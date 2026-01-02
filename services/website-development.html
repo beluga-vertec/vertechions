@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development Portfolio | Vertechions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Portfolio Grid */
+        .portfolio {
+            padding: 60px 20px 120px;
+        }
+        
+        .portfolio-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .portfolio-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(168, 85, 247, 0.3);
+            box-shadow: 0 20px 60px rgba(168, 85, 247, 0.2);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(6, 182, 212, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+        
+        .portfolio-content {
+            padding: 30px;
+        }
+        
+        .portfolio-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-card p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: var(--accent-purple);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid rgba(168, 85, 247, 0.5);
+            color: var(--accent-purple);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(168, 85, 247, 0.1);
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .status-live {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        .status-template {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-text">Vertechions</a>
+            <a href="../index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1 data-aos="fade-up">
+            Website Development <span class="gradient-text">Portfolio</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            Professional websites built for businesses across various industries
+        </p>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio">
+        <div class="portfolio-grid">
+            
+            <!-- Helio Ground Cafe -->
+            <div class="portfolio-card" data-aos="fade-up">
+                <div class="portfolio-image">☕</div>
+                <div class="portfolio-content">
+                    <span class="status status-live">● LIVE PROJECT</span>
+                    <h3>Helio Ground Cafe</h3>
+                    <p>Professional cafe website with menu carousel, WhatsApp ordering, customer reviews, and Google Maps integration.</p>
+                    <div class="tags">
+                        <span class="tag">Restaurant</span>
+                        <span class="tag">WhatsApp</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                    <a href="https://beluga-vertec.github.io/helio-ground-cafe/" target="_blank" class="btn">View Live Site →</a>
+                </div>
+            </div>
+
+            <!-- Daycare Template -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-image">🏫</div>
+                <div class="portfolio-content">
+                    <span class="status status-template">● TEMPLATE AVAILABLE</span>
+                    <h3>Kids Care Center</h3>
+                    <p>Bright, colorful website for daycare and playschools with enrollment forms, class schedules, and parent portal.</p>
+                    <div class="tags">
+                        <span class="tag">Education</span>
+                        <span class="tag">Forms</span>
+                        <span class="tag">Gallery</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Warehouse/Ecommerce -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-image">📦</div>
+                <div class="portfolio-content">
+                    <span class="status status-template">● TEMPLATE AVAILABLE</span>
+                    <h3>Warehouse & Logistics</h3>
+                    <p>Complete warehouse management website with inventory tracking, order processing, and client dashboard.</p>
+                    <div class="tags">
+                        <span class="tag">E-Commerce</span>
+                        <span class="tag">Inventory</span>
+                        <span class="tag">Dashboard</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Fashion Store -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="portfolio-image">👗</div>
+                <div class="portfolio-content">
+                    <span class="status status-template">● TEMPLATE AVAILABLE</span>
+                    <h3>Fashion Boutique</h3>
+                    <p>Elegant online clothing store with product catalog, shopping cart, and payment integration.</p>
+                    <div class="tags">
+                        <span class="tag">Retail</span>
+                        <span class="tag">E-Commerce</span>
+                        <span class="tag">Payment Gateway</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Corporate Website -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="portfolio-image">🏢</div>
+                <div class="portfolio-content">
+                    <span class="status status-template">● TEMPLATE AVAILABLE</span>
+                    <h3>Corporate Business</h3>
+                    <p>Professional corporate website with company profile, services, team showcase, and contact system.</p>
+                    <div class="tags">
+                        <span class="tag">Corporate</span>
+                        <span class="tag">Portfolio</span>
+                        <span class="tag">Professional</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Coming Soon</a>
+                </div>
+            </div>
+
+            <!-- Restaurant -->
+            <div class="portfolio-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="portfolio-image">🍽️</div>
+                <div class="portfolio-content">
+                    <span class="status status-template">● TEMPLATE AVAILABLE</span>
+                    <h3>Fine Dining Restaurant</h3>
+                    <p>Elegant restaurant website with digital menu, table reservations, and online ordering system.</p>
+                    <div class="tags">
+                        <span class="tag">Restaurant</span>
+                        <span class="tag">Reservations</span>
+                        <span class="tag">Menu</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Coming Soon</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px;" data-aos="fade-up">Need a Custom Website?</h2>
+        <p style="font-size: 1.2em; color: var(--text-gray); margin-bottom: 30px;" data-aos="fade-up">
+            Let's build something amazing for your business
+        </p>
+        <a href="https://wa.me/601172570041?text=Hi%20Vertechions!%20I'm%20interested%20in%20Website%20Development" 
+           target="_blank" 
+           class="btn" 
+           data-aos="fade-up">
+            Get a Quote on WhatsApp →
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

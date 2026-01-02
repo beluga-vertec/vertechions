@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Infrastructure Solutions | Vertechions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Services Grid */
+        .services {
+            padding: 60px 20px 120px;
+        }
+        
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+        
+        .service-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+        }
+        
+        .service-card h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features-list li {
+            padding: 10px 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            color: var(--accent-cyan);
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-text">Vertechions</a>
+            <a href="../index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1 data-aos="fade-up">
+            IT <span class="gradient-text">Infrastructure</span> Solutions
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            Enterprise-grade communication systems for modern businesses
+        </p>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="services-grid">
+            
+            <!-- VoIP System -->
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">📞</div>
+                <h3>VoIP System Setup</h3>
+                <p>Modern Voice over IP solutions that reduce costs and improve communication quality.</p>
+                <ul class="features-list">
+                    <li>Complete VoIP infrastructure setup</li>
+                    <li>SIP trunk configuration</li>
+                    <li>Call routing & IVR systems</li>
+                    <li>Voicemail to email integration</li>
+                    <li>Call recording & monitoring</li>
+                    <li>Mobile app integration</li>
+                    <li>Cost savings up to 70%</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20VoIP%20System%20Setup" target="_blank" class="btn">Get Quote →</a>
+            </div>
+
+            <!-- PBX System -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">☎️</div>
+                <h3>PBX Configuration</h3>
+                <p>Professional Private Branch Exchange systems for seamless internal and external communications.</p>
+                <ul class="features-list">
+                    <li>Cloud PBX or On-Premise setup</li>
+                    <li>Extension management (100+ users)</li>
+                    <li>Auto-attendant configuration</li>
+                    <li>Conference calling</li>
+                    <li>Call transfer & forwarding</li>
+                    <li>Integration with CRM systems</li>
+                    <li>24/7 monitoring & support</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20PBX%20Configuration" target="_blank" class="btn">Get Quote →</a>
+            </div>
+
+            <!-- SBC Implementation -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">🔒</div>
+                <h3>SBC Implementation</h3>
+                <p>Session Border Controllers for secure, reliable, and high-quality VoIP communications.</p>
+                <ul class="features-list">
+                    <li>SBC deployment & configuration</li>
+                    <li>Security & firewall setup</li>
+                    <li>Protocol conversion</li>
+                    <li>Quality of Service (QoS)</li>
+                    <li>Load balancing</li>
+                    <li>DDoS protection</li>
+                    <li>Regulatory compliance</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20SBC%20Implementation" target="_blank" class="btn">Get Quote →</a>
+            </div>
+
+            <!-- Call Center Solution -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">🎧</div>
+                <h3>Call Center Solution</h3>
+                <p>Complete call center infrastructure with queue management and agent monitoring.</p>
+                <ul class="features-list">
+                    <li>ACD (Automatic Call Distribution)</li>
+                    <li>Queue management system</li>
+                    <li>Agent dashboard & metrics</li>
+                    <li>Call recording & analytics</li>
+                    <li>Real-time reporting</li>
+                    <li>Predictive dialer (outbound)</li>
+                    <li>Multi-channel support (voice, chat, email)</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Call%20Center%20Solution" target="_blank" class="btn">Get Quote →</a>
+            </div>
+
+            <!-- Network Infrastructure -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon">🌐</div>
+                <h3>Network Infrastructure</h3>
+                <p>Robust network setup with redundancy and high availability for business continuity.</p>
+                <ul class="features-list">
+                    <li>Network design & architecture</li>
+                    <li>Router & switch configuration</li>
+                    <li>VLAN setup for segmentation</li>
+                    <li>VPN for remote access</li>
+                    <li>Firewall & security setup</li>
+                    <li>Bandwidth management</li>
+                    <li>Network monitoring tools</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Network%20Infrastructure" target="_blank" class="btn">Get Quote →</a>
+            </div>
+
+            <!-- Cloud Telephony -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud Telephony</h3>
+                <p>Scalable cloud-based phone systems with no hardware investment required.</p>
+                <ul class="features-list">
+                    <li>Zero hardware installation</li>
+                    <li>Scale up/down instantly</li>
+                    <li>Work from anywhere</li>
+                    <li>Auto-failover & redundancy</li>
+                    <li>Pay-as-you-go pricing</li>
+                    <li>Integration with business tools</li>
+                    <li>Managed service & support</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Cloud%20Telephony" target="_blank" class="btn">Get Quote →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px;" data-aos="fade-up">Ready to Upgrade Your IT Infrastructure?</h2>
+        <p style="font-size: 1.2em; color: var(--text-gray); margin-bottom: 30px;" data-aos="fade-up">
+            Get a free consultation and quote for your business
+        </p>
+        <a href="https://wa.me/601172570041?text=Hi%20Vertechions!%20I%20need%20IT%20Infrastructure%20consultation" 
+           target="_blank" 
+           class="btn" 
+           data-aos="fade-up">
+            Schedule Consultation →
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

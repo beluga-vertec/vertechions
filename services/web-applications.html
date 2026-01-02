@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Web Applications | Vertechions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Solutions Grid */
+        .solutions {
+            padding: 60px 20px 120px;
+        }
+        
+        .solutions-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .solution-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+        
+        .solution-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+        }
+        
+        .solution-card h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .solution-card p {
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features-list li {
+            padding: 10px 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            color: var(--accent-cyan);
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .solutions-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-text">Vertechions</a>
+            <a href="../index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1 data-aos="fade-up">
+            Custom <span class="gradient-text">Web Applications</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            Tailored solutions to streamline your business operations
+        </p>
+    </section>
+
+    <!-- Solutions -->
+    <section class="solutions">
+        <div class="solutions-grid">
+            
+            <!-- Online Ordering System -->
+            <div class="solution-card" data-aos="fade-up">
+                <div class="solution-icon">🛍️</div>
+                <h3>Online Ordering System</h3>
+                <p>Complete food and product ordering platform with real-time updates and payment integration.</p>
+                <ul class="features-list">
+                    <li>Menu/Product catalog management</li>
+                    <li>Real-time order tracking</li>
+                    <li>Multiple payment gateways</li>
+                    <li>Customer notifications (SMS/Email)</li>
+                    <li>Admin dashboard for order management</li>
+                    <li>Delivery tracking integration</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Online%20Ordering%20System" target="_blank" class="btn">Get Started →</a>
+            </div>
+
+            <!-- Inventory Management -->
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="solution-icon">📦</div>
+                <h3>Inventory Management</h3>
+                <p>Track stock levels, manage suppliers, and automate reordering with our inventory system.</p>
+                <ul class="features-list">
+                    <li>Real-time stock tracking</li>
+                    <li>Low stock alerts</li>
+                    <li>Supplier management</li>
+                    <li>Purchase order automation</li>
+                    <li>Barcode/QR scanning</li>
+                    <li>Multi-location support</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Inventory%20Management%20System" target="_blank" class="btn">Get Started →</a>
+            </div>
+
+            <!-- Customer Portal -->
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="solution-icon">👥</div>
+                <h3>Customer Portal</h3>
+                <p>Self-service portal for your customers to manage orders, view history, and get support.</p>
+                <ul class="features-list">
+                    <li>User authentication & profiles</li>
+                    <li>Order history & tracking</li>
+                    <li>Invoice downloads</li>
+                    <li>Support ticket system</li>
+                    <li>Loyalty points tracking</li>
+                    <li>Personalized recommendations</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Customer%20Portal" target="_blank" class="btn">Get Started →</a>
+            </div>
+
+            <!-- Booking & Appointment System -->
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="solution-icon">📅</div>
+                <h3>Booking & Appointments</h3>
+                <p>Streamline reservations and appointments with automated scheduling and reminders.</p>
+                <ul class="features-list">
+                    <li>Online booking calendar</li>
+                    <li>Automated reminders (SMS/Email)</li>
+                    <li>Payment integration</li>
+                    <li>Staff schedule management</li>
+                    <li>Cancellation & rescheduling</li>
+                    <li>Customer database</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Booking%20System" target="_blank" class="btn">Get Started →</a>
+            </div>
+
+            <!-- Admin Dashboard -->
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="solution-icon">📊</div>
+                <h3>Admin Dashboard</h3>
+                <p>Comprehensive analytics and management dashboard for complete business oversight.</p>
+                <ul class="features-list">
+                    <li>Real-time analytics</li>
+                    <li>Sales reports & insights</li>
+                    <li>User management</li>
+                    <li>Content management</li>
+                    <li>Export to Excel/PDF</li>
+                    <li>Mobile-responsive design</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20Admin%20Dashboard" target="_blank" class="btn">Get Started →</a>
+            </div>
+
+            <!-- E-Commerce Platform -->
+            <div class="solution-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="solution-icon">🛒</div>
+                <h3>E-Commerce Platform</h3>
+                <p>Full-featured online store with product management, payments, and shipping integration.</p>
+                <ul class="features-list">
+                    <li>Product catalog with variants</li>
+                    <li>Shopping cart & checkout</li>
+                    <li>Payment gateway (FPX, Cards)</li>
+                    <li>Shipping integration (Poslaju, J&T)</li>
+                    <li>Promo codes & discounts</li>
+                    <li>Customer reviews & ratings</li>
+                </ul>
+                <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20E-Commerce%20Platform" target="_blank" class="btn">Get Started →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 80px 20px; text-align: center;">
+        <h2 style="font-size: 2.5em; margin-bottom: 20px;" data-aos="fade-up">Need a Custom Solution?</h2>
+        <p style="font-size: 1.2em; color: var(--text-gray); margin-bottom: 30px;" data-aos="fade-up">
+            Tell us about your requirements and we'll build it for you
+        </p>
+        <a href="https://wa.me/601172570041?text=Hi%20Vertechions!%20I%20need%20a%20custom%20web%20application" 
+           target="_blank" 
+           class="btn" 
+           data-aos="fade-up">
+            Discuss Your Project →
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
