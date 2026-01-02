@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vertechions - Professional Web Development & IT Infrastructure Solutions. Custom websites, eCommerce platforms, VoIP, PBX, and SBC services for your business.">
+    <title>Vertechions | Web Development & IT Infrastructure Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-container img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+        
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+        }
+        
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--gradient-1);
+            top: 10%;
+            left: 10%;
+        }
+        
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--gradient-1);
+            top: 60%;
+            right: 15%;
+            animation-delay: 5s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+        
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 25px;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 120px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .section-description {
+            text-align: center;
+            font-size: 1.2em;
+            color: var(--text-gray);
+            margin-bottom: 60px;
+        }
+        
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+        
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 25px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            color: var(--text-gray);
+        }
+        
+        .service-features li::before {
+            content: '✓ ';
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 120px 20px;
+            background: rgba(10, 14, 39, 0.5);
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-method {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 2em;
+            min-width: 50px;
+            height: 50px;
+            background: var(--gradient-1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-details h4 {
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        .contact-details a {
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+        
+        .contact-form {
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(10, 14, 39, 0.8);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 10px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .hero h1 { font-size: 2.5em; }
+            .services-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Vertechions">
+                <span class="logo-text">Vertechions</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/601172570041?text=Hi%20Vertechions!%20I'm%20interested%20in%20your%20services" 
+       target="_blank" 
+       class="whatsapp-float">💬</a>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        
+        <div class="container">
+            <div data-aos="fade-up">
+                <h1>
+                    Build Your Digital Future with 
+                    <span class="gradient-text">Vertechions</span>
+                </h1>
+                <p>
+                    Transform your business with custom web applications, professional websites, 
+                    and enterprise-grade IT infrastructure. From cafes to call centers, we deliver 
+                    solutions that drive growth.
+                </p>
+                <a href="#contact" class="btn btn-primary">Get Started →</a>
+                <a href="#services" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+        <p class="section-description" data-aos="fade-up">
+            Comprehensive digital solutions tailored to your business needs
+        </p>
+
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">🌐</div>
+                <h3>Website Development</h3>
+                <p>Professional, responsive websites that convert visitors into customers.</p>
+                <ul class="service-features">
+                    <li>Custom website design</li>
+                    <li>Mobile-responsive layouts</li>
+                    <li>SEO optimization</li>
+                    <li>E-commerce integration</li>
+                </ul>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">🛒</div>
+                <h3>Custom Web Applications</h3>
+                <p>Tailored online ordering and eCommerce platforms for your business.</p>
+                <ul class="service-features">
+                    <li>Online ordering systems</li>
+                    <li>Inventory management</li>
+                    <li>Payment gateway integration</li>
+                    <li>Admin dashboards</li>
+                </ul>
+            </div>
+
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">📞</div>
+                <h3>IT Infrastructure</h3>
+                <p>Enterprise-grade VoIP, PBX, and SBC solutions.</p>
+                <ul class="service-features">
+                    <li>VoIP system setup</li>
+                    <li>PBX configuration</li>
+                    <li>SBC implementation</li>
+                    <li>24/7 technical support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+        <p class="section-description" data-aos="fade-up">
+            Let's start building something amazing together
+        </p>
+
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <h3>Let's Talk</h3>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <h4>WhatsApp / Phone</h4>
+                        <p><a href="tel:+601172570041">011-7257 0041</a></p>
+                        <p><a href="https://wa.me/601172570041" target="_blank">Message on WhatsApp</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p><a href="mailto:hello@vertechions.com">hello@vertechions.com</a></p>
+                        <p><a href="mailto:support@vertechions.com">support@vertechions.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <p>Selangor, Malaysia</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form" data-aos="fade-left">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required placeholder="011-1234 5678">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Service Interested In *</label>
+                        <select name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="website">Website Development</option>
+                            <option value="webapp">Custom Web Application</option>
+                            <option value="ecommerce">E-Commerce Platform</option>
+                            <option value="voip">VoIP / PBX / SBC</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Project Details *</label>
+                        <textarea name="message" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+        <p>Crafted with 💜 in Malaysia</p>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            const message = `New Project Inquiry from ${data.name}%0A%0AEmail: ${data.email}%0APhone: ${data.phone}%0AService: ${data.service}%0A%0AProject Details:%0A${data.message}`;
+            
+            window.open(`https://wa.me/601172570041?text=${message}`, '_blank');
+            
+            this.reset();
+            alert('Thank you! Redirecting to WhatsApp...');
+        });
+    </script>
+</body>
+</html>
