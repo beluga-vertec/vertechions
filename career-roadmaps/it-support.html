@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete IT Support Specialist career roadmap. Learn everything you need to become a professional IT Support Specialist from scratch.">
+    <title>IT Support Specialist Roadmap | Complete Career Guide - Vertechions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --accent-green: #10B981;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-description {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        
+        /* Overview Section */
+        .overview {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .overview-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+        
+        .overview-text {
+            font-size: 1.1em;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .key-facts {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+        }
+        
+        .key-facts h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .fact-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 10px;
+        }
+        
+        .fact-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .fact-value {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+        
+        /* Career Path */
+        .career-path {
+            padding: 80px 20px;
+        }
+        
+        .path-timeline {
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .path-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
+            transform: translateX(-50%);
+        }
+        
+        .path-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .path-step:nth-child(even) .step-content {
+            grid-column: 1;
+            text-align: right;
+        }
+        
+        .path-step:nth-child(even) .step-years {
+            grid-column: 2;
+        }
+        
+        .path-step:nth-child(odd) .step-content {
+            grid-column: 2;
+        }
+        
+        .path-step:nth-child(odd) .step-years {
+            grid-column: 1;
+            text-align: right;
+        }
+        
+        .step-marker {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            border: 4px solid var(--primary-dark);
+            z-index: 10;
+        }
+        
+        .step-content {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        .step-content h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        
+        .step-years {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Learning Path */
+        .learning-path {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .phase {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .phase-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        .phase-info h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .phase-duration {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        
+        .topic {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-purple);
+        }
+        
+        .topic h4 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .topic-details {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .detail-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+        }
+        
+        .detail-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        
+        .detail-content {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+        
+        .resources-list {
+            list-style: none;
+        }
+        
+        .resources-list li {
+            padding: 8px 0;
+            color: var(--text-gray);
+        }
+        
+        .resources-list li::before {
+            content: '→ ';
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            padding: 80px 20px;
+        }
+        
+        .stack-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .stack-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .stack-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .stack-items {
+            list-style: none;
+        }
+        
+        .stack-items li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .stack-items li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Projects */
+        .projects {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .projects-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .project-icon {
+            font-size: 2.5em;
+        }
+        
+        .project-card h3 {
+            font-size: 1.6em;
+        }
+        
+        .project-description {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--accent-purple);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        /* Certifications */
+        .certifications {
+            padding: 80px 20px;
+        }
+        
+        .cert-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            gap: 25px;
+        }
+        
+        .cert-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .cert-priority {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        
+        .priority-essential {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .priority-recommended {
+            background: rgba(6, 182, 212, 0.2);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+        
+        .priority-optional {
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--accent-purple);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        
+        .cert-info h4 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+        
+        .cert-info p {
+            color: var(--text-gray);
+        }
+        
+        /* Resources */
+        .resources {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .resources-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .resource-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .resource-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        
+        .resource-list {
+            list-style: none;
+        }
+        
+        .resource-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+            color: var(--text-gray);
+        }
+        
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.2em;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .overview-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .path-timeline::before {
+                left: 20px;
+            }
+            
+            .path-step {
+                grid-template-columns: 1fr;
+                padding-left: 50px;
+            }
+            
+            .path-step:nth-child(even) .step-content,
+            .path-step:nth-child(odd) .step-content {
+                grid-column: 1;
+                text-align: left;
+            }
+            
+            .path-step:nth-child(even) .step-years,
+            .path-step:nth-child(odd) .step-years {
+                grid-column: 1;
+                text-align: left;
+            }
+            
+            .step-marker {
+                left: 20px;
+            }
+            
+            .detail-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-text">Vertechions</a>
+            <a href="../career-roadmaps.html" class="back-btn">← Back to Roadmaps</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div data-aos="fade-up">
+            <div class="hero-icon">🛠️</div>
+            <div class="hero-badge">BEGINNER FRIENDLY</div>
+            <h1>IT Support Specialist <span class="gradient-text">Roadmap</span></h1>
+            <p class="hero-description">
+                Your complete guide to becoming an IT Support Specialist. Start your tech career 
+                helping users solve problems while building foundational skills for future growth.
+            </p>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-content">
+                <div data-aos="fade-right">
+                    <h2 class="section-title">What is IT Support?</h2>
+                    <p class="overview-text">
+                        IT Support Specialists are the frontline heroes who keep technology running smoothly. 
+                        You'll help users troubleshoot problems, set up hardware and software, maintain systems, 
+                        and ensure everyone can work productively.
+                    </p>
+                    <p class="overview-text">
+                        This role is the perfect entry point into tech because it doesn't require coding knowledge 
+                        to start, yet it teaches you the fundamentals of how technology works. You'll gain hands-on 
+                        experience every single day.
+                    </p>
+                    <p class="overview-text">
+                        Best of all, IT Support opens doors to every other tech career. Many Cloud Engineers, 
+                        System Administrators, and Network Engineers started exactly where you are now.
+                    </p>
+                </div>
+                
+                <div class="key-facts" data-aos="fade-left">
+                    <h3>Key Facts</h3>
+                    <div class="fact-item">
+                        <div class="fact-label">Entry Level</div>
+                        <div class="fact-value">Easiest path into tech</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Coding Required</div>
+                        <div class="fact-value">No (basic scripting helps later)</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Learning Time</div>
+                        <div class="fact-value">3-6 months to job-ready</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Work Style</div>
+                        <div class="fact-value">Hands-on, problem-solving</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Career Path</div>
+                        <div class="fact-value">Gateway to all tech roles</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Path -->
+    <section class="career-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Career Progression Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Your journey from beginner to expert
+            </p>
+            
+            <div class="path-timeline">
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Junior IT Support</h3>
+                        <p>Handle basic troubleshooting, password resets, software installations. Learn on the job while helping users.</p>
+                    </div>
+                    <div class="step-years">0-1 Years</div>
+                </div>
+                
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>IT Support Specialist</h3>
+                        <p>Manage more complex issues, configure systems, maintain documentation. Work independently with minimal supervision.</p>
+                    </div>
+                    <div class="step-years">1-2 Years</div>
+                </div>
+                
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Senior IT Support / Desktop Engineer</h3>
+                        <p>Lead projects, mentor juniors, handle escalated issues. Design solutions and implement improvements.</p>
+                    </div>
+                    <div class="step-years">2-4 Years</div>
+                </div>
+                
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Specialization Options</h3>
+                        <p>Branch into System Administration, Network Engineering, Cloud Engineering, or IT Management based on your interests.</p>
+                    </div>
+                    <div class="step-years">4+ Years</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Complete Learning Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Follow this step-by-step roadmap to become job-ready
+            </p>
+            
+            <!-- Phase 1 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">1</div>
+                    <div class="phase-info">
+                        <h3>Computer Fundamentals</h3>
+                        <div class="phase-duration">Duration: 4-6 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Windows Operating System</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                File system navigation, Control Panel, Device Manager, System Configuration, 
+                                Windows updates, User accounts and permissions, Registry basics (viewing only), 
+                                Task Manager and Resource Monitor
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Professor Messer's Windows tutorials (YouTube)</li>
+                                    <li>Microsoft Learn - Windows 10 fundamentals</li>
+                                    <li>Practice on your own Windows computer</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Set up a virtual machine, install Windows, configure user accounts, troubleshoot 
+                                common issues, create backup and restore points
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Hardware Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Computer components (CPU, RAM, HDD/SSD, motherboard), peripheral devices, 
+                                printers and scanners, cable types (USB, HDMI, Ethernet), laptop hardware, 
+                                mobile devices
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>CompTIA A+ Core 1 study materials</li>
+                                    <li>Professor Messer A+ videos (YouTube)</li>
+                                    <li>Hardware troubleshooting guides</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Disassemble and reassemble an old computer, upgrade RAM or storage, 
+                                install a printer, set up multiple monitors
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Networking Fundamentals</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                IP addressing basics, DHCP and DNS concepts, WiFi setup and troubleshooting, 
+                                router configuration, basic TCP/IP, ping and traceroute commands
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>NetworkChuck YouTube channel</li>
+                                    <li>Cisco Networking Basics (free course)</li>
+                                    <li>Professor Messer Network+ intro videos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Set up home WiFi network, configure router settings, test network connectivity, 
+                                use command-line tools (ipconfig, ping, nslookup)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 2 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">2</div>
+                    <div class="phase-info">
+                        <h3>Core IT Support Skills</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Troubleshooting Methodology</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Identify the problem, establish a theory, test theories, create action plan, 
+                                implement solution, verify functionality, document findings, proper communication 
+                                with users
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>CompTIA A+ troubleshooting methodology</li>
+                                    <li>Google IT Support Certificate (Coursera)</li>
+                                    <li>IT troubleshooting case studies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Practice troubleshooting common issues: slow computer, no internet, printer not 
+                                working, software crashes. Document each step you take.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Software Installation & Configuration</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Software installation best practices, MSI vs EXE installers, silent installations, 
+                                software updates and patching, common business applications (Office 365, Adobe, browsers), 
+                                license management
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Microsoft 365 admin training</li>
+                                    <li>Software deployment tutorials</li>
+                                    <li>Group Policy basics</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Install and configure Office suite, set up email clients, deploy software remotely 
+                                (using PowerShell), create deployment packages
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Active Directory Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                User account management, password resets, group memberships, organizational units, 
+                                basic Group Policy, computer accounts, login troubleshooting
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Active Directory tutorials for beginners</li>
+                                    <li>Microsoft Learn - AD fundamentals</li>
+                                    <li>Set up home lab with Windows Server trial</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Set up Windows Server VM, create domain, add users, manage groups, apply group policies, 
+                                join computers to domain
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Remote Support Tools</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Remote Desktop Protocol (RDP), TeamViewer, AnyDesk, VNC, Windows Remote Assistance, 
+                                remote troubleshooting best practices, security considerations
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Remote support software documentation</li>
+                                    <li>RDP configuration guides</li>
+                                    <li>Security best practices for remote access</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Set up RDP on your computers, practice with TeamViewer, troubleshoot remote connection 
+                                issues, configure firewall rules
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 3 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">3</div>
+                    <div class="phase-info">
+                        <h3>Advanced Skills & Specialization</h3>
+                        <div class="phase-duration">Duration: 4-6 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Linux Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Linux distributions (Ubuntu, CentOS), command-line basics, file permissions, 
+                                package management (apt, yum), basic shell scripting, SSH
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Linux Journey (free website)</li>
+                                    <li>Ubuntu tutorials</li>
+                                    <li>Linux command line crash course</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Install Ubuntu on VM, practice basic commands, create shell scripts for automation, 
+                                manage users and permissions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Scripting & Automation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                PowerShell basics, batch scripting, automate repetitive tasks, scheduled tasks, 
+                                basic Python for automation
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>PowerShell in a Month of Lunches</li>
+                                    <li>Automate the Boring Stuff with Python (free book)</li>
+                                    <li>Scripting tutorials on YouTube</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Write scripts to: automate user creation, backup files, generate reports, clean temp 
+                                files, monitor disk space
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Ticketing Systems & Documentation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                ITIL basics, ticketing system workflows, SLA understanding, proper documentation, 
+                                knowledge base creation, customer service best practices
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>ITIL Foundation introduction</li>
+                                    <li>ServiceNow free learning</li>
+                                    <li>Documentation best practices guides</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create mock tickets, write clear documentation, build a personal knowledge base, 
+                                practice professional email communication
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Security Fundamentals</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Password policies, antivirus and anti-malware, Windows Firewall, VPN basics, 
+                                phishing awareness, data backup and recovery, encryption basics
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>CompTIA Security+ intro materials</li>
+                                    <li>Cybersecurity awareness training</li>
+                                    <li>Microsoft security best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure Windows Firewall rules, set up backups, create strong password policies, 
+                                practice malware removal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 4 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">4</div>
+                    <div class="phase-info">
+                        <h3>Job Preparation & Real Experience</h3>
+                        <div class="phase-duration">Duration: 2-4 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Build Your Portfolio</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Create:</div>
+                            <div class="detail-content">
+                                Documentation of your home lab setup, troubleshooting guides you've written, 
+                                automation scripts you've created, personal projects, GitHub repository
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Portfolio Items:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Home lab setup documentation with screenshots</li>
+                                    <li>3-5 troubleshooting guides for common issues</li>
+                                    <li>PowerShell/Python automation scripts</li>
+                                    <li>Active Directory setup documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Interview Preparation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Prepare:</div>
+                            <div class="detail-content">
+                                Common IT support interview questions, troubleshooting scenarios, technical questions 
+                                about Windows/networking/hardware, soft skills (communication, customer service), 
+                                behavioral questions
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Practice Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>IT support interview questions on Glassdoor</li>
+                                    <li>Mock interview practice with friends/family</li>
+                                    <li>Record yourself answering questions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Get Real Experience</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">Ways to Gain Experience:</div>
+                            <div class="detail-content">
+                                Help family/friends with tech issues (document everything), volunteer at non-profits 
+                                or schools, offer free tech support to small businesses, join online communities and 
+                                help others, start a tech blog or YouTube channel
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Where to Find Opportunities:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Local community centers and schools</li>
+                                    <li>Small businesses in your area</li>
+                                    <li>Online forums (Reddit r/techsupport)</li>
+                                    <li>Volunteer Malaysia platforms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Essential Tech Stack</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Tools and technologies you need to master
+            </p>
+            
+            <div class="stack-grid">
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Operating Systems</h3>
+                    <ul class="stack-items">
+                        <li>Windows 10/11</li>
+                        <li>Windows Server 2019/2022</li>
+                        <li>Ubuntu Linux (basics)</li>
+                        <li>macOS (helpful)</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Hardware</h3>
+                    <ul class="stack-items">
+                        <li>Desktop components</li>
+                        <li>Laptop hardware</li>
+                        <li>Printers & scanners</li>
+                        <li>Mobile devices</li>
+                        <li>Networking equipment</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Software & Tools</h3>
+                    <ul class="stack-items">
+                        <li>Microsoft Office 365</li>
+                        <li>Active Directory</li>
+                        <li>Group Policy</li>
+                        <li>Antivirus software</li>
+                        <li>Backup solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Remote Support</h3>
+                    <ul class="stack-items">
+                        <li>Remote Desktop (RDP)</li>
+                        <li>TeamViewer</li>
+                        <li>AnyDesk</li>
+                        <li>VNC</li>
+                        <li>SSH basics</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Networking</h3>
+                    <ul class="stack-items">
+                        <li>TCP/IP basics</li>
+                        <li>DHCP & DNS</li>
+                        <li>WiFi configuration</li>
+                        <li>Router basics</li>
+                        <li>VPN setup</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Scripting (Optional)</h3>
+                    <ul class="stack-items">
+                        <li>PowerShell</li>
+                        <li>Batch scripts</li>
+                        <li>Python basics</li>
+                        <li>Bash (Linux)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hands-On Projects -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Hands-On Projects</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Build these projects to demonstrate your skills
+            </p>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">🏠</div>
+                        <h3>Home Lab Setup</h3>
+                    </div>
+                    <p class="project-description">
+                        Build a complete home lab with multiple VMs running Windows Server, Windows 10, and Ubuntu. 
+                        Configure Active Directory, set up networking, and document everything.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Virtualization</span>
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">Documentation</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">📖</div>
+                        <h3>Troubleshooting Knowledge Base</h3>
+                    </div>
+                    <p class="project-description">
+                        Create a personal knowledge base with step-by-step guides for solving common IT issues. 
+                        Include screenshots, commands, and clear explanations. Host it on GitHub Pages.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Documentation</span>
+                        <span class="skill-tag">Technical Writing</span>
+                        <span class="skill-tag">Problem Solving</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">⚙️</div>
+                        <h3>Automation Scripts Collection</h3>
+                    </div>
+                    <p class="project-description">
+                        Build a collection of PowerShell and Python scripts for common IT tasks: user management, 
+                        disk cleanup, system monitoring, backup automation. Share on GitHub.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">PowerShell</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">🌐</div>
+                        <h3>Network Setup & Documentation</h3>
+                    </div>
+                    <p class="project-description">
+                        Design and set up a small office network with proper segmentation, DHCP, DNS, and security. 
+                        Document the entire network architecture with diagrams.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">Router Config</span>
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">Diagrams</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">🔒</div>
+                        <h3>Security Hardening Project</h3>
+                    </div>
+                    <p class="project-description">
+                        Harden a Windows system following industry best practices. Configure firewall rules, implement 
+                        security policies, set up backups, and document the entire process.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Security</span>
+                        <span class="skill-tag">Group Policy</span>
+                        <span class="skill-tag">Backup & Recovery</span>
+                        <span class="skill-tag">Compliance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Recommended Certifications</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Certifications to boost your credibility (optional but helpful)
+            </p>
+            
+            <div class="cert-grid">
+                <div class="cert-card" data-aos="fade-up">
+                    <div class="cert-priority priority-essential">ESSENTIAL</div>
+                    <div class="cert-info">
+                        <h4>CompTIA A+</h4>
+                        <p>The gold standard entry-level IT certification. Covers hardware, software, networking, and troubleshooting.</p>
+                    </div>
+                </div>
+                
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-priority priority-recommended">RECOMMENDED</div>
+                    <div class="cert-info">
+                        <h4>Microsoft 365 Certified: Fundamentals</h4>
+                        <p>Shows competency in Microsoft cloud services, which most companies use today.</p>
+                    </div>
+                </div>
+                
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-priority priority-recommended">RECOMMENDED</div>
+                    <div class="cert-info">
+                        <h4>CompTIA Network+</h4>
+                        <p>Validates networking knowledge - essential for progressing to higher-level roles.</p>
+                    </div>
+                </div>
+                
+                <div class="cert-card" data-aos="fade-up">
+                    <div class="cert-priority priority-optional">OPTIONAL</div>
+                    <div class="cert-info">
+                        <h4>ITIL Foundation</h4>
+                        <p>Understanding of IT service management frameworks used in enterprises.</p>
+                    </div>
+                </div>
+                
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-priority priority-optional">OPTIONAL</div>
+                    <div class="cert-info">
+                        <h4>CompTIA Security+</h4>
+                        <p>Basic cybersecurity knowledge - increasingly important for all IT roles.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(168, 85, 247, 0.05); border-radius: 15px; max-width: 800px; margin-left: auto; margin-right: auto;" data-aos="fade-up">
+                <p style="color: var(--text-gray); line-height: 1.8;">
+                    <strong>Important Note:</strong> Certifications are helpful but NOT required to get your first job. 
+                    Focus on hands-on skills and real experience first. Many IT Support roles hire based on practical 
+                    knowledge and soft skills rather than certifications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Resources -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Free Learning Resources</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Quality resources to learn everything you need
+            </p>
+            
+            <div class="resources-grid">
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>📺 YouTube Channels</h3>
+                    <ul class="resource-list">
+                        <li>Professor Messer (A+, Network+)</li>
+                        <li>PowerCert Animated Videos</li>
+                        <li>NetworkChuck</li>
+                        <li>Eli the Computer Guy</li>
+                        <li>Linus Tech Tips</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>🎓 Online Courses</h3>
+                    <ul class="resource-list">
+                        <li>Google IT Support Certificate (Coursera)</li>
+                        <li>Microsoft Learn (free)</li>
+                        <li>CompTIA CertMaster Learn (free trial)</li>
+                        <li>Cisco Networking Academy</li>
+                        <li>freeCodeCamp IT courses</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>💬 Communities</h3>
+                    <ul class="resource-list">
+                        <li>Reddit r/ITCareerQuestions</li>
+                        <li>Reddit r/sysadmin</li>
+                        <li>Spiceworks Community</li>
+                        <li>TechNet Forums</li>
+                        <li>Local tech meetups</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>📖 Documentation</h3>
+                    <ul class="resource-list">
+                        <li>Microsoft Docs</li>
+                        <li>Ubuntu Documentation</li>
+                        <li>CompTIA Exam Objectives</li>
+                        <li>How-To Geek guides</li>
+                        <li>TechTarget SearchITChannel</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>🛠️ Practice Platforms</h3>
+                    <ul class="resource-list">
+                        <li>VirtualBox (free VMs)</li>
+                        <li>Windows Server trial versions</li>
+                        <li>Ubuntu (completely free)</li>
+                        <li>Home lab equipment</li>
+                        <li>Old computers for practice</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>📝 Study Materials</h3>
+                    <ul class="resource-list">
+                        <li>CompTIA A+ exam objectives PDF</li>
+                        <li>Professor Messer course notes</li>
+                        <li>Microsoft Virtual Academy</li>
+                        <li>ExamCompass practice tests</li>
+                        <li>Anki flashcard decks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Ready to Start Your IT Career?</h2>
+            <p>
+                Have questions about this roadmap? Need guidance on your learning journey? 
+                We're here to help you succeed.
+            </p>
+            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20following%20the%20IT%20Support%20roadmap%20and%20have%20some%20questions" 
+               target="_blank" 
+               class="btn">
+                Get Free Guidance →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+        <p style="margin-top: 10px;">Empowering the next generation of tech professionals 💜</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
