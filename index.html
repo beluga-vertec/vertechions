@@ -573,19 +573,124 @@
             }
         }
 
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
             nav ul {
-                display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 14, 39, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                border-top: 1px solid rgba(168, 85, 247, 0.2);
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            }
+
+            nav ul.active {
+                transform: translateX(0);
+            }
+
+            nav ul li {
+                padding: 0;
+                margin: 0;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 15px 30px;
+                border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+            }
+
+            nav ul li a:hover {
+                background: rgba(168, 85, 247, 0.1);
             }
 
             .hero h1 {
                 font-size: 2.5em;
             }
 
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
             .services-grid,
+            .industries-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
             .contact-container {
                 grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                grid-template-columns: 60px 1fr;
+                gap: 20px;
+            }
+
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5em;
+            }
+
+            .cta-content h2 {
+                font-size: 2.2em;
             }
         }
     </style>
@@ -596,7 +701,7 @@
     <nav>
         <div class="container">
             <div class="logo-container">
-                <img src="images/logo.png" alt="Vertechions">
+                <img src="images/logo.png" alt="Vertechions Logo">
                 <span class="logo-text">Vertechions</span>
             </div>
             <ul>
@@ -606,6 +711,11 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="career-roadmaps.html">Career Guide</a></li>
             </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
@@ -891,17 +1001,41 @@
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-
             const message = `New Project Inquiry from ${data.name}%0A%0AEmail: ${data.email}%0APhone: ${data.phone}%0AService: ${data.service}%0A%0AProject Details:%0A${data.message}`;
-
             window.open(`https://wa.me/601172570041?text=${message}`, '_blank');
-
             this.reset();
             alert('Thank you! Redirecting to WhatsApp...');
         });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener('click', function () {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const nav = document.querySelector('nav');
+                if (!nav.contains(event.target)) {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 
