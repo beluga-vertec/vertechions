@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free career roadmaps and learning paths for aspiring tech professionals. Complete guides from beginner to professional.">
-    <meta name="keywords" content="career roadmap, tech careers, cloud engineer, web developer, IT career guide, learning path">
+    <meta name="description"
+        content="Free career roadmaps and learning paths for aspiring tech professionals. Complete guides from beginner to professional.">
+    <meta name="keywords"
+        content="career roadmap, tech careers, cloud engineer, web developer, IT career guide, learning path">
     <title>Career Roadmaps | Free Tech Career Guide - Vertechions</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --primary-dark: #0A0E27;
             --accent-purple: #A855F7;
@@ -27,18 +32,20 @@
             --text-gray: #9CA3AF;
             --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--primary-dark);
             color: var(--text-light);
             line-height: 1.6;
         }
-        
-        h1, h2, h3 {
+
+        h1,
+        h2,
+        h3 {
             font-family: 'Space Grotesk', sans-serif;
         }
-        
+
         /* Navigation */
         nav {
             position: fixed;
@@ -50,7 +57,7 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(168, 85, 247, 0.1);
         }
-        
+
         nav .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -59,13 +66,13 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo-container {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
+
         .logo-text {
             font-size: 1.5em;
             font-weight: 700;
@@ -74,7 +81,7 @@
             -webkit-text-fill-color: transparent;
             text-decoration: none;
         }
-        
+
         .back-btn {
             padding: 10px 25px;
             background: rgba(255, 255, 255, 0.1);
@@ -83,18 +90,18 @@
             border-radius: 30px;
             transition: all 0.3s;
         }
-        
+
         .back-btn:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-        
+
         /* Hero */
         .hero {
             padding: 120px 20px 80px;
             text-align: center;
             position: relative;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -105,14 +112,14 @@
             background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
             z-index: 0;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .hero-badge {
             display: inline-block;
             background: rgba(168, 85, 247, 0.1);
@@ -124,45 +131,45 @@
             font-weight: 600;
             margin-bottom: 30px;
         }
-        
+
         .hero h1 {
             font-size: 4em;
             margin-bottom: 25px;
             line-height: 1.2;
         }
-        
+
         .gradient-text {
             background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .hero p {
             font-size: 1.3em;
             color: var(--text-gray);
             line-height: 1.8;
             margin-bottom: 20px;
         }
-        
+
         .hero .mission {
             font-size: 1.1em;
             color: var(--accent-cyan);
             font-weight: 500;
             margin-top: 30px;
         }
-        
+
         /* How It Works */
         .how-it-works {
             padding: 80px 20px;
             background: rgba(168, 85, 247, 0.02);
         }
-        
+
         .section-title {
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-        
+
         .section-description {
             text-align: center;
             font-size: 1.1em;
@@ -170,7 +177,7 @@
             max-width: 700px;
             margin: 0 auto 60px;
         }
-        
+
         .steps-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -178,12 +185,12 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
         }
-        
+
         .step-card {
             text-align: center;
             padding: 30px;
         }
-        
+
         .step-number {
             width: 60px;
             height: 60px;
@@ -196,22 +203,22 @@
             font-weight: 700;
             margin: 0 auto 20px;
         }
-        
+
         .step-card h3 {
             font-size: 1.4em;
             margin-bottom: 15px;
         }
-        
+
         .step-card p {
             color: var(--text-gray);
             line-height: 1.7;
         }
-        
+
         /* Career Cards Grid */
         .careers {
             padding: 80px 20px;
         }
-        
+
         .careers-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -219,7 +226,7 @@
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
-        
+
         .career-card {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
             border: 2px solid rgba(168, 85, 247, 0.1);
@@ -229,8 +236,10 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        
+
         .career-card::before {
             content: '';
             position: absolute;
@@ -243,28 +252,28 @@
             transition: opacity 0.4s;
             z-index: 0;
         }
-        
+
         .career-card:hover {
             transform: translateY(-10px);
             border-color: rgba(168, 85, 247, 0.5);
             box-shadow: 0 20px 60px rgba(168, 85, 247, 0.3);
         }
-        
+
         .career-card:hover::before {
             opacity: 0.05;
         }
-        
-        .career-card > * {
+
+        .career-card>* {
             position: relative;
             z-index: 1;
         }
-        
+
         .career-icon {
             font-size: 4em;
             margin-bottom: 20px;
             display: block;
         }
-        
+
         .career-badge {
             display: inline-block;
             padding: 5px 15px;
@@ -272,43 +281,52 @@
             font-size: 0.85em;
             font-weight: 600;
             margin-bottom: 15px;
+            align-self: flex-start;
+            /* Prevents stretching */
+            width: fit-content;
+            /* Fits content width */
         }
-        
+
         .badge-beginner {
             background: rgba(16, 185, 129, 0.2);
             color: var(--accent-green);
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
-        
+
         .badge-intermediate {
             background: rgba(245, 158, 11, 0.2);
             color: var(--accent-orange);
             border: 1px solid rgba(245, 158, 11, 0.3);
         }
-        
+
         .badge-advanced {
             background: rgba(168, 85, 247, 0.2);
             color: var(--accent-purple);
             border: 1px solid rgba(168, 85, 247, 0.3);
         }
-        
+
         .career-card h3 {
             font-size: 1.8em;
             margin-bottom: 15px;
             color: white;
         }
-        
+
         .career-card p {
             color: var(--text-gray);
             margin-bottom: 25px;
             line-height: 1.7;
         }
-        
+
         .career-highlights {
             list-style: none;
             margin-bottom: 25px;
         }
-        
+
+        .career-card>.coming-soon,
+        .career-card>.view-roadmap {
+            margin-top: auto;
+        }
+
         .career-highlights li {
             padding: 8px 0;
             color: var(--text-gray);
@@ -317,14 +335,14 @@
             gap: 10px;
             font-size: 0.95em;
         }
-        
+
         .career-highlights li::before {
             content: '→';
             color: var(--accent-cyan);
             font-weight: bold;
             font-size: 1.2em;
         }
-        
+
         .coming-soon {
             display: inline-block;
             padding: 10px 25px;
@@ -335,7 +353,7 @@
             font-weight: 600;
             font-size: 0.95em;
         }
-        
+
         .view-roadmap {
             display: inline-block;
             padding: 12px 30px;
@@ -346,35 +364,35 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-        
+
         .view-roadmap:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
         }
-        
+
         /* CTA Section */
         .cta-section {
             padding: 100px 20px;
             text-align: center;
             background: rgba(168, 85, 247, 0.02);
         }
-        
+
         .cta-content {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .cta-content h2 {
             font-size: 3em;
             margin-bottom: 20px;
         }
-        
+
         .cta-content p {
             font-size: 1.2em;
             color: var(--text-gray);
             margin-bottom: 40px;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 15px 35px;
@@ -387,21 +405,21 @@
             transition: all 0.3s;
             margin: 0 10px;
         }
-        
+
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
         }
-        
+
         .btn-secondary {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Footer */
         footer {
             background: rgba(10, 14, 39, 0.8);
@@ -409,37 +427,37 @@
             text-align: center;
             border-top: 1px solid rgba(168, 85, 247, 0.1);
         }
-        
+
         footer p {
             color: var(--text-gray);
         }
-        
+
         /* Mobile */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5em;
             }
-            
+
             .hero p {
                 font-size: 1.1em;
             }
-            
+
             .careers-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .steps-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .section-title {
                 font-size: 2em;
             }
-            
+
             .cta-content h2 {
                 font-size: 2em;
             }
-            
+
             .btn {
                 display: block;
                 margin: 10px auto;
@@ -447,6 +465,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -464,7 +483,7 @@
                 Your Roadmap to a <span class="gradient-text">Tech Career</span>
             </h1>
             <p data-aos="fade-up" data-aos-delay="200">
-                Complete learning paths for aspiring tech professionals. From absolute beginner 
+                Complete learning paths for aspiring tech professionals. From absolute beginner
                 to job-ready professional—every step mapped out for you.
             </p>
             <p data-aos="fade-up" data-aos-delay="300">
@@ -512,21 +531,6 @@
         </p>
 
         <div class="careers-grid">
-            <!-- Web Developer -->
-            <div class="career-card" data-aos="fade-up" data-aos-delay="100">
-                <span class="career-icon">💻</span>
-                <span class="career-badge badge-beginner">BEGINNER FRIENDLY</span>
-                <h3>Web Developer</h3>
-                <p>Build websites and web applications that millions of people use every day</p>
-                <ul class="career-highlights">
-                    <li>Start from zero coding knowledge</li>
-                    <li>High demand in job market</li>
-                    <li>Work remotely or freelance</li>
-                    <li>See your work come to life instantly</li>
-                </ul>
-                <span class="coming-soon">Roadmap Coming Soon</span>
-            </div>
-
             <!-- IT Support -->
             <div class="career-card" data-aos="fade-up" data-aos-delay="200">
                 <span class="career-icon">🛠️</span>
@@ -540,6 +544,51 @@
                     <li>Clear progression path</li>
                 </ul>
                 <a href="career-roadmaps/it-support.html" class="view-roadmap">View Complete Roadmap →</a>
+            </div>
+
+            <!-- Web Developer -->
+            <div class="career-card" data-aos="fade-up" data-aos-delay="100">
+                <span class="career-icon">💻</span>
+                <span class="career-badge badge-beginner">BEGINNER FRIENDLY</span>
+                <h3>Web Developer</h3>
+                <p>Build websites and web applications that millions of people use every day</p>
+                <ul class="career-highlights">
+                    <li>Start from zero coding knowledge</li>
+                    <li>High demand in job market</li>
+                    <li>Work remotely or freelance</li>
+                    <li>See your work come to life instantly</li>
+                </ul>
+                <a href="career-roadmaps/web-developer.html" class="view-roadmap">View Complete Roadmap →</a>
+            </div>
+
+            <!-- System Administrator -->
+            <div class="career-card" data-aos="fade-up" data-aos-delay="100">
+                <span class="career-icon">🖥️</span>
+                <span class="career-badge badge-beginner">BEGINNER FRIENDLY</span>
+                <h3>System Administrator</h3>
+                <p>Manage servers, systems and infrastructure that keep businesses running</p>
+                <ul class="career-highlights">
+                    <li>Foundation for many tech roles</li>
+                    <li>Linux and Windows servers</li>
+                    <li>Automation and scripting</li>
+                    <li>Stable career path</li>
+                </ul>
+                <span class="coming-soon">Roadmap Coming Soon</span>
+            </div>
+
+            <!-- Database Administrator -->
+            <div class="career-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="career-icon">🗄️</span>
+                <span class="career-badge badge-intermediate">INTERMEDIATE</span>
+                <h3>Database Administrator</h3>
+                <p>Manage and optimize the databases that store critical business data</p>
+                <ul class="career-highlights">
+                    <li>Work with SQL and NoSQL</li>
+                    <li>Ensure data integrity</li>
+                    <li>Performance tuning</li>
+                    <li>Business-critical role</li>
+                </ul>
+                <span class="coming-soon">Roadmap Coming Soon</span>
             </div>
 
             <!-- Cloud Engineer -->
@@ -562,7 +611,7 @@
                 <span class="career-icon">🌐</span>
                 <span class="career-badge badge-intermediate">INTERMEDIATE</span>
                 <h3>Network Engineer</h3>
-                <p>Design, implement, and maintain the networks that connect the world</p>
+                <p>Design, implement and maintain the networks that connect the world</p>
                 <ul class="career-highlights">
                     <li>Build network infrastructure</li>
                     <li>Secure and optimize connections</li>
@@ -592,42 +641,12 @@
                 <span class="career-icon">📞</span>
                 <span class="career-badge badge-advanced">SPECIALIZED</span>
                 <h3>VoIP / UC Engineer</h3>
-                <p>Build modern communication systems with VoIP, PBX, and unified communications</p>
+                <p>Build modern communication systems with VoIP, PBX and unified communications</p>
                 <ul class="career-highlights">
-                    <li>Specialized niche with less competition</li>
+                    <li>Specialized niche</li>
                     <li>Work with telephony systems</li>
                     <li>PBX, SBC, SIP protocols</li>
                     <li>High-value skillset</li>
-                </ul>
-                <span class="coming-soon">Roadmap Coming Soon</span>
-            </div>
-
-            <!-- System Administrator -->
-            <div class="career-card" data-aos="fade-up" data-aos-delay="100">
-                <span class="career-icon">🖥️</span>
-                <span class="career-badge badge-beginner">BEGINNER FRIENDLY</span>
-                <h3>System Administrator</h3>
-                <p>Manage servers, systems, and infrastructure that keep businesses running</p>
-                <ul class="career-highlights">
-                    <li>Foundation for many tech roles</li>
-                    <li>Linux and Windows servers</li>
-                    <li>Automation and scripting</li>
-                    <li>Stable career path</li>
-                </ul>
-                <span class="coming-soon">Roadmap Coming Soon</span>
-            </div>
-
-            <!-- Database Administrator -->
-            <div class="career-card" data-aos="fade-up" data-aos-delay="200">
-                <span class="career-icon">🗄️</span>
-                <span class="career-badge badge-intermediate">INTERMEDIATE</span>
-                <h3>Database Administrator</h3>
-                <p>Manage and optimize the databases that store critical business data</p>
-                <ul class="career-highlights">
-                    <li>Work with SQL and NoSQL</li>
-                    <li>Ensure data integrity</li>
-                    <li>Performance tuning</li>
-                    <li>Business-critical role</li>
                 </ul>
                 <span class="coming-soon">Roadmap Coming Soon</span>
             </div>
@@ -637,7 +656,7 @@
                 <span class="career-icon">🔧</span>
                 <span class="career-badge badge-advanced">ADVANCED</span>
                 <h3>Site Reliability Engineer</h3>
-                <p>Ensure systems are reliable, scalable, and performing at peak efficiency</p>
+                <p>Ensure systems are reliable, scalable and performing at peak efficiency</p>
                 <ul class="career-highlights">
                     <li>Build resilient systems</li>
                     <li>Monitoring and observability</li>
@@ -656,9 +675,8 @@
             <p>
                 Have questions? Need guidance? We're here to help you succeed.
             </p>
-            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20the%20Career%20Roadmaps%20guide" 
-               target="_blank" 
-               class="btn">
+            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20interested%20in%20the%20Career%20Roadmaps%20guide"
+                target="_blank" class="btn">
                 Get Free Guidance →
             </a>
             <a href="index.html#contact" class="btn btn-secondary">
@@ -683,4 +701,5 @@
         });
     </script>
 </body>
+
 </html>
