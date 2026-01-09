@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Complete System Administrator career roadmap. Learn everything you need to become a professional System Administrator from scratch.">
+    <title>System Administrator Roadmap | Complete Career Guide - Vertechions</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --accent-green: #10B981;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .back-btn {
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        /* Overview Section */
+        .overview {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .overview-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+
+        .overview-text {
+            font-size: 1.1em;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .key-facts {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .key-facts h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .fact-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 10px;
+        }
+
+        .fact-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .fact-value {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+
+        /* Career Path */
+        .career-path {
+            padding: 80px 20px;
+        }
+
+        .path-timeline {
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .path-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
+            transform: translateX(-50%);
+        }
+
+        .path-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 60px;
+            position: relative;
+            align-items: center;
+        }
+
+        .path-step:nth-child(even) .step-content {
+            grid-column: 1;
+            text-align: right;
+        }
+
+        .path-step:nth-child(even) .step-years {
+            grid-column: 2;
+        }
+
+        .path-step:nth-child(odd) .step-content {
+            grid-column: 2;
+        }
+
+        .path-step:nth-child(odd) .step-years {
+            grid-column: 1;
+            justify-content: flex-end;
+        }
+
+        .step-marker {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            border: 4px solid var(--primary-dark);
+            z-index: 10;
+        }
+
+        .step-content {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .step-content h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .step-years {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Learning Path */
+        .learning-path {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+
+        .phase {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .phase-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        .phase-info h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .phase-duration {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .topic {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .topic h4 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .topic-details {
+            display: grid;
+            gap: 15px;
+        }
+
+        .detail-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+        }
+
+        .detail-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .detail-content {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .resources-list {
+            list-style: none;
+        }
+
+        .resources-list li {
+            padding: 8px 0;
+            color: var(--text-gray);
+        }
+
+        .resources-list li::before {
+            content: '→ ';
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            padding: 80px 20px;
+        }
+
+        .stack-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .stack-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .stack-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stack-items {
+            list-style: none;
+        }
+
+        .stack-items li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stack-items li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Projects */
+        .projects {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+
+        .projects-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            gap: 30px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-icon {
+            font-size: 2.5em;
+        }
+
+        .project-card h3 {
+            font-size: 1.6em;
+        }
+
+        .project-description {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--accent-purple);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        /* Resources */
+        .resources {
+            padding: 80px 20px;
+        }
+
+        .resources-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .resource-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+            color: var(--text-gray);
+        }
+
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 100px 20px;
+            text-align: center;
+            background: rgba(168, 85, 247, 0.02);
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.2em;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .overview-content {
+                grid-template-columns: 1fr;
+            }
+
+            .path-timeline::before {
+                left: 20px;
+            }
+
+            .path-step {
+                grid-template-columns: 1fr;
+                padding-left: 50px;
+            }
+
+            .path-step:nth-child(even) .step-content,
+            .path-step:nth-child(odd) .step-content {
+                grid-column: 1;
+                text-align: left;
+            }
+
+            .path-step:nth-child(even) .step-years,
+            .path-step:nth-child(odd) .step-years {
+                grid-column: 1;
+                text-align: left;
+            }
+
+            .step-marker {
+                left: 20px;
+            }
+
+            .detail-row {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-text">Vertechions</a>
+            <a href="../career-roadmaps.html" class="back-btn">← Back to Roadmaps</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div data-aos="fade-up">
+            <div class="hero-icon">🖥️</div>
+            <div class="hero-badge">BEGINNER FRIENDLY</div>
+            <h1>System Administrator <span class="gradient-text">Roadmap</span></h1>
+            <p class="hero-description">
+                Your complete guide to becoming a System Administrator. <br>Manage servers, systems and
+                infrastructure that keep businesses running smoothly. A foundational role for many tech careers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-content">
+                <div data-aos="fade-right">
+                    <h2 class="section-title">What is System Administration?</h2>
+                    <p class="overview-text">
+                        System Administrators (SysAdmins) are the backbone of IT infrastructure. You'll manage
+                        servers (both Linux and Windows), ensure systems are running smoothly, handle user accounts,
+                        implement security policies and automate routine tasks to keep everything operational.
+                    </p>
+                    <p class="overview-text">
+                        This role is perfect if you enjoy problem-solving, like working with both hardware and
+                        software and want a stable career path with clear progression. SysAdmins are needed in
+                        every industry — from startups to Fortune 500 companies.
+                    </p>
+                    <p class="overview-text">
+                        The beauty of this role is that it's a gateway to many advanced positions: Cloud Engineer,
+                        DevOps Engineer, Infrastructure Architect or IT Management. You'll build skills that are
+                        always in demand and highly transferable.
+                    </p>
+                </div>
+
+                <div class="key-facts" data-aos="fade-left">
+                    <h3>Key Facts</h3>
+                    <div class="fact-item">
+                        <div class="fact-label">Entry Level</div>
+                        <div class="fact-value">Beginner-friendly path</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Coding Required</div>
+                        <div class="fact-value">Scripting (optional but helpful)</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Learning Time</div>
+                        <div class="fact-value">6-9 months to job-ready</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Work Style</div>
+                        <div class="fact-value">Hands-on, problem-solving</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Career Stability</div>
+                        <div class="fact-value">High demand, stable path</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Path -->
+    <section class="career-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Career Progression Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
+                data-aos="fade-up">
+                Your journey from beginner to expert
+            </p>
+
+            <div class="path-timeline">
+                <!-- Step 1 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">0-1 Years</div>
+                    <div class="step-content">
+                        <h3>Junior System Administrator</h3>
+                        <p>Manage user accounts, handle basic server tasks, perform routine maintenance and learn system
+                            administration fundamentals.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>System Administrator</h3>
+                        <p>Manage multiple servers independently, implement automation, handle security, perform
+                            upgrades and troubleshoot complex issues.</p>
+                    </div>
+                    <div class="step-years">1-3 Years</div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">3-5 Years</div>
+                    <div class="step-content">
+                        <h3>Senior System Administrator</h3>
+                        <p>Lead infrastructure projects, architect solutions, mentor juniors, implement enterprise-grade
+                            systems and optimize performance.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h3>Specialization Options</h3>
+                        <p>Branch into Cloud Engineering, DevOps, Infrastructure Architecture, Security Engineering or
+                            IT Management based on your interests.</p>
+                    </div>
+                    <div class="step-years">5+ Years</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Complete Learning Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
+                data-aos="fade-up">
+                Follow this step-by-step roadmap to become job-ready
+            </p>
+
+            <!-- Phase 1 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">1</div>
+                    <div class="phase-info">
+                        <h3>Linux Fundamentals</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Linux Basics & Command Line</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Linux distributions (Ubuntu, CentOS, RHEL), file system hierarchy, basic commands (ls,
+                                cd, cp, mv, rm),
+                                file permissions (chmod, chown), text editors (vim, nano), package management (apt,
+                                yum),
+                                process management (ps, top, kill)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Linux Journey (comprehensive free course)</li>
+                                    <li>Ubuntu tutorials and documentation</li>
+                                    <li>Linux Command Line Basics (Udemy free course)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Install Ubuntu on VirtualBox, practice 100+ commands, create users and groups,
+                                manage file permissions, navigate entire file system
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>User & Group Management</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Creating and managing users (useradd, usermod, userdel), group management (groupadd,
+                                groupmod),
+                                sudo privileges and sudoers file, password policies, user authentication, /etc/passwd
+                                and /etc/shadow
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Linux user management tutorials</li>
+                                    <li>Ubuntu Server Guide</li>
+                                    <li>Red Hat documentation (free)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create 10+ users with different permissions, configure sudo access, set up shared
+                                directories
+                                with group permissions, implement password policies
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Networking Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                TCP/IP fundamentals, IP addressing and subnetting, DNS configuration, network
+                                configuration
+                                (ifconfig, ip), ping, traceroute, netstat, SSH configuration and usage, firewall basics
+                                (iptables, ufw)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>NetworkChuck YouTube tutorials</li>
+                                    <li>Linux networking documentation</li>
+                                    <li>CompTIA Network+ study materials</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure static IP addresses, set up SSH access, configure firewall rules,
+                                set up local DNS, troubleshoot network connectivity
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">2</div>
+                    <div class="phase-info">
+                        <h3>Server Management & Services</h3>
+                        <div class="phase-duration">Duration: 8-10 weeks</div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Web Servers (Apache & Nginx)</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Apache installation and configuration, virtual hosts, Nginx basics, reverse proxy setup,
+                                SSL/TLS certificates (Let's Encrypt), load balancing basics, web server security
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Apache official documentation</li>
+                                    <li>Nginx beginner's guide</li>
+                                    <li>Digital Ocean tutorials (excellent quality)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Host multiple websites on one server, configure SSL certificates, set up reverse proxy,
+                                implement basic security hardening
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Database Management</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                MySQL/PostgreSQL installation, database creation and management, user privileges,
+                                backup and restore (mysqldump, pg_dump), basic SQL queries, database security,
+                                performance tuning basics
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>MySQL official documentation</li>
+                                    <li>PostgreSQL tutorial</li>
+                                    <li>Database administration crash course</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Install and configure MySQL, create databases and users, implement automated backups,
+                                practice restore procedures, secure database access
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>System Monitoring & Logging</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Log file locations (/var/log), viewing logs (tail, grep, less), system monitoring tools
+                                (top, htop, vmstat, iostat), disk usage monitoring (df, du), setting up monitoring
+                                alerts,
+                                log rotation
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Linux logging and monitoring guide</li>
+                                    <li>System monitoring tutorials</li>
+                                    <li>Open source monitoring tools documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Monitor system resources, analyze log files for issues, set up log rotation,
+                                create monitoring dashboards, configure alerts for critical events
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Backup & Recovery</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Backup strategies (full, incremental, differential), backup tools (rsync, tar, dump),
+                                automated backup scripts, backup verification, disaster recovery planning,
+                                off-site backup solutions
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Linux backup and recovery guide</li>
+                                    <li>rsync tutorial</li>
+                                    <li>Disaster recovery best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create automated backup scripts, test restore procedures, implement 3-2-1 backup
+                                strategy,
+                                document recovery procedures
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">3</div>
+                    <div class="phase-info">
+                        <h3>Automation & Scripting</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Bash Scripting</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Bash basics (variables, loops, conditionals), script structure, input/output handling,
+                                error handling, functions, scheduling with cron, practical automation scripts
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Bash scripting tutorial</li>
+                                    <li>Linux shell scripting cookbook</li>
+                                    <li>ShellCheck (script validation tool)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Write scripts for: user creation automation, log analysis, disk cleanup,
+                                backup automation, system health checks
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Python for System Administration</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Python basics, file and directory operations, subprocess module, system information
+                                gathering,
+                                network operations, APIs for automation, scheduled tasks
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Automate the Boring Stuff (free book)</li>
+                                    <li>Python for system administrators</li>
+                                    <li>Real Python tutorials</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Build automation tools: server monitoring dashboard, automated deployment script,
+                                log parser, configuration management tool
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Configuration Management (Ansible Basics)</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Ansible fundamentals, inventory files, playbooks, modules, roles, idempotency,
+                                managing multiple servers, infrastructure as code concepts
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Ansible official documentation</li>
+                                    <li>Ansible for beginners tutorial</li>
+                                    <li>Infrastructure as code guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create playbooks for: web server deployment, user management across multiple servers,
+                                security hardening automation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">4</div>
+                    <div class="phase-info">
+                        <h3>Windows Server & Security</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Windows Server Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Windows Server installation and configuration, Active Directory basics, Group Policy,
+                                PowerShell fundamentals, Windows services, user management, file sharing (SMB)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Microsoft Learn (free courses)</li>
+                                    <li>Windows Server documentation</li>
+                                    <li>PowerShell tutorials</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Set up Windows Server VM, configure Active Directory, create users and OUs,
+                                apply Group Policies, practice PowerShell automation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>System Security</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Security best practices, firewall configuration (iptables, firewalld, Windows Firewall),
+                                SSH hardening, SELinux/AppArmor basics, security updates and patching, intrusion
+                                detection basics,
+                                security auditing
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Linux security hardening guide</li>
+                                    <li>CIS Benchmarks (security standards)</li>
+                                    <li>OWASP security guidelines</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Harden Linux server following CIS benchmarks, configure firewalls, implement fail2ban,
+                                set up automatic security updates, conduct security audit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Virtualization Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Virtualization concepts, VMware or VirtualBox, creating and managing VMs,
+                                snapshots and clones, resource allocation, networking in virtualized environments,
+                                Docker basics (containerization)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Virtualization fundamentals</li>
+                                    <li>Docker getting started guide</li>
+                                    <li>VirtualBox documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Build home lab with multiple VMs, practice VM lifecycle management,
+                                experiment with Docker containers, create network of interconnected VMs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 5 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">5</div>
+                    <div class="phase-info">
+                        <h3>Portfolio & Job Preparation</h3>
+                        <div class="phase-duration">Duration: 3-4 weeks</div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Build Your Home Lab</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Create:</div>
+                            <div class="detail-content">
+                                Complete infrastructure setup with multiple servers (web, database, monitoring),
+                                automated deployment, monitoring dashboards, documentation of entire setup,
+                                GitHub repository with all scripts
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Portfolio Items:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Home lab architecture diagram</li>
+                                    <li>Automation scripts collection</li>
+                                    <li>System administration playbooks</li>
+                                    <li>Troubleshooting documentation</li>
+                                    <li>Security hardening guide you created</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Interview Preparation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Prepare:</div>
+                            <div class="detail-content">
+                                Linux command line scenarios, troubleshooting methodologies, networking fundamentals,
+                                security best practices, scripting examples, system architecture discussions,
+                                behavioral questions
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Practice Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>System administrator interview questions</li>
+                                    <li>Linux troubleshooting scenarios</li>
+                                    <li>Mock interview practice</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="topic">
+                    <h4>Get Real Experience</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">Ways to Gain Experience:</div>
+                            <div class="detail-content">
+                                Manage servers for small businesses or non-profits, contribute to open source
+                                infrastructure
+                                projects, set up and maintain servers for side projects, offer freelance server
+                                management,
+                                participate in online communities helping others
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Where to Find Opportunities:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Local businesses needing IT help</li>
+                                    <li>Non-profit organizations</li>
+                                    <li>Open source projects needing infrastructure</li>
+                                    <li>Reddit r/sysadmin community</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Essential Tech Stack</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
+                data-aos="fade-up">
+                Master these technologies to become job-ready
+            </p>
+
+            <div class="stack-grid">
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Operating Systems</h3>
+                    <ul class="stack-items">
+                        <li>Linux (Ubuntu, CentOS, RHEL)</li>
+                        <li>Windows Server 2019/2022</li>
+                        <li>macOS (optional)</li>
+                    </ul>
+                </div>
+
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Server Services</h3>
+                    <ul class="stack-items">
+                        <li>Apache / Nginx</li>
+                        <li>MySQL / PostgreSQL</li>
+                        <li>DNS (BIND)</li>
+                        <li>DHCP</li>
+                        <li>FTP / SFTP</li>
+                        <li>Email servers</li>
+                    </ul>
+                </div>
+
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Scripting & Automation</h3>
+                    <ul class="stack-items">
+                        <li>Bash scripting</li>
+                        <li>Python</li>
+                        <li>PowerShell</li>
+                        <li>Ansible (basics)</li>
+                        <li>Cron jobs</li>
+                    </ul>
+                </div>
+
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Networking</h3>
+                    <ul class="stack-items">
+                        <li>TCP/IP</li>
+                        <li>DNS & DHCP</li>
+                        <li>Firewall (iptables, firewalld)</li>
+                        <li>SSH</li>
+                        <li>VPN basics</li>
+                    </ul>
+                </div>
+
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Monitoring & Logging</h3>
+                    <ul class="stack-items">
+                        <li>System logs</li>
+                        <li>Monitoring tools (Nagios, Zabbix)</li>
+                        <li>Log analysis</li>
+                        <li>Performance monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Virtualization & Containers</h3>
+                    <ul class="stack-items">
+                        <li>VirtualBox / VMware</li>
+                        <li>Docker basics</li>
+                        <li>KVM (optional)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Portfolio Projects to Build</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
+                data-aos="fade-up">
+                Build these projects to showcase your skills to employers
+            </p>
+
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">🏗️</div>
+                        <h3>Complete Home Lab Infrastructure</h3>
+                    </div>
+                    <p class="project-description">
+                        Build a multi-server environment with web server, database server, monitoring server and backup
+                        server.
+                        Document architecture, implement automation and create disaster recovery plan.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">Virtualization</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Documentation</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <h3>Automated System Deployment</h3>
+                    </div>
+                    <p class="project-description">
+                        Create Ansible playbooks that automatically deploy and configure LAMP/LEMP stack, including
+                        security
+                        hardening, monitoring setup and backup configuration. Make it fully automated and idempotent.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Configuration Management</span>
+                        <span class="skill-tag">Security</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <h3>System Monitoring Dashboard</h3>
+                    </div>
+                    <p class="project-description">
+                        Set up comprehensive monitoring with Nagios or Zabbix, create custom checks, configure alerts,
+                        and build dashboard showing system health. Include log aggregation and analysis.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Monitoring</span>
+                        <span class="skill-tag">Logging</span>
+                        <span class="skill-tag">Alerting</span>
+                        <span class="skill-tag">Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">🔒</div>
+                        <h3>Security Hardening Implementation</h3>
+                    </div>
+                    <p class="project-description">
+                        Harden Linux servers following CIS benchmarks, implement firewall rules, configure fail2ban,
+                        set up intrusion detection and create security audit scripts. Document every step.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Security</span>
+                        <span class="skill-tag">Firewall</span>
+                        <span class="skill-tag">Auditing</span>
+                        <span class="skill-tag">Best Practices</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">💾</div>
+                        <h3>Disaster Recovery System</h3>
+                    </div>
+                    <p class="project-description">
+                        Implement complete backup and disaster recovery solution with automated backups, off-site
+                        replication,
+                        documented recovery procedures and tested restore processes. Include monitoring and alerting.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Backup</span>
+                        <span class="skill-tag">Recovery</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Testing</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">📝</div>
+                        <h3>System Administration Toolkit</h3>
+                    </div>
+                    <p class="project-description">
+                        Create collection of Bash and Python scripts for common sysadmin tasks: user management,
+                        log analysis, system health checks, automated reports. Publish on GitHub with documentation.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Free Learning Resources</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
+                data-aos="fade-up">
+                Best free resources to master system administration
+            </p>
+
+            <div class="resources-grid">
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>🎓 Complete Courses</h3>
+                    <ul class="resource-list">
+                        <li>Linux Journey (complete Linux course)</li>
+                        <li>edX Linux Foundation courses</li>
+                        <li>Coursera System Administration</li>
+                        <li>Red Hat free training</li>
+                        <li>Microsoft Learn (Windows Server)</li>
+                    </ul>
+                </div>
+
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>📺 YouTube Channels</h3>
+                    <ul class="resource-list">
+                        <li>NetworkChuck</li>
+                        <li>Learn Linux TV</li>
+                        <li>Chris Titus Tech</li>
+                        <li>TechWorld with Nana</li>
+                        <li>PowerCert Animated Videos</li>
+                    </ul>
+                </div>
+
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>📖 Documentation</h3>
+                    <ul class="resource-list">
+                        <li>Ubuntu Server Guide</li>
+                        <li>Red Hat documentation</li>
+                        <li>Arch Wiki (excellent resource)</li>
+                        <li>Microsoft Docs</li>
+                        <li>DigitalOcean tutorials</li>
+                    </ul>
+                </div>
+
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>💻 Practice Platforms</h3>
+                    <ul class="resource-list">
+                        <li>VirtualBox (free VMs)</li>
+                        <li>Linux distribution ISOs</li>
+                        <li>OverTheWire (security games)</li>
+                        <li>Vagrant (environment automation)</li>
+                        <li>AWS Free Tier (cloud practice)</li>
+                    </ul>
+                </div>
+
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>💬 Communities</h3>
+                    <ul class="resource-list">
+                        <li>Reddit r/sysadmin</li>
+                        <li>Reddit r/linuxadmin</li>
+                        <li>Stack Exchange ServerFault</li>
+                        <li>Discord server admin communities</li>
+                        <li>Local Linux user groups</li>
+                    </ul>
+                </div>
+
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>📚 Books (Free)</h3>
+                    <ul class="resource-list">
+                        <li>The Linux Command Line (free PDF)</li>
+                        <li>Linux System Administration Handbook</li>
+                        <li>Bash Guide for Beginners</li>
+                        <li>Automate the Boring Stuff (Python)</li>
+                        <li>UNIX and Linux System Administration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Ready to Start Your SysAdmin Journey?</h2>
+            <p>
+                Have questions about this roadmap? Need guidance on your learning path?
+                We're here to help you succeed.
+            </p>
+            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20following%20the%20System%20Administrator%20roadmap%20and%20have%20questions"
+                target="_blank" class="btn">
+                Get Free Guidance →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+        <p style="margin-top: 10px;">Empowering the next generation of tech professionals 💜</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>
