@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete Network Engineer career roadmap. Learn everything you need to become a professional Network Engineer from scratch.">
+    <title>Network Engineer Roadmap | Complete Career Guide - Vertechions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --accent-green: #10B981;
+            --accent-orange: #F59E0B;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent-orange);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-description {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        
+        /* Overview Section */
+        .overview {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .overview-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+        
+        .overview-text {
+            font-size: 1.1em;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .key-facts {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+        }
+        
+        .key-facts h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .fact-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 10px;
+        }
+        
+        .fact-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .fact-value {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+        
+        /* Career Path */
+        .career-path {
+            padding: 80px 20px;
+        }
+        
+        .path-timeline {
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .path-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
+        }
+        
+        .path-step {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 60px;
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .step-marker {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            border: 4px solid var(--primary-dark);
+            z-index: 10;
+        }
+        
+        .step-content {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        .step-content h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        
+        .step-years {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        /* Learning Path */
+        .learning-path {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .phase {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .phase-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        .phase-info h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .phase-duration {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        
+        .topic {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-purple);
+        }
+        
+        .topic h4 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .topic-details {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .detail-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+        }
+        
+        .detail-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        
+        .detail-content {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+        
+        .resources-list {
+            list-style: none;
+        }
+        
+        .resources-list li {
+            padding: 8px 0;
+            color: var(--text-gray);
+        }
+        
+        .resources-list li::before {
+            content: '→ ';
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            padding: 80px 20px;
+        }
+        
+        .stack-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .stack-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .stack-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .stack-items {
+            list-style: none;
+        }
+        
+        .stack-items li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .stack-items li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Projects */
+        .projects {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .projects-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .project-icon {
+            font-size: 2.5em;
+        }
+        
+        .project-card h3 {
+            font-size: 1.6em;
+        }
+        
+        .project-description {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--accent-purple);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        /* Resources */
+        .resources {
+            padding: 80px 20px;
+        }
+        
+        .resources-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .resource-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .resource-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        
+        .resource-list {
+            list-style: none;
+        }
+        
+        .resource-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+            color: var(--text-gray);
+        }
+        
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 100px 20px;
+            text-align: center;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.2em;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .overview-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-text">Vertechions</a>
+            <a href="../career-roadmaps.html" class="back-btn">← Back to Roadmaps</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div data-aos="fade-up">
+            <div class="hero-icon">🌐</div>
+            <div class="hero-badge">INTERMEDIATE</div>
+            <h1>Network Engineer <span class="gradient-text">Roadmap</span></h1>
+            <p class="hero-description">
+                Your complete guide to becoming a Network Engineer. <br>Design, implement and maintain the 
+                networks that connect the world.<br>A critical role in every organization.
+            </p>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-content">
+                <div data-aos="fade-right">
+                    <h2 class="section-title">What is Network Engineering?</h2>
+                    <p class="overview-text">
+                        Network Engineers design, implement and maintain the network infrastructure that enables 
+                        communication within and between organizations. You'll work with routers, switches, firewalls, 
+                        wireless systems and configure protocols that ensure data flows securely and efficiently.
+                    </p>
+                    <p class="overview-text">
+                        This role combines deep technical knowledge with problem-solving skills. You'll troubleshoot 
+                        connectivity issues, optimize network performance, implement security policies, design network 
+                        architectures and ensure high availability for business-critical systems.
+                    </p>
+                    <p class="overview-text">
+                        Network Engineers are essential to every organization—from small businesses to global enterprises. 
+                        As everything becomes more connected (IoT, cloud, 5G), the demand for skilled network professionals 
+                        continues to grow. This career offers excellent stability, clear progression and opportunities to 
+                        specialize in areas like security, wireless or cloud networking.
+                    </p>
+                </div>
+                
+                <div class="key-facts" data-aos="fade-left">
+                    <h3>Key Facts</h3>
+                    <div class="fact-item">
+                        <div class="fact-label">Entry Level</div>
+                        <div class="fact-value">Intermediate (IT basics helpful)</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Coding Required</div>
+                        <div class="fact-value">Scripting helpful (Python)</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Learning Time</div>
+                        <div class="fact-value">8-12 months to job-ready</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Work Style</div>
+                        <div class="fact-value">Hands-on, problem-solving</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Career Stability</div>
+                        <div class="fact-value">Very high, always needed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Path -->
+    <section class="career-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Career Progression Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Your journey from beginner to expert
+            </p>
+            
+            <div class="path-timeline">
+                <!-- Step 1 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">0-1 Years</div>
+                    <div class="step-content">
+                        <h3>Junior Network Engineer</h3>
+                        <p>Learn networking fundamentals, configure basic switches and routers, troubleshoot connectivity issues, assist with network maintenance.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">1-3 Years</div>
+                    <div class="step-content">
+                        <h3>Network Engineer</h3>
+                        <p>Design and implement network solutions, configure VLANs and routing protocols, manage firewalls, optimize network performance independently.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">3-5 Years</div>
+                    <div class="step-content">
+                        <h3>Senior Network Engineer</h3>
+                        <p>Architect complex networks, lead infrastructure projects, implement advanced security, mentor juniors, handle multi-site networks.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">5-8 Years</div>
+                    <div class="step-content">
+                        <h3>Network Architect / Lead Engineer</h3>
+                        <p>Design enterprise network architectures, set standards, lead network team, make strategic technology decisions for organization.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">8+ Years</div>
+                    <div class="step-content">
+                        <h3>Specialization Options</h3>
+                        <p>Branch into Network Security Engineer, Cloud Network Specialist, Wireless Expert, SD-WAN Architect or Network Manager/Director.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Complete Learning Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Follow this step-by-step roadmap to become job-ready
+            </p>
+            
+            <!-- Phase 1 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">1</div>
+                    <div class="phase-info">
+                        <h3>Networking Fundamentals</h3>
+                        <div class="phase-duration">Duration: 8-10 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>OSI Model & TCP/IP</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                7 layers of OSI model (Physical, Data Link, Network, Transport, Session, Presentation, Application), 
+                                TCP/IP model (4 layers), protocols at each layer, encapsulation and de-encapsulation, 
+                                how data flows through network, troubleshooting using OSI model
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>NetworkChuck YouTube (OSI model)</li>
+                                    <li>Professor Messer Network+ series</li>
+                                    <li>Cisco Networking Academy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Use Wireshark to capture and analyze packets, identify protocols at each layer, 
+                                trace data flow through network stack
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>IP Addressing & Subnetting</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                IPv4 addressing, classes (A, B, C), public vs private IPs, subnet masks, CIDR notation, 
+                                subnetting calculations, VLSM (Variable Length Subnet Masks), supernetting, IPv6 basics, 
+                                IPv6 addressing format
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Subnetting Made Easy (YouTube)</li>
+                                    <li>Subnet calculator and practice</li>
+                                    <li>IPv6 fundamentals course</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Practice subnetting 100+ problems manually, design subnet schemes for organizations, 
+                                work with IPv6 addresses, use subnet calculators for verification
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Network Devices & Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Hubs vs switches vs routers, network interface cards (NICs), cables (Ethernet, fiber), 
+                                wireless basics, MAC addresses, ARP (Address Resolution Protocol), broadcast domains, 
+                                collision domains, network topologies
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Network devices explained (YouTube)</li>
+                                    <li>Networking basics course</li>
+                                    <li>Practical networking tutorials</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Build home network with router and switch, configure devices, 
+                                use packet tracer simulations, document network topology
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 2 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">2</div>
+                    <div class="phase-info">
+                        <h3>Switching & VLANs</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Switch Configuration & VLANs</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Cisco IOS basics, switch CLI navigation, port configuration, VLANs (Virtual LANs), 
+                                trunk ports vs access ports, VLAN tagging (802.1Q), inter-VLAN routing, 
+                                port security, MAC address tables
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Cisco CCNA 200-301 course (free resources)</li>
+                                    <li>GNS3 or Packet Tracer tutorials</li>
+                                    <li>VLAN configuration guides</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Use GNS3 or Packet Tracer to configure switches, create multiple VLANs, 
+                                configure trunk links, implement port security, troubleshoot VLAN issues
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Spanning Tree Protocol (STP)</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Why STP is needed (loop prevention), STP operation, root bridge election, 
+                                port states (blocking, listening, learning, forwarding), RSTP (Rapid STP), 
+                                PortFast and BPDU Guard, STP troubleshooting
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>STP explained (NetworkChuck)</li>
+                                    <li>Spanning Tree Protocol deep dive</li>
+                                    <li>Cisco documentation on STP</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create redundant switch topologies, configure STP root bridge, 
+                                verify STP operation, test failover scenarios, implement RSTP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>EtherChannel & Link Aggregation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Link aggregation concepts, EtherChannel (Port Channel), LACP (Link Aggregation Control Protocol), 
+                                PAgP (Port Aggregation Protocol), load balancing methods, configuring EtherChannel, 
+                                troubleshooting bundled links
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>EtherChannel configuration guide</li>
+                                    <li>LACP vs PAgP comparison</li>
+                                    <li>Link aggregation tutorials</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure EtherChannel between switches, test load balancing, 
+                                verify redundancy, troubleshoot misconfigurations
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 3 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">3</div>
+                    <div class="phase-info">
+                        <h3>Routing Protocols</h3>
+                        <div class="phase-duration">Duration: 8-10 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Static Routing & Default Routes</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Router basics and configuration, static routes, default routes (0.0.0.0/0), 
+                                floating static routes, route administrative distance, routing table, 
+                                longest prefix match, recursive routing lookups
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Router configuration basics</li>
+                                    <li>Static routing tutorials</li>
+                                    <li>Cisco routing fundamentals</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure routers in GNS3/Packet Tracer, create static routes between networks, 
+                                implement default routes, verify routing tables, test connectivity
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Dynamic Routing - OSPF</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                OSPF (Open Shortest Path First) basics, link-state vs distance-vector protocols, 
+                                OSPF areas (backbone, stub), router roles (DR, BDR), OSPF neighbor adjacency, 
+                                LSA types, SPF algorithm, OSPF configuration, OSPF authentication
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>OSPF explained (detailed tutorial)</li>
+                                    <li>OSPF configuration guide</li>
+                                    <li>Cisco OSPF documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure OSPF in single area, implement multi-area OSPF, verify neighbor relationships, 
+                                troubleshoot OSPF issues, optimize OSPF for large networks
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Dynamic Routing - EIGRP & BGP Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                EIGRP (Enhanced Interior Gateway Routing Protocol), EIGRP metric calculation, 
+                                feasible successor, DUAL algorithm, BGP (Border Gateway Protocol) basics, 
+                                eBGP vs iBGP, BGP path selection, AS numbers, routing protocol comparison
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>EIGRP configuration guide</li>
+                                    <li>BGP fundamentals course</li>
+                                    <li>Routing protocols comparison</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure EIGRP, implement route redistribution, configure basic BGP, 
+                                understand when to use each protocol
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Routing Protocol Troubleshooting</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Common routing issues, troubleshooting methodology, show commands (show ip route, 
+                                show ip protocols, show ip ospf neighbor), debug commands, route filtering, 
+                                route maps, prefix lists, distribute lists
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Routing troubleshooting guide</li>
+                                    <li>Common routing problems and solutions</li>
+                                    <li>Advanced routing configuration</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Practice troubleshooting broken network scenarios, use debug commands, 
+                                implement route filtering, optimize routing configurations
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 4 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">4</div>
+                    <div class="phase-info">
+                        <h3>Network Services & Security</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>DHCP, DNS & NAT</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                DHCP (Dynamic Host Configuration Protocol), DHCP discover/offer/request/ack process, 
+                                DHCP relay, DNS (Domain Name System), DNS query process, DNS records (A, AAAA, CNAME, MX), 
+                                NAT (Network Address Translation), PAT (Port Address Translation), static NAT vs dynamic NAT
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>DHCP explained in detail</li>
+                                    <li>DNS deep dive tutorial</li>
+                                    <li>NAT configuration guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure DHCP server on router, set up DNS server, implement NAT/PAT, 
+                                verify services with show commands, troubleshoot issues
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Access Control Lists (ACLs)</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Standard ACLs vs Extended ACLs, ACL syntax and logic, wildcard masks, 
+                                ACL placement best practices, named ACLs, applying ACLs to interfaces, 
+                                ACL troubleshooting, implicit deny, ACL ordering
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Cisco ACL configuration guide</li>
+                                    <li>ACL best practices</li>
+                                    <li>ACL examples and scenarios</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create standard and extended ACLs, apply ACLs to control traffic flow, 
+                                test ACL effectiveness, troubleshoot ACL issues, optimize ACL performance
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Network Security Basics</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Security threats and vulnerabilities, firewalls (stateful vs stateless), 
+                                IDS vs IPS, VPN concepts (site-to-site, remote access), IPsec fundamentals, 
+                                SSL/TLS VPNs, port security, DHCP snooping, ARP inspection, AAA (Authentication, Authorization, Accounting)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Network security fundamentals</li>
+                                    <li>VPN configuration tutorials</li>
+                                    <li>Cisco security best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure basic firewall rules, set up VPN tunnels, implement port security, 
+                                enable security features on switches and routers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 5 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">5</div>
+                    <div class="phase-info">
+                        <h3>Wireless & Advanced Topics</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Wireless Networking</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                WiFi standards (802.11a/b/g/n/ac/ax), frequency bands (2.4GHz, 5GHz, 6GHz), 
+                                channels and channel width, SSID and BSS, wireless security (WPA2, WPA3), 
+                                wireless controllers, roaming, site surveys, wireless troubleshooting
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Wireless networking fundamentals</li>
+                                    <li>WiFi standards explained</li>
+                                    <li>Wireless site survey guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure wireless access points, optimize channel selection, implement WPA3, 
+                                perform basic site survey, troubleshoot WiFi issues
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>WAN Technologies</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                WAN overview, leased lines, MPLS (Multiprotocol Label Switching), SD-WAN basics, 
+                                PPP (Point-to-Point Protocol), Frame Relay (legacy), Metro Ethernet, 
+                                WAN optimization, QoS (Quality of Service) fundamentals
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>WAN technologies overview</li>
+                                    <li>MPLS explained</li>
+                                    <li>SD-WAN fundamentals</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Configure PPP on serial links, understand MPLS concepts, 
+                                explore SD-WAN benefits, implement basic QoS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Network Automation & Python</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Network automation benefits, Python basics for networking, Netmiko library, 
+                                NAPALM, Ansible for network automation, REST APIs for network devices, 
+                                NETCONF/RESTCONF, network configuration management
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Network automation with Python</li>
+                                    <li>Netmiko tutorial</li>
+                                    <li>Ansible for network engineers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Write Python scripts to configure devices, use Netmiko to automate tasks, 
+                                create Ansible playbooks for network configuration
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 6 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">6</div>
+                    <div class="phase-info">
+                        <h3>Certification & Job Preparation</h3>
+                        <div class="phase-duration">Duration: 8-12 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>CCNA Certification (Highly Recommended)</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">Why CCNA:</div>
+                            <div class="detail-content">
+                                CCNA (200-301) is the industry-standard certification for network engineers. 
+                                It validates your knowledge and opens doors to job opportunities. Most network 
+                                engineer positions require or strongly prefer CCNA certification.
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Exam Coverage:</div>
+                            <div class="detail-content">
+                                Network fundamentals, network access, IP connectivity, IP services, security fundamentals, 
+                                automation and programmability. Covers everything you've learned plus some additional topics.
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Study Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Jeremy's IT Lab (complete free CCNA course)</li>
+                                    <li>David Bombal CCNA videos</li>
+                                    <li>Cisco Learning Network</li>
+                                    <li>Packet Tracer labs</li>
+                                    <li>Practice exams and flashcards</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Build Your Home Lab</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Create:</div>
+                            <div class="detail-content">
+                                Complete network topology in GNS3 with routers, switches and end devices. 
+                                Implement all protocols learned (VLANs, OSPF, ACLs, NAT, etc.). Document your 
+                                network with diagrams and configuration files. Create GitHub repository.
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Portfolio Items:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Network topology diagrams (Visio/Draw.io)</li>
+                                    <li>Configuration files and documentation</li>
+                                    <li>Troubleshooting scenarios and solutions</li>
+                                    <li>Automation scripts (Python/Ansible)</li>
+                                    <li>Technical blog posts explaining concepts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Interview Preparation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Prepare:</div>
+                            <div class="detail-content">
+                                Subnetting (practice until you can do it instantly), troubleshooting methodology, 
+                                OSI model explanation, routing protocols comparison, network design discussions, 
+                                security best practices, real-world scenarios you've worked on
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Common Questions:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>"Explain how data flows from your computer to a website"</li>
+                                    <li>"What happens when you type google.com and press Enter?"</li>
+                                    <li>"How would you troubleshoot no internet connectivity?"</li>
+                                    <li>"Difference between hub, switch and router"</li>
+                                    <li>"Explain VLANs and why we use them"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Essential Tech Stack</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Master these technologies to become job-ready
+            </p>
+            
+            <div class="stack-grid">
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Network Devices</h3>
+                    <ul class="stack-items">
+                        <li>Cisco Routers & Switches</li>
+                        <li>Firewalls (ASA, Firepower)</li>
+                        <li>Wireless Access Points</li>
+                        <li>Load Balancers</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Protocols & Technologies</h3>
+                    <ul class="stack-items">
+                        <li>TCP/IP, IPv4/IPv6</li>
+                        <li>OSPF, EIGRP, BGP</li>
+                        <li>VLANs, STP</li>
+                        <li>NAT, DHCP, DNS</li>
+                        <li>VPN (IPsec, SSL)</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Simulation & Labs</h3>
+                    <ul class="stack-items">
+                        <li>GNS3</li>
+                        <li>Cisco Packet Tracer</li>
+                        <li>EVE-NG</li>
+                        <li>Wireshark</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Monitoring & Tools</h3>
+                    <ul class="stack-items">
+                        <li>SNMP</li>
+                        <li>Syslog</li>
+                        <li>NetFlow</li>
+                        <li>Network monitoring tools</li>
+                        <li>Ping, Traceroute, Nslookup</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Automation & Scripting</h3>
+                    <ul class="stack-items">
+                        <li>Python (Netmiko, NAPALM)</li>
+                        <li>Ansible</li>
+                        <li>REST APIs</li>
+                        <li>Git/GitHub</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Documentation</h3>
+                    <ul class="stack-items">
+                        <li>Network diagrams (Visio, Draw.io)</li>
+                        <li>Configuration management</li>
+                        <li>Troubleshooting logs</li>
+                        <li>Change management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Portfolio Projects to Build</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Build these projects to showcase your skills to employers
+            </p>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">🏢</div>
+                        <h3>Enterprise Network Design</h3>
+                    </div>
+                    <p class="project-description">
+                        Design complete enterprise network for 500-person company with multiple departments. Include routers, 
+                        switches, VLANs, OSPF routing, redundancy, security. Create detailed network diagrams and documentation.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Network Design</span>
+                        <span class="skill-tag">VLANs</span>
+                        <span class="skill-tag">OSPF</span>
+                        <span class="skill-tag">Redundancy</span>
+                        <span class="skill-tag">Documentation</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">🔒</div>
+                        <h3>Secure Remote Access VPN</h3>
+                    </div>
+                    <p class="project-description">
+                        Implement site-to-site and remote access VPN solution with IPsec. Include firewall configuration, 
+                        ACLs for security, NAT traversal, authentication and monitoring. Test failover scenarios.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">VPN</span>
+                        <span class="skill-tag">IPsec</span>
+                        <span class="skill-tag">Security</span>
+                        <span class="skill-tag">Firewalls</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <h3>Network Monitoring Solution</h3>
+                    </div>
+                    <p class="project-description">
+                        Set up comprehensive network monitoring with SNMP, syslog and NetFlow. Create dashboards showing 
+                        network health, bandwidth utilization and alerts. Implement automated notifications.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">SNMP</span>
+                        <span class="skill-tag">Monitoring</span>
+                        <span class="skill-tag">NetFlow</span>
+                        <span class="skill-tag">Dashboards</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <h3>Network Automation Framework</h3>
+                    </div>
+                    <p class="project-description">
+                        Create Python-based automation toolkit using Netmiko for device configuration, backup collection, 
+                        compliance checking. Include Ansible playbooks for common tasks. Publish on GitHub.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Netmiko</span>
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">Automation</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">🔄</div>
+                        <h3>High Availability Network</h3>
+                    </div>
+                    <p class="project-description">
+                        Design network with full redundancy: dual routers with HSRP/VRRP, redundant switches with STP, 
+                        redundant links with EtherChannel. Test all failover scenarios and document recovery times.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">HSRP</span>
+                        <span class="skill-tag">Redundancy</span>
+                        <span class="skill-tag">STP</span>
+                        <span class="skill-tag">EtherChannel</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">📡</div>
+                        <h3>Wireless Network Deployment</h3>
+                    </div>
+                    <p class="project-description">
+                        Design and implement wireless network for office building. Perform site survey, optimize channel 
+                        selection, configure controller, implement WPA3 security and create guest network with captive portal.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Wireless</span>
+                        <span class="skill-tag">Site Survey</span>
+                        <span class="skill-tag">WPA3</span>
+                        <span class="skill-tag">Controller</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Free Learning Resources</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Best free resources to master network engineering
+            </p>
+            
+            <div class="resources-grid">
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>🎓 CCNA Preparation</h3>
+                    <ul class="resource-list">
+                        <li>Jeremy's IT Lab (YouTube)</li>
+                        <li>David Bombal CCNA course</li>
+                        <li>NetworkChuck CCNA playlist</li>
+                        <li>Cisco Learning Network</li>
+                        <li>Neil Anderson CCNA (Udemy free)</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>📺 YouTube Channels</h3>
+                    <ul class="resource-list">
+                        <li>NetworkChuck</li>
+                        <li>David Bombal</li>
+                        <li>Keith Barker</li>
+                        <li>CBT Nuggets (free samples)</li>
+                        <li>Professor Messer</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>📖 Documentation</h3>
+                    <ul class="resource-list">
+                        <li>Cisco Official Documentation</li>
+                        <li>Cisco Command Reference</li>
+                        <li>PacketLife Cheat Sheets</li>
+                        <li>Network protocols RFCs</li>
+                        <li>Cisco Press free chapters</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>💻 Simulation & Practice</h3>
+                    <ul class="resource-list">
+                        <li>GNS3 (free network simulator)</li>
+                        <li>Cisco Packet Tracer (free)</li>
+                        <li>EVE-NG Community Edition</li>
+                        <li>Cisco DevNet Sandboxes</li>
+                        <li>Free labs online</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>💬 Communities</h3>
+                    <ul class="resource-list">
+                        <li>Reddit r/ccna</li>
+                        <li>Reddit r/networking</li>
+                        <li>Cisco Learning Network forums</li>
+                        <li>NetworkEngineering subreddit</li>
+                        <li>Discord network communities</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>📚 Books & Guides</h3>
+                    <ul class="resource-list">
+                        <li>CCNA Official Cert Guide</li>
+                        <li>Network Warrior (O'Reilly)</li>
+                        <li>TCP/IP Illustrated</li>
+                        <li>Packet Guide to Routing</li>
+                        <li>Free networking e-books</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Ready to Start Your Network Engineering Journey?</h2>
+            <p>
+                Have questions about this roadmap? Need guidance on your networking learning path? 
+                We're here to help you succeed.
+            </p>
+            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20following%20the%20Network%20Engineer%20roadmap%20and%20have%20questions" 
+               target="_blank" 
+               class="btn">
+                Get Free Guidance →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+        <p style="margin-top: 10px;">Empowering the next generation of tech professionals 💜</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
