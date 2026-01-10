@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Complete Web Developer career roadmap. Learn everything you need to become a professional Web Developer from scratch.">
-    <title>Web Developer Roadmap | Complete Career Guide - Vertechions</title>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta name="description" content="Complete Database Administrator career roadmap. Learn everything you need to become a professional Database Administrator from scratch.">
+    <title>Database Administrator Roadmap | Complete Career Guide - Vertechions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
             --primary-dark: #0A0E27;
             --accent-purple: #A855F7;
@@ -30,21 +26,18 @@
             --text-gray: #9CA3AF;
             --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
         }
-
+        
         body {
             font-family: 'Inter', sans-serif;
             background: var(--primary-dark);
             color: var(--text-light);
             line-height: 1.6;
         }
-
-        h1,
-        h2,
-        h3,
-        h4 {
+        
+        h1, h2, h3, h4 {
             font-family: 'Space Grotesk', sans-serif;
         }
-
+        
         /* Navigation */
         nav {
             position: fixed;
@@ -56,7 +49,7 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(168, 85, 247, 0.1);
         }
-
+        
         nav .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -65,7 +58,7 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo-text {
             font-size: 1.5em;
             font-weight: 700;
@@ -74,7 +67,7 @@
             -webkit-text-fill-color: transparent;
             text-decoration: none;
         }
-
+        
         .back-btn {
             padding: 10px 25px;
             background: rgba(255, 255, 255, 0.1);
@@ -83,47 +76,47 @@
             border-radius: 30px;
             transition: all 0.3s;
         }
-
+        
         .back-btn:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-
+        
         /* Hero */
         .hero {
             padding: 120px 20px 60px;
             text-align: center;
             background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
         }
-
+        
         .hero-icon {
             font-size: 5em;
             margin-bottom: 20px;
         }
-
+        
         .hero-badge {
             display: inline-block;
-            background: rgba(16, 185, 129, 0.2);
-            color: var(--accent-green);
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent-orange);
+            border: 1px solid rgba(245, 158, 11, 0.3);
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 0.9em;
             font-weight: 600;
             margin-bottom: 20px;
         }
-
+        
         .hero h1 {
             font-size: 3.5em;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-
+        
         .gradient-text {
             background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
+        
         .hero-description {
             font-size: 1.3em;
             color: var(--text-gray);
@@ -131,80 +124,80 @@
             margin: 0 auto 30px;
             line-height: 1.8;
         }
-
+        
         /* Overview Section */
         .overview {
             padding: 80px 20px;
             background: rgba(168, 85, 247, 0.02);
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .overview-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 60px;
             align-items: start;
         }
-
+        
         .section-title {
             font-size: 2.5em;
             margin-bottom: 25px;
         }
-
+        
         .overview-text {
             font-size: 1.1em;
             color: var(--text-gray);
             line-height: 1.8;
             margin-bottom: 20px;
         }
-
+        
         .key-facts {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
             border: 1px solid rgba(168, 85, 247, 0.2);
             border-radius: 20px;
             padding: 30px;
         }
-
+        
         .key-facts h3 {
             font-size: 1.5em;
             margin-bottom: 20px;
             text-align: center;
         }
-
+        
         .fact-item {
             padding: 15px;
             margin-bottom: 15px;
             background: rgba(10, 14, 39, 0.5);
             border-radius: 10px;
         }
-
+        
         .fact-label {
             color: var(--accent-cyan);
             font-weight: 600;
             font-size: 0.9em;
             margin-bottom: 5px;
         }
-
+        
         .fact-value {
             color: var(--text-light);
             font-size: 1.1em;
         }
-
+        
         /* Career Path */
         .career-path {
             padding: 80px 20px;
         }
-
+        
         .path-timeline {
             max-width: 900px;
             margin: 40px auto;
             position: relative;
         }
-
+        
         .path-timeline::before {
             content: '';
             position: absolute;
@@ -214,22 +207,21 @@
             width: 3px;
             background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
         }
-
+        
         .path-step {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 10px;
             margin-bottom: 60px;
             position: relative;
-            align-items: center;
             padding-left: 60px;
         }
-
+        
         .step-marker {
             position: absolute;
             left: 20px;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            top: 30px;
+            transform: translateX(-50%);
             width: 30px;
             height: 30px;
             background: var(--gradient-1);
@@ -237,34 +229,32 @@
             border: 4px solid var(--primary-dark);
             z-index: 10;
         }
-
+        
         .step-content {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
             border: 1px solid rgba(168, 85, 247, 0.2);
             border-radius: 15px;
             padding: 25px;
-            text-align: left;
         }
-
+        
         .step-content h3 {
             font-size: 1.6em;
             margin-bottom: 10px;
         }
-
+        
         .step-years {
             color: var(--accent-cyan);
             font-weight: 600;
-            padding: 0;
-            margin-bottom: 10px;
             font-size: 1.1em;
+            margin-bottom: 10px;
         }
-
+        
         /* Learning Path */
         .learning-path {
             padding: 80px 20px;
             background: rgba(168, 85, 247, 0.02);
         }
-
+        
         .phase {
             max-width: 1000px;
             margin: 0 auto 50px;
@@ -273,14 +263,14 @@
             border-radius: 20px;
             padding: 40px;
         }
-
+        
         .phase-header {
             display: flex;
             align-items: center;
             gap: 20px;
             margin-bottom: 30px;
         }
-
+        
         .phase-number {
             width: 60px;
             height: 60px;
@@ -292,17 +282,17 @@
             font-size: 1.8em;
             font-weight: 700;
         }
-
+        
         .phase-info h3 {
             font-size: 2em;
             margin-bottom: 5px;
         }
-
+        
         .phase-duration {
             color: var(--accent-cyan);
             font-weight: 600;
         }
-
+        
         .topic {
             margin-bottom: 30px;
             padding: 25px;
@@ -310,54 +300,54 @@
             border-radius: 15px;
             border-left: 4px solid var(--accent-purple);
         }
-
+        
         .topic h4 {
             font-size: 1.4em;
             margin-bottom: 15px;
             color: white;
         }
-
+        
         .topic-details {
             display: grid;
             gap: 15px;
         }
-
+        
         .detail-row {
             display: grid;
             grid-template-columns: 150px 1fr;
             gap: 15px;
         }
-
+        
         .detail-label {
             color: var(--accent-cyan);
             font-weight: 600;
         }
-
+        
         .detail-content {
             color: var(--text-gray);
             line-height: 1.7;
         }
-
+        
         .resources-list {
             list-style: none;
         }
-
+        
         .resources-list li {
             padding: 8px 0;
             color: var(--text-gray);
         }
-
+        
         .resources-list li::before {
             content: '→ ';
             color: var(--accent-cyan);
             font-weight: bold;
         }
-
+        
         /* Tech Stack */
         .tech-stack {
             padding: 80px 20px;
         }
-
+        
         .stack-grid {
             max-width: 1000px;
             margin: 40px auto;
@@ -365,24 +355,24 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
-
+        
         .stack-category {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
             border: 1px solid rgba(168, 85, 247, 0.2);
             border-radius: 15px;
             padding: 30px;
         }
-
+        
         .stack-category h3 {
             font-size: 1.4em;
             margin-bottom: 20px;
             text-align: center;
         }
-
+        
         .stack-items {
             list-style: none;
         }
-
+        
         .stack-items li {
             padding: 12px;
             margin-bottom: 10px;
@@ -392,61 +382,61 @@
             align-items: center;
             gap: 10px;
         }
-
+        
         .stack-items li::before {
             content: '✓';
             color: var(--accent-green);
             font-weight: bold;
             font-size: 1.2em;
         }
-
+        
         /* Projects */
         .projects {
             padding: 80px 20px;
             background: rgba(168, 85, 247, 0.02);
         }
-
+        
         .projects-grid {
             max-width: 1000px;
             margin: 40px auto;
             display: grid;
             gap: 30px;
         }
-
+        
         .project-card {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
             border: 1px solid rgba(168, 85, 247, 0.2);
             border-radius: 15px;
             padding: 30px;
         }
-
+        
         .project-header {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-bottom: 20px;
         }
-
+        
         .project-icon {
             font-size: 2.5em;
         }
-
+        
         .project-card h3 {
             font-size: 1.6em;
         }
-
+        
         .project-description {
             color: var(--text-gray);
             margin-bottom: 20px;
             line-height: 1.7;
         }
-
+        
         .project-skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-
+        
         .skill-tag {
             background: rgba(168, 85, 247, 0.2);
             color: var(--accent-purple);
@@ -455,12 +445,12 @@
             font-size: 0.85em;
             font-weight: 600;
         }
-
+        
         /* Resources */
         .resources {
             padding: 80px 20px;
         }
-
+        
         .resources-grid {
             max-width: 1000px;
             margin: 40px auto;
@@ -468,56 +458,56 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-
+        
         .resource-category {
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
             border: 1px solid rgba(168, 85, 247, 0.2);
             border-radius: 15px;
             padding: 30px;
         }
-
+        
         .resource-category h3 {
             font-size: 1.4em;
             margin-bottom: 20px;
         }
-
+        
         .resource-list {
             list-style: none;
         }
-
+        
         .resource-list li {
             padding: 12px 0;
             border-bottom: 1px solid rgba(168, 85, 247, 0.1);
             color: var(--text-gray);
         }
-
+        
         .resource-list li:last-child {
             border-bottom: none;
         }
-
+        
         /* CTA */
         .cta-section {
             padding: 100px 20px;
             text-align: center;
             background: rgba(168, 85, 247, 0.02);
         }
-
+        
         .cta-content {
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
         .cta-content h2 {
             font-size: 3em;
             margin-bottom: 20px;
         }
-
+        
         .cta-content p {
             font-size: 1.2em;
             color: var(--text-gray);
             margin-bottom: 40px;
         }
-
+        
         .btn {
             display: inline-block;
             padding: 15px 35px;
@@ -530,12 +520,12 @@
             transition: all 0.3s;
             margin: 0 10px;
         }
-
+        
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
         }
-
+        
         /* Footer */
         footer {
             background: rgba(10, 14, 39, 0.8);
@@ -543,53 +533,27 @@
             text-align: center;
             border-top: 1px solid rgba(168, 85, 247, 0.1);
         }
-
+        
         /* Mobile */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5em;
             }
-
+            
             .overview-content {
                 grid-template-columns: 1fr;
             }
-
-            .path-timeline::before {
-                left: 20px;
-            }
-
-            .path-step {
-                grid-template-columns: 1fr;
-                padding-left: 50px;
-            }
-
-            .path-step:nth-child(even) .step-content,
-            .path-step:nth-child(odd) .step-content {
-                grid-column: 1;
-                text-align: left;
-            }
-
-            .path-step:nth-child(even) .step-years,
-            .path-step:nth-child(odd) .step-years {
-                grid-column: 1;
-                text-align: left;
-            }
-
-            .step-marker {
-                left: 20px;
-            }
-
+            
             .detail-row {
                 grid-template-columns: 1fr;
             }
-
+            
             .section-title {
                 font-size: 2em;
             }
         }
     </style>
 </head>
-
 <body>
     <!-- Navigation -->
     <nav>
@@ -602,12 +566,12 @@
     <!-- Hero -->
     <section class="hero">
         <div data-aos="fade-up">
-            <div class="hero-icon">💻</div>
-            <div class="hero-badge">BEGINNER FRIENDLY</div>
-            <h1>Web Developer <span class="gradient-text">Roadmap</span></h1>
+            <div class="hero-icon">🗄️</div>
+            <div class="hero-badge">INTERMEDIATE</div>
+            <h1>Database Administrator <span class="gradient-text">Roadmap</span></h1>
             <p class="hero-description">
-                Your complete guide to becoming a Web Developer. <br>Build websites and web applications
-                that millions use every day — from complete beginner to professional developer.
+                Your complete guide to becoming a Database Administrator. <br>Manage and optimize the databases 
+                that store critical business data. <br>A business-critical role with excellent career stability.
             </p>
         </div>
     </section>
@@ -617,45 +581,45 @@
         <div class="container">
             <div class="overview-content">
                 <div data-aos="fade-right">
-                    <h2 class="section-title">What is Web Development?</h2>
+                    <h2 class="section-title">What is Database Administration?</h2>
                     <p class="overview-text">
-                        Web Developers create the websites and web applications you use every day—from simple
-                        landing pages to complex platforms like Facebook, Netflix, or your favorite online store.
-                        You'll write code that runs in browsers and servers to bring ideas to life.
+                        Database Administrators (DBAs) are responsible for the performance, security and availability 
+                        of databases. You'll design database schemas, ensure data integrity, optimize query performance, 
+                        implement backup and recovery strategies and keep critical business data safe and accessible.
                     </p>
                     <p class="overview-text">
-                        The beauty of web development is that you see your work immediately. Write code, refresh
-                        the browser, and boom—you've created something real. Plus, you can start building projects
-                        on day one, which makes learning incredibly rewarding.
+                        This role combines technical expertise with business understanding. You'll work with both SQL 
+                        (MySQL, PostgreSQL, Oracle, SQL Server) and NoSQL databases (MongoDB, Cassandra, Redis), implement 
+                        high availability solutions and ensure databases can handle millions of transactions.
                     </p>
                     <p class="overview-text">
-                        Web development offers incredible flexibility: work as a freelancer, join startups, work
-                        remotely for companies worldwide, or build your own products. The demand is huge and growing
-                        every single day.
+                        DBAs are mission-critical to every organization. Downtime or data loss can cost companies millions, 
+                        making this a highly valued role with excellent job security. As data continues to grow exponentially, 
+                        skilled DBAs remain in constant demand.
                     </p>
                 </div>
-
+                
                 <div class="key-facts" data-aos="fade-left">
                     <h3>Key Facts</h3>
                     <div class="fact-item">
                         <div class="fact-label">Entry Level</div>
-                        <div class="fact-value">Beginner-friendly path</div>
+                        <div class="fact-value">Intermediate (IT basics helpful)</div>
                     </div>
                     <div class="fact-item">
                         <div class="fact-label">Coding Required</div>
-                        <div class="fact-value">Yes (from day one)</div>
+                        <div class="fact-value">SQL + scripting (Python/Bash)</div>
                     </div>
                     <div class="fact-item">
                         <div class="fact-label">Learning Time</div>
-                        <div class="fact-value">6-12 months to job-ready</div>
+                        <div class="fact-value">6-10 months to job-ready</div>
                     </div>
                     <div class="fact-item">
                         <div class="fact-label">Work Style</div>
-                        <div class="fact-value">Creative + logical thinking</div>
+                        <div class="fact-value">Detail-oriented, analytical</div>
                     </div>
                     <div class="fact-item">
-                        <div class="fact-label">Career Flexibility</div>
-                        <div class="fact-value">Remote, freelance, full-time</div>
+                        <div class="fact-label">Career Stability</div>
+                        <div class="fact-value">Very high, business-critical</div>
                     </div>
                 </div>
             </div>
@@ -666,59 +630,58 @@
     <section class="career-path">
         <div class="container">
             <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Career Progression Path</h2>
-            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
-                data-aos="fade-up">
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
                 Your journey from beginner to expert
             </p>
-
+            
             <div class="path-timeline">
+                <!-- Step 1 -->
                 <div class="path-step" data-aos="fade-up">
                     <div class="step-marker"></div>
                     <div class="step-years">0-1 Years</div>
                     <div class="step-content">
-                        <h3>Junior Frontend Developer</h3>
-                        <p>Build user interfaces with HTML, CSS, and JavaScript. Create responsive websites and simple
-                            interactive features.</p>
+                        <h3>Junior Database Administrator</h3>
+                        <p>Learn database fundamentals, perform basic maintenance tasks, assist with backups, monitor database health, write SQL queries.</p>
                     </div>
                 </div>
-
+                
+                <!-- Step 2 -->
                 <div class="path-step" data-aos="fade-up">
                     <div class="step-marker"></div>
-                    <div class="step-years">1-2 Years</div>
+                    <div class="step-years">1-3 Years</div>
                     <div class="step-content">
-                        <h3>Frontend Developer</h3>
-                        <p>Master React or Vue, work with APIs, build complex UIs. Create polished, performant web
-                            applications independently.</p>
+                        <h3>Database Administrator</h3>
+                        <p>Manage databases independently, optimize performance, implement security policies, handle complex queries, perform upgrades and migrations.</p>
                     </div>
                 </div>
-
+                
+                <!-- Step 3 -->
                 <div class="path-step" data-aos="fade-up">
                     <div class="step-marker"></div>
-                    <div class="step-years">2-4 Years</div>
+                    <div class="step-years">3-5 Years</div>
                     <div class="step-content">
-                        <h3>Full-Stack Developer</h3>
-                        <p>Add backend skills (Node.js, databases). Build complete applications from frontend to backend
-                            to deployment.</p>
+                        <h3>Senior Database Administrator</h3>
+                        <p>Design database architectures, lead major projects, implement high availability solutions, mentor juniors, handle disaster recovery planning.</p>
                     </div>
                 </div>
-
+                
+                <!-- Step 4 -->
                 <div class="path-step" data-aos="fade-up">
                     <div class="step-marker"></div>
-                    <div class="step-years">4+ Years</div>
+                    <div class="step-years">5-8 Years</div>
                     <div class="step-content">
-                        <h3>Senior / Lead Developer</h3>
-                        <p>Architect applications, mentor juniors, make technical decisions. Lead projects and shape
-                            product direction.</p>
+                        <h3>Lead DBA / Database Architect</h3>
+                        <p>Architect enterprise database solutions, set standards across organization, lead database team, handle complex multi-database environments.</p>
                     </div>
                 </div>
-
+                
+                <!-- Step 5 -->
                 <div class="path-step" data-aos="fade-up">
                     <div class="step-marker"></div>
-                    <div class="step-years">5+ Years</div>
+                    <div class="step-years">8+ Years</div>
                     <div class="step-content">
                         <h3>Specialization Options</h3>
-                        <p>Branch into Frontend Expert, Backend Specialist, DevOps Engineer, Solution Architect, or
-                            Engineering Manager.</p>
+                        <p>Branch into Data Engineering, Cloud Database Specialist, Database Security, Performance Tuning Expert or Database Manager/Director.</p>
                     </div>
                 </div>
             </div>
@@ -729,430 +692,477 @@
     <section class="learning-path">
         <div class="container">
             <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Complete Learning Path</h2>
-            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
-                data-aos="fade-up">
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
                 Follow this step-by-step roadmap to become job-ready
             </p>
-
+            
             <!-- Phase 1 -->
             <div class="phase" data-aos="fade-up">
                 <div class="phase-header">
                     <div class="phase-number">1</div>
                     <div class="phase-info">
-                        <h3>HTML & CSS Fundamentals</h3>
+                        <h3>SQL & Relational Database Fundamentals</h3>
                         <div class="phase-duration">Duration: 6-8 weeks</div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>HTML Basics</h4>
+                    <h4>SQL Basics & Data Querying</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                HTML structure and syntax, semantic HTML elements (header, nav, main, article, footer),
-                                forms and inputs, tables, lists, links and images, accessibility basics, HTML5 features
+                                Database concepts (tables, rows, columns), SQL syntax (SELECT, FROM, WHERE), filtering and sorting data, 
+                                JOINs (INNER, LEFT, RIGHT, FULL), aggregate functions (COUNT, SUM, AVG, MAX, MIN), GROUP BY and HAVING, 
+                                subqueries and nested queries, common table expressions (CTEs)
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>freeCodeCamp Responsive Web Design (free)</li>
-                                    <li>MDN Web Docs HTML Guide</li>
-                                    <li>HTML Crash Course by Traversy Media (YouTube)</li>
+                                    <li>Mode SQL Tutorial (comprehensive and free)</li>
+                                    <li>SQLZoo (interactive exercises)</li>
+                                    <li>freeCodeCamp SQL course (YouTube)</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build 5 simple pages: personal bio page, recipe page, simple blog post,
-                                contact form, product landing page
+                                Install MySQL or PostgreSQL locally, practice 100+ SQL queries on sample databases, 
+                                solve problems on LeetCode SQL section, create complex reports with JOINs
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>CSS Fundamentals</h4>
+                    <h4>Database Design & Normalization</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                CSS selectors and specificity, box model (margin, padding, border), colors and
-                                typography,
-                                positioning (static, relative, absolute, fixed), display and visibility, backgrounds and
-                                borders,
-                                pseudo-classes and pseudo-elements
+                                Entity-relationship (ER) diagrams, primary keys and foreign keys, normalization (1NF, 2NF, 3NF, BCNF), 
+                                denormalization when appropriate, data types and constraints, indexes fundamentals, 
+                                referential integrity, database schemas
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>CSS Tricks website</li>
-                                    <li>Kevin Powell YouTube channel</li>
-                                    <li>freeCodeCamp CSS tutorials</li>
+                                    <li>Database design tutorials (Stanford online)</li>
+                                    <li>Normalization explained (YouTube)</li>
+                                    <li>Database design best practices articles</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Style your HTML pages, recreate layouts from screenshots, build a CSS art project,
-                                create button designs with hover effects
+                                Design database schema for e-commerce system, create ER diagrams, normalize poorly designed databases, 
+                                implement schemas in MySQL/PostgreSQL
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Responsive Design & Flexbox</h4>
+                    <h4>Data Manipulation & Transactions</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Mobile-first design principles, media queries, flexible layouts, Flexbox properties
-                                (justify-content, align-items, flex-direction), responsive images and typography,
-                                viewport units (vw, vh), CSS Grid basics
+                                INSERT, UPDATE, DELETE statements, transaction management (BEGIN, COMMIT, ROLLBACK), 
+                                ACID properties (Atomicity, Consistency, Isolation, Durability), isolation levels, 
+                                stored procedures and functions, triggers, views and materialized views
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>Flexbox Froggy (game to learn Flexbox)</li>
-                                    <li>CSS Grid Garden (game)</li>
-                                    <li>Responsive Web Design tutorial (freeCodeCamp)</li>
+                                    <li>PostgreSQL documentation (transactions)</li>
+                                    <li>MySQL stored procedures tutorial</li>
+                                    <li>Database transactions explained</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build a responsive navigation bar, create a photo gallery with Flexbox,
-                                build a responsive card layout, recreate mobile and desktop versions
+                                Create stored procedures for common operations, write triggers for audit logging, 
+                                practice transaction management, create complex views
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            
             <!-- Phase 2 -->
             <div class="phase" data-aos="fade-up">
                 <div class="phase-header">
                     <div class="phase-number">2</div>
                     <div class="phase-info">
-                        <h3>JavaScript Programming</h3>
+                        <h3>Database Administration Essentials</h3>
                         <div class="phase-duration">Duration: 8-10 weeks</div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>JavaScript Basics</h4>
+                    <h4>Database Installation & Configuration</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Variables (let, const, var), data types (strings, numbers, booleans, arrays, objects),
-                                operators, conditionals (if/else, switch), loops (for, while), functions, scope,
-                                template literals, arrow functions
+                                Installing MySQL/PostgreSQL on Linux and Windows, configuration files and parameters, 
+                                memory allocation (buffer pools, cache), connection pooling, log file management, 
+                                character sets and collations, timezone configuration
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>JavaScript.info (comprehensive guide)</li>
-                                    <li>freeCodeCamp JavaScript course</li>
-                                    <li>JavaScript 30 by Wes Bos (30 projects)</li>
+                                    <li>MySQL official documentation</li>
+                                    <li>PostgreSQL administration guide</li>
+                                    <li>Database configuration best practices</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build: calculator, to-do list, number guessing game, simple quiz app,
-                                temperature converter. Solve coding challenges on freeCodeCamp.
+                                Install and configure multiple database instances, tune configuration parameters, 
+                                set up different environments (dev, staging, prod)
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>DOM Manipulation</h4>
+                    <h4>User Management & Security</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Selecting elements (querySelector, getElementById), modifying elements (innerHTML,
-                                textContent, classList), creating and removing elements, event listeners (click,
-                                input, submit), event delegation, form handling
+                                Creating users and roles, GRANT and REVOKE permissions, principle of least privilege, 
+                                authentication methods, password policies, SSL/TLS for connections, encryption at rest, 
+                                auditing and logging access, security best practices
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>JavaScript DOM Manipulation (Traversy Media)</li>
-                                    <li>MDN DOM documentation</li>
-                                    <li>Build 10 projects with vanilla JavaScript</li>
+                                    <li>Database security fundamentals</li>
+                                    <li>MySQL/PostgreSQL security guides</li>
+                                    <li>OWASP database security cheat sheet</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build interactive projects: image slider, modal popup, dropdown menu,
-                                form validation, dynamic content loading
+                                Create role-based access control system, implement least privilege, enable SSL connections, 
+                                set up audit logging, practice security hardening
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>ES6+ Modern JavaScript</h4>
+                    <h4>Backup & Recovery</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Destructuring, spread and rest operators, array methods (map, filter, reduce),
-                                async/await and Promises, modules (import/export), classes, fetch API for HTTP requests
+                                Backup types (full, incremental, differential), logical vs physical backups, 
+                                mysqldump and pg_dump, point-in-time recovery, automated backup strategies, 
+                                backup verification and testing, recovery time objective (RTO) and recovery point objective (RPO), 
+                                disaster recovery planning
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>ES6 for Everyone by Wes Bos</li>
-                                    <li>Modern JavaScript tutorial</li>
-                                    <li>JavaScript array methods explained</li>
+                                    <li>MySQL backup and recovery guide</li>
+                                    <li>PostgreSQL backup strategies</li>
+                                    <li>Database disaster recovery best practices</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build projects using APIs: weather app, movie search app, GitHub profile finder,
-                                random quote generator
+                                Implement automated backup scripts, practice full and incremental backups, 
+                                perform recovery drills, test point-in-time recovery, document procedures
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Git & GitHub</h4>
+                    <h4>Monitoring & Maintenance</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Git basics (init, add, commit, push, pull), branching and merging, GitHub workflow,
-                                pull requests, README files, GitHub Pages for hosting, .gitignore
+                                Performance monitoring tools and queries, slow query logs, connection monitoring, 
+                                disk space management, database statistics, health checks, routine maintenance tasks 
+                                (VACUUM, ANALYZE, OPTIMIZE), monitoring dashboards (Grafana, pgAdmin)
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>Git and GitHub for Beginners (freeCodeCamp)</li>
-                                    <li>Git Immersion tutorial</li>
-                                    <li>GitHub Learning Lab</li>
+                                    <li>Database monitoring best practices</li>
+                                    <li>Prometheus + Grafana for databases</li>
+                                    <li>Performance monitoring queries collection</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Create GitHub account, push all your projects to GitHub, create a portfolio website,
-                                contribute to open source (typo fixes, documentation)
+                                Set up monitoring dashboard, configure alerts, create maintenance scripts, 
+                                analyze slow query logs, implement health check procedures
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            
             <!-- Phase 3 -->
             <div class="phase" data-aos="fade-up">
                 <div class="phase-header">
                     <div class="phase-number">3</div>
                     <div class="phase-info">
-                        <h3>Frontend Framework (React)</h3>
-                        <div class="phase-duration">Duration: 8-10 weeks</div>
+                        <h3>Performance Optimization</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>React Fundamentals</h4>
+                    <h4>Query Optimization & Execution Plans</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Components and JSX, props and state, event handling, conditional rendering,
-                                lists and keys, forms in React, component lifecycle, React Hooks (useState, useEffect),
-                                create-react-app
+                                Understanding EXPLAIN and EXPLAIN ANALYZE, reading execution plans, identifying bottlenecks, 
+                                query rewriting techniques, avoiding N+1 queries, optimizing JOINs, using indexes effectively, 
+                                query hints and optimizer directives
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>React official tutorial (tic-tac-toe)</li>
-                                    <li>React course by freeCodeCamp</li>
-                                    <li>Scrimba React course (interactive)</li>
+                                    <li>Query optimization guide (Use The Index Luke)</li>
+                                    <li>EXPLAIN plan tutorials</li>
+                                    <li>SQL optimization techniques</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build React projects: to-do app with local storage, notes app, expense tracker,
-                                recipe app with search
+                                Analyze slow queries using EXPLAIN, optimize queries (10x-100x speedups), 
+                                practice on large datasets, create before/after benchmarks
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Advanced React Concepts</h4>
+                    <h4>Indexing Strategies</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                React Router for navigation, Context API for state management, custom hooks,
-                                useReducer for complex state, performance optimization (useMemo, useCallback),
-                                error boundaries, React best practices
+                                Index types (B-tree, Hash, GiST, GIN), single-column vs composite indexes, 
+                                covering indexes, partial indexes, index maintenance (rebuilding, reindexing), 
+                                when NOT to use indexes, index bloat, index-only scans
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>React Router documentation</li>
-                                    <li>Advanced React patterns</li>
-                                    <li>React Hooks in depth tutorials</li>
+                                    <li>PostgreSQL index types explained</li>
+                                    <li>MySQL indexing best practices</li>
+                                    <li>Index optimization tutorials</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build multi-page apps with React Router, e-commerce cart with Context API,
-                                dashboard with multiple features
+                                Create optimal indexes for various query patterns, measure index impact, 
+                                identify missing indexes, remove unused indexes, optimize composite indexes
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Working with APIs & External Data</h4>
+                    <h4>Database Performance Tuning</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                REST API concepts, fetch and axios, handling loading and error states,
-                                authentication basics, CORS understanding, working with JSON, API documentation reading
+                                Memory tuning (shared buffers, work_mem, effective_cache_size), connection pooling (PgBouncer, ProxySQL), 
+                                query cache configuration, table partitioning, sharding basics, read replicas, 
+                                connection limit optimization, vacuuming strategies
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>Public APIs list (GitHub)</li>
-                                    <li>REST API tutorial</li>
-                                    <li>Postman API testing tool</li>
+                                    <li>PostgreSQL performance tuning guide</li>
+                                    <li>MySQL performance optimization</li>
+                                    <li>Database scaling strategies</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build apps using real APIs: movie database app (TMDB), GitHub profile viewer,
-                                news aggregator, cryptocurrency tracker
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="topic">
-                    <h4>Styling in React</h4>
-                    <div class="topic-details">
-                        <div class="detail-row">
-                            <div class="detail-label">What to Learn:</div>
-                            <div class="detail-content">
-                                CSS Modules, styled-components or emotion, Tailwind CSS, responsive design in React,
-                                component libraries (Material-UI, Chakra UI), animations (Framer Motion)
-                            </div>
-                        </div>
-                        <div class="detail-row">
-                            <div class="detail-label">Free Resources:</div>
-                            <div class="detail-content">
-                                <ul class="resources-list">
-                                    <li>Tailwind CSS documentation</li>
-                                    <li>Styled-components tutorial</li>
-                                    <li>Material-UI documentation</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="detail-row">
-                            <div class="detail-label">Hands-On Practice:</div>
-                            <div class="detail-content">
-                                Rebuild previous projects with Tailwind, create a component library,
-                                build a dashboard with Material-UI
+                                Tune database parameters for workload, set up connection pooling, 
+                                implement table partitioning, benchmark performance improvements
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            
             <!-- Phase 4 -->
             <div class="phase" data-aos="fade-up">
                 <div class="phase-header">
                     <div class="phase-number">4</div>
                     <div class="phase-info">
-                        <h3>Backend Basics & Full-Stack</h3>
-                        <div class="phase-duration">Duration: 8-10 weeks (optional but recommended)</div>
+                        <h3>High Availability & Replication</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Node.js & Express</h4>
+                    <h4>Replication Setup & Management</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Node.js basics, npm and package management, Express.js framework, routing,
-                                middleware, REST API creation, request/response handling, error handling
+                                Master-slave replication, streaming replication (PostgreSQL), binary log replication (MySQL), 
+                                synchronous vs asynchronous replication, multi-master replication, replication lag monitoring, 
+                                failover procedures, promoting replicas
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>Node.js crash course (Traversy Media)</li>
-                                    <li>Express.js documentation</li>
-                                    <li>Build REST API tutorial</li>
+                                    <li>PostgreSQL replication tutorial</li>
+                                    <li>MySQL replication guide</li>
+                                    <li>High availability architectures</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build simple REST APIs: to-do API, notes API, user authentication API,
-                                file upload API
+                                Set up master-slave replication, configure streaming replication, 
+                                practice failover scenarios, monitor replication lag
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Database Basics (MongoDB or PostgreSQL)</h4>
+                    <h4>Clustering & Load Balancing</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Database concepts (SQL vs NoSQL), MongoDB basics (documents, collections),
-                                Mongoose ODM, CRUD operations, database design basics, relationships, querying
+                                Database clustering concepts, Patroni for PostgreSQL HA, MySQL Group Replication, 
+                                automatic failover, load balancing reads across replicas, HAProxy and pgpool-II, 
+                                split-brain problem and solutions, quorum-based systems
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Patroni documentation</li>
+                                    <li>MySQL clustering tutorial</li>
+                                    <li>Database load balancing guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Set up Patroni cluster, configure automatic failover, implement read load balancing, 
+                                test split-brain scenarios
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Disaster Recovery Planning</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Disaster recovery strategies, RTO and RPO requirements, geo-replication, 
+                                multi-region setup, backup strategies for HA, recovery testing procedures, 
+                                documentation and runbooks, incident response planning
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Disaster recovery best practices</li>
+                                    <li>Multi-region database setup</li>
+                                    <li>Database incident response guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create DR plan documentation, set up multi-region replication, 
+                                conduct disaster recovery drills, document all procedures
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 5 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">5</div>
+                    <div class="phase-info">
+                        <h3>NoSQL & Modern Databases</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>MongoDB Administration</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Document-oriented databases, BSON format, MongoDB CRUD operations, indexes in MongoDB, 
+                                aggregation pipeline, replica sets, sharding, MongoDB Atlas (cloud), backup and restore, 
+                                performance tuning
                             </div>
                         </div>
                         <div class="detail-row">
@@ -1160,163 +1170,175 @@
                             <div class="detail-content">
                                 <ul class="resources-list">
                                     <li>MongoDB University (free courses)</li>
-                                    <li>MongoDB crash course</li>
-                                    <li>Database design basics</li>
+                                    <li>MongoDB official documentation</li>
+                                    <li>NoSQL database patterns</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Connect database to Express API, build full CRUD app, create data models,
-                                implement search and filtering
+                                Install and configure MongoDB, create replica set, practice aggregation pipelines, 
+                                implement sharding, optimize queries
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Authentication & Security</h4>
+                    <h4>Redis & Caching Strategies</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                JWT (JSON Web Tokens), bcrypt for password hashing, authentication vs authorization,
-                                sessions vs tokens, protected routes, CORS, security best practices, environment
-                                variables
+                                In-memory databases, Redis data structures (strings, hashes, lists, sets, sorted sets), 
+                                caching patterns, cache invalidation strategies, Redis persistence (RDB, AOF), 
+                                Redis Sentinel for HA, Redis Cluster, pub/sub messaging
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>JWT authentication tutorial</li>
-                                    <li>Web security basics</li>
-                                    <li>OWASP security guidelines</li>
+                                    <li>Redis documentation</li>
+                                    <li>Caching best practices</li>
+                                    <li>Redis University courses</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Build user authentication system, implement login/register, protected routes,
-                                password reset functionality
+                                Set up Redis, implement caching layer for application, configure persistence, 
+                                set up Redis Sentinel, practice different data structures
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Deployment & DevOps Basics</h4>
+                    <h4>Other NoSQL Databases (Overview)</h4>
                     <div class="topic-details">
                         <div class="detail-row">
                             <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Hosting platforms (Vercel, Netlify, Heroku, Railway), environment variables,
-                                domain names and DNS, HTTPS/SSL, CI/CD basics, monitoring and logging
+                                Cassandra (wide-column store), Elasticsearch (document store + search), DynamoDB (AWS), 
+                                Neo4j (graph database), when to use each type, CAP theorem, eventual consistency, 
+                                choosing the right database for use case
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>Vercel/Netlify documentation</li>
-                                    <li>Deploy full-stack apps tutorial</li>
-                                    <li>GitHub Actions basics</li>
+                                    <li>NoSQL database comparison</li>
+                                    <li>CAP theorem explained</li>
+                                    <li>Database selection guide</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="detail-row">
                             <div class="detail-label">Hands-On Practice:</div>
                             <div class="detail-content">
-                                Deploy your React apps to Vercel/Netlify, deploy backend to Railway/Heroku,
-                                set up custom domain, implement CI/CD
+                                Try out different NoSQL databases, understand their strengths and weaknesses, 
+                                practice with sample applications
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Phase 5 -->
+            
+            <!-- Phase 6 -->
             <div class="phase" data-aos="fade-up">
                 <div class="phase-header">
-                    <div class="phase-number">5</div>
+                    <div class="phase-number">6</div>
                     <div class="phase-info">
-                        <h3>Portfolio & Job Preparation</h3>
+                        <h3>Automation & Cloud Databases</h3>
                         <div class="phase-duration">Duration: 4-6 weeks</div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Build Your Portfolio</h4>
+                    <h4>Database Automation & Scripting</h4>
                     <div class="topic-details">
                         <div class="detail-row">
-                            <div class="detail-label">What to Include:</div>
+                            <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                Personal portfolio website showcasing your best 3-5 projects, About section
-                                with your story, skills section with tech stack, contact form, links to GitHub
-                                and LinkedIn, responsive design, clean code
+                                Python for database automation, database connectors (psycopg2, pymysql), 
+                                Bash scripts for maintenance, scheduled jobs (cron), Ansible for database management, 
+                                database migrations (Flyway, Liquibase), infrastructure as code for databases
                             </div>
                         </div>
                         <div class="detail-row">
-                            <div class="detail-label">Portfolio Projects:</div>
+                            <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>Full-stack MERN app (e.g., social media clone)</li>
-                                    <li>React dashboard with charts and data</li>
-                                    <li>E-commerce frontend with cart functionality</li>
-                                    <li>API-based app (weather, movies, etc.)</li>
-                                    <li>Personal project that solves a real problem</li>
+                                    <li>Python database programming</li>
+                                    <li>Ansible for databases</li>
+                                    <li>Database migration tools</li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Write Python scripts for common DBA tasks, automate backup procedures, 
+                                create Ansible playbooks for database deployment, implement migration workflow
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Interview Preparation</h4>
+                    <h4>Cloud Database Services</h4>
                     <div class="topic-details">
                         <div class="detail-row">
-                            <div class="detail-label">What to Prepare:</div>
+                            <div class="detail-label">What to Learn:</div>
                             <div class="detail-content">
-                                JavaScript interview questions, React concepts, HTML/CSS questions, data structures
-                                basics (arrays, objects), algorithm basics (sorting, searching), system design basics,
-                                behavioral questions
+                                AWS RDS (MySQL, PostgreSQL), Aurora, DynamoDB, Azure SQL Database, Azure Cosmos DB, 
+                                Google Cloud SQL, managed vs self-hosted, cloud database best practices, 
+                                cost optimization, backup and DR in cloud
                             </div>
                         </div>
                         <div class="detail-row">
-                            <div class="detail-label">Practice Resources:</div>
+                            <div class="detail-label">Free Resources:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>LeetCode Easy problems</li>
-                                    <li>Frontend interview questions (GitHub)</li>
-                                    <li>Mock interviews with friends</li>
-                                    <li>CodeWars challenges</li>
+                                    <li>AWS RDS documentation</li>
+                                    <li>Azure SQL tutorials</li>
+                                    <li>Cloud database comparison guide</li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Create RDS instances, configure automated backups, set up read replicas, 
+                                practice migration to cloud, optimize costs
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="topic">
-                    <h4>Get Real Experience</h4>
+                    <h4>Portfolio & Interview Preparation</h4>
                     <div class="topic-details">
                         <div class="detail-row">
-                            <div class="detail-label">Ways to Gain Experience:</div>
+                            <div class="detail-label">What to Create:</div>
                             <div class="detail-content">
-                                Build websites for local businesses or non-profits (free/cheap), contribute to
-                                open source projects on GitHub, freelance on Upwork or Fiverr (start small),
-                                participate in hackathons, create content (blog, YouTube, Twitter)
+                                GitHub repository with automation scripts, documented case studies (performance optimizations, 
+                                migrations), architecture diagrams, disaster recovery plans, technical blog posts
                             </div>
                         </div>
                         <div class="detail-row">
-                            <div class="detail-label">Where to Find Opportunities:</div>
+                            <div class="detail-label">Interview Prep:</div>
                             <div class="detail-content">
                                 <ul class="resources-list">
-                                    <li>Local businesses needing websites</li>
-                                    <li>Good First Issue (GitHub label)</li>
-                                    <li>Freelance platforms (Upwork, Fiverr)</li>
-                                    <li>Hackathons (Dev.to, MLH)</li>
+                                    <li>Database design questions</li>
+                                    <li>Query optimization scenarios</li>
+                                    <li>Troubleshooting problems</li>
+                                    <li>Architecture discussions</li>
+                                    <li>Real-world DBA experiences</li>
                                 </ul>
                             </div>
                         </div>
@@ -1330,75 +1352,68 @@
     <section class="tech-stack">
         <div class="container">
             <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Essential Tech Stack</h2>
-            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
-                data-aos="fade-up">
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
                 Master these technologies to become job-ready
             </p>
-
+            
             <div class="stack-grid">
                 <div class="stack-category" data-aos="fade-up">
-                    <h3>Frontend Core</h3>
+                    <h3>Relational Databases</h3>
                     <ul class="stack-items">
-                        <li>HTML5</li>
-                        <li>CSS3 (Flexbox, Grid)</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>Responsive Design</li>
-                        <li>Browser DevTools</li>
+                        <li>PostgreSQL</li>
+                        <li>MySQL / MariaDB</li>
+                        <li>Oracle (optional)</li>
+                        <li>SQL Server (optional)</li>
                     </ul>
                 </div>
-
+                
                 <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Frontend Framework</h3>
+                    <h3>NoSQL Databases</h3>
                     <ul class="stack-items">
-                        <li>React.js</li>
-                        <li>React Hooks</li>
-                        <li>React Router</li>
-                        <li>Context API</li>
-                        <li>Component Libraries</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                        <li>Cassandra (optional)</li>
+                        <li>Elasticsearch (optional)</li>
                     </ul>
                 </div>
-
+                
                 <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Styling</h3>
+                    <h3>High Availability Tools</h3>
                     <ul class="stack-items">
-                        <li>Tailwind CSS</li>
-                        <li>CSS Modules</li>
-                        <li>Styled-components</li>
-                        <li>Material-UI or Chakra</li>
-                        <li>Sass/SCSS (optional)</li>
+                        <li>Patroni</li>
+                        <li>PgBouncer / ProxySQL</li>
+                        <li>HAProxy</li>
+                        <li>Replication (built-in)</li>
                     </ul>
                 </div>
-
+                
                 <div class="stack-category" data-aos="fade-up">
-                    <h3>Backend (Optional)</h3>
+                    <h3>Monitoring & Tools</h3>
                     <ul class="stack-items">
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>RESTful APIs</li>
-                        <li>MongoDB or PostgreSQL</li>
-                        <li>JWT Authentication</li>
+                        <li>Prometheus + Grafana</li>
+                        <li>pgAdmin / MySQL Workbench</li>
+                        <li>Slow query analyzers</li>
+                        <li>Database profilers</li>
                     </ul>
                 </div>
-
+                
                 <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Tools & Workflow</h3>
+                    <h3>Automation & Scripting</h3>
                     <ul class="stack-items">
-                        <li>Git & GitHub</li>
-                        <li>VS Code</li>
-                        <li>npm/yarn</li>
-                        <li>Chrome DevTools</li>
-                        <li>Postman/Insomnia</li>
+                        <li>Python (psycopg2, pymysql)</li>
+                        <li>Bash scripting</li>
+                        <li>Ansible</li>
+                        <li>Flyway / Liquibase</li>
                     </ul>
                 </div>
-
+                
                 <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Deployment</h3>
+                    <h3>Cloud Platforms</h3>
                     <ul class="stack-items">
-                        <li>Vercel or Netlify</li>
-                        <li>GitHub Pages</li>
-                        <li>Railway or Heroku</li>
-                        <li>Domain & DNS basics</li>
-                        <li>Environment variables</li>
+                        <li>AWS RDS / Aurora</li>
+                        <li>Azure SQL Database</li>
+                        <li>Google Cloud SQL</li>
+                        <li>Managed database services</li>
                     </ul>
                 </div>
             </div>
@@ -1409,116 +1424,110 @@
     <section class="projects">
         <div class="container">
             <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Portfolio Projects to Build</h2>
-            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
-                data-aos="fade-up">
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
                 Build these projects to showcase your skills to employers
             </p>
-
+            
             <div class="projects-grid">
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-header">
-                        <div class="project-icon">📝</div>
-                        <h3>Full-Stack Task Manager</h3>
+                        <div class="project-icon">⚡</div>
+                        <h3>Query Performance Optimization Case Study</h3>
                     </div>
                     <p class="project-description">
-                        Complete MERN stack application with user authentication, CRUD operations, drag-and-drop
-                        task management, categories, and search functionality. Deploy frontend and backend separately.
+                        Document a real optimization project where you improved query performance by 10x-100x. Include 
+                        before/after EXPLAIN plans, indexing strategies, query rewrites and measurable results with benchmarks.
                     </p>
                     <div class="project-skills">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">JWT Auth</span>
-                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Query Optimization</span>
+                        <span class="skill-tag">Indexing</span>
+                        <span class="skill-tag">Performance Tuning</span>
+                        <span class="skill-tag">Benchmarking</span>
                     </div>
                 </div>
-
+                
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-header">
-                        <div class="project-icon">🛒</div>
-                        <h3>E-Commerce Frontend</h3>
+                        <div class="project-icon">🔄</div>
+                        <h3>High Availability PostgreSQL Cluster</h3>
                     </div>
                     <p class="project-description">
-                        Modern e-commerce frontend with product listing, filtering, search, shopping cart,
-                        checkout flow (UI only), and responsive design. Use a fake API or create mock data.
+                        Set up production-grade HA cluster using Patroni, etcd and HAProxy. Implement automatic failover, 
+                        load balancing, monitoring with Prometheus/Grafana. Document architecture and procedures.
                     </p>
                     <div class="project-skills">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Context API</span>
-                        <span class="skill-tag">React Router</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Local Storage</span>
+                        <span class="skill-tag">Patroni</span>
+                        <span class="skill-tag">High Availability</span>
+                        <span class="skill-tag">Replication</span>
+                        <span class="skill-tag">Load Balancing</span>
                     </div>
                 </div>
-
+                
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-header">
-                        <div class="project-icon">🎬</div>
-                        <h3>Movie Database App</h3>
+                        <div class="project-icon">🤖</div>
+                        <h3>Database Automation Framework</h3>
                     </div>
                     <p class="project-description">
-                        Build a movie/TV show database using TMDB API. Include search, filters, detailed views,
-                        favorites list, and responsive design. Add smooth animations and loading states.
+                        Create Python-based automation toolkit for common DBA tasks: health checks, backup verification, 
+                        performance monitoring, automated reports and alerts. Include scheduling and error handling.
                     </p>
                     <div class="project-skills">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">API Integration</span>
-                        <span class="skill-tag">React Router</span>
-                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Monitoring</span>
+                        <span class="skill-tag">Scripting</span>
                     </div>
                 </div>
-
+                
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-header">
-                        <div class="project-icon">📊</div>
-                        <h3>Analytics Dashboard</h3>
+                        <div class="project-icon">🗄️</div>
+                        <h3>E-Commerce Database Design</h3>
                     </div>
                     <p class="project-description">
-                        Create a data visualization dashboard with charts, graphs, and tables. Use Chart.js or
-                        Recharts. Include filters, date ranges, and export functionality. Make it fully responsive.
+                        Design complete e-commerce database schema with proper normalization, implement complex queries, 
+                        stored procedures, triggers. Include performance testing, indexing strategy and scaling considerations.
                     </p>
                     <div class="project-skills">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Chart.js</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">Responsive</span>
+                        <span class="skill-tag">Database Design</span>
+                        <span class="skill-tag">Normalization</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Performance</span>
                     </div>
                 </div>
-
+                
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-header">
-                        <div class="project-icon">💬</div>
-                        <h3>Real-Time Chat App</h3>
+                        <div class="project-icon">☁️</div>
+                        <h3>Cloud Database Migration Project</h3>
                     </div>
                     <p class="project-description">
-                        Build a chat application with Socket.io for real-time messaging, multiple rooms,
-                        user authentication, message history, and typing indicators. Deploy both client and server.
+                        Plan and execute migration from on-premise PostgreSQL/MySQL to AWS RDS. Include downtime 
+                        minimization strategy, data validation, rollback plan and cost optimization analysis.
                     </p>
                     <div class="project-skills">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Socket.io</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Real-time</span>
-                        <span class="skill-tag">Authentication</span>
+                        <span class="skill-tag">Cloud Migration</span>
+                        <span class="skill-tag">AWS RDS</span>
+                        <span class="skill-tag">Planning</span>
+                        <span class="skill-tag">Documentation</span>
                     </div>
                 </div>
-
+                
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-header">
-                        <div class="project-icon">🌐</div>
-                        <h3>Personal Portfolio Website</h3>
+                        <div class="project-icon">🛡️</div>
+                        <h3>Disaster Recovery Implementation</h3>
                     </div>
                     <p class="project-description">
-                        Showcase your work with a stunning portfolio. Include animations, smooth scrolling,
-                        contact form (using EmailJS), dark mode toggle, and fully responsive design. This is your
-                        resume!
+                        Design and implement complete DR solution with geo-replication, automated backups, point-in-time 
+                        recovery testing. Document RTO/RPO, conduct DR drills, create detailed runbooks.
                     </p>
                     <div class="project-skills">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Framer Motion</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">EmailJS</span>
-                        <span class="skill-tag">SEO</span>
+                        <span class="skill-tag">Disaster Recovery</span>
+                        <span class="skill-tag">Backup Strategy</span>
+                        <span class="skill-tag">Replication</span>
+                        <span class="skill-tag">Documentation</span>
                     </div>
                 </div>
             </div>
@@ -1529,75 +1538,74 @@
     <section class="resources">
         <div class="container">
             <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Free Learning Resources</h2>
-            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;"
-                data-aos="fade-up">
-                Best free resources to master web development
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Best free resources to master database administration
             </p>
-
+            
             <div class="resources-grid">
                 <div class="resource-category" data-aos="fade-up">
-                    <h3>🎓 Complete Courses</h3>
+                    <h3>🎓 SQL & Database Basics</h3>
                     <ul class="resource-list">
-                        <li>freeCodeCamp (100% free)</li>
-                        <li>The Odin Project</li>
-                        <li>Scrimba Frontend Career Path</li>
-                        <li>Full Stack Open (University of Helsinki)</li>
-                        <li>CS50 Web Programming (Harvard)</li>
+                        <li>Mode SQL Tutorial</li>
+                        <li>SQLZoo (interactive)</li>
+                        <li>freeCodeCamp SQL course</li>
+                        <li>Stanford Database Course</li>
+                        <li>LeetCode SQL problems</li>
                     </ul>
                 </div>
-
+                
                 <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
                     <h3>📺 YouTube Channels</h3>
                     <ul class="resource-list">
-                        <li>Traversy Media</li>
-                        <li>Web Dev Simplified</li>
-                        <li>Fireship</li>
-                        <li>Kevin Powell (CSS)</li>
-                        <li>Codevolution (React)</li>
+                        <li>Hussein Nasser (databases)</li>
+                        <li>CMU Database Course (Andy Pavlo)</li>
+                        <li>Database Star</li>
+                        <li>Coding with John (SQL)</li>
+                        <li>TechWorld with Nana</li>
                     </ul>
                 </div>
-
+                
                 <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
                     <h3>📖 Documentation</h3>
                     <ul class="resource-list">
-                        <li>MDN Web Docs</li>
-                        <li>React official docs</li>
-                        <li>JavaScript.info</li>
-                        <li>CSS-Tricks</li>
-                        <li>W3Schools (quick reference)</li>
+                        <li>PostgreSQL Documentation</li>
+                        <li>MySQL Reference Manual</li>
+                        <li>MongoDB Manual</li>
+                        <li>Redis Documentation</li>
+                        <li>Use The Index Luke (optimization)</li>
                     </ul>
                 </div>
-
+                
                 <div class="resource-category" data-aos="fade-up">
                     <h3>💻 Practice Platforms</h3>
                     <ul class="resource-list">
-                        <li>CodePen (frontend)</li>
-                        <li>CodeSandbox (React)</li>
-                        <li>LeetCode Easy (algorithms)</li>
-                        <li>Frontend Mentor (designs)</li>
-                        <li>Exercism (coding practice)</li>
+                        <li>DB Fiddle (online SQL)</li>
+                        <li>HackerRank SQL</li>
+                        <li>StrataScratch</li>
+                        <li>PostgreSQL Exercises</li>
+                        <li>Local database installations</li>
                     </ul>
                 </div>
-
+                
                 <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
                     <h3>💬 Communities</h3>
                     <ul class="resource-list">
-                        <li>Reddit r/webdev</li>
-                        <li>Dev.to community</li>
-                        <li>Discord coding servers</li>
+                        <li>Reddit r/Database</li>
+                        <li>Reddit r/PostgreSQL</li>
                         <li>Stack Overflow</li>
-                        <li>Twitter #100DaysOfCode</li>
+                        <li>DBA Stack Exchange</li>
+                        <li>PostgreSQL Slack</li>
                     </ul>
                 </div>
-
+                
                 <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3>🎨 Design Resources</h3>
+                    <h3>📚 Books (Free/Open)</h3>
                     <ul class="resource-list">
-                        <li>Figma (free design tool)</li>
-                        <li>Dribbble (inspiration)</li>
-                        <li>Coolors (color palettes)</li>
-                        <li>Google Fonts</li>
-                        <li>Unsplash (free images)</li>
+                        <li>PostgreSQL Up and Running</li>
+                        <li>High Performance MySQL</li>
+                        <li>Database Internals</li>
+                        <li>Designing Data-Intensive Apps</li>
+                        <li>SQL Performance Explained</li>
                     </ul>
                 </div>
             </div>
@@ -1607,13 +1615,14 @@
     <!-- CTA -->
     <section class="cta-section">
         <div class="cta-content" data-aos="fade-up">
-            <h2>Ready to Start Your Web Dev Journey?</h2>
+            <h2>Ready to Start Your DBA Journey?</h2>
             <p>
-                Have questions about this roadmap? Need guidance on your learning path?
+                Have questions about this roadmap? Need guidance on your database learning path? 
                 We're here to help you succeed.
             </p>
-            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20following%20the%20Web%20Developer%20roadmap%20and%20have%20questions"
-                target="_blank" class="btn">
+            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20following%20the%20Database%20Administrator%20roadmap%20and%20have%20questions" 
+               target="_blank" 
+               class="btn">
                 Get Free Guidance →
             </a>
         </div>
@@ -1635,5 +1644,4 @@
         });
     </script>
 </body>
-
 </html>
