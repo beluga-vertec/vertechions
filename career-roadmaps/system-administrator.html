@@ -207,44 +207,26 @@
         .path-timeline::before {
             content: '';
             position: absolute;
-            left: 50%;
+            left: 20px;
             top: 0;
             height: 100%;
             width: 3px;
             background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
-            transform: translateX(-50%);
         }
 
         .path-step {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1fr;
+            gap: 20px;
             margin-bottom: 60px;
             position: relative;
             align-items: center;
-        }
-
-        .path-step:nth-child(even) .step-content {
-            grid-column: 1;
-            text-align: right;
-        }
-
-        .path-step:nth-child(even) .step-years {
-            grid-column: 2;
-        }
-
-        .path-step:nth-child(odd) .step-content {
-            grid-column: 2;
-        }
-
-        .path-step:nth-child(odd) .step-years {
-            grid-column: 1;
-            justify-content: flex-end;
+            padding-left: 60px;
         }
 
         .step-marker {
             position: absolute;
-            left: 50%;
+            left: 20px;
             top: 50%;
             transform: translate(-50%, -50%);
             width: 30px;
@@ -260,6 +242,7 @@
             border: 1px solid rgba(168, 85, 247, 0.2);
             border-radius: 15px;
             padding: 25px;
+            text-align: left;
         }
 
         .step-content h3 {
@@ -270,9 +253,9 @@
         .step-years {
             color: var(--accent-cyan);
             font-weight: 600;
-            padding: 25px;
-            display: flex;
-            align-items: center;
+            padding: 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
 
         /* Learning Path */
@@ -702,12 +685,12 @@
                 <!-- Step 2 -->
                 <div class="path-step" data-aos="fade-up">
                     <div class="step-marker"></div>
+                    <div class="step-years">1-3 Years</div>
                     <div class="step-content">
                         <h3>System Administrator</h3>
                         <p>Manage multiple servers independently, implement automation, handle security, perform
                             upgrades and troubleshoot complex issues.</p>
                     </div>
-                    <div class="step-years">1-3 Years</div>
                 </div>
 
                 <!-- Step 3 -->
@@ -724,12 +707,12 @@
                 <!-- Step 4 -->
                 <div class="path-step" data-aos="fade-up">
                     <div class="step-marker"></div>
+                    <div class="step-years">5+ Years</div>
                     <div class="step-content">
                         <h3>Specialization Options</h3>
                         <p>Branch into Cloud Engineering, DevOps, Infrastructure Architecture, Security Engineering or
                             IT Management based on your interests.</p>
                     </div>
-                    <div class="step-years">5+ Years</div>
                 </div>
             </div>
         </div>
