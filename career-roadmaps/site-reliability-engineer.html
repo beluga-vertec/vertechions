@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete Site Reliability Engineer (SRE) career roadmap. Learn everything you need to become a professional SRE from scratch.">
+    <title>Site Reliability Engineer Roadmap | Complete Career Guide - Vertechions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0A0E27;
+            --accent-purple: #A855F7;
+            --accent-cyan: #06B6D4;
+            --accent-green: #10B981;
+            --accent-orange: #F59E0B;
+            --text-light: #E5E7EB;
+            --text-gray: #9CA3AF;
+            --gradient-1: linear-gradient(135deg, #A855F7 0%, #06B6D4 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 1.5em;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+        
+        .back-btn {
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 120px 20px 60px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.2);
+            color: #EF4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.3em;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        
+        /* Overview Section */
+        .overview {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .overview-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+        
+        .overview-text {
+            font-size: 1.1em;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .key-facts {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+        }
+        
+        .key-facts h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .fact-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 10px;
+        }
+        
+        .fact-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .fact-value {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+        
+        /* Career Path */
+        .career-path {
+            padding: 80px 20px;
+        }
+        
+        .path-timeline {
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .path-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
+        }
+        
+        .path-step {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 60px;
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .step-marker {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            border: 4px solid var(--primary-dark);
+            z-index: 10;
+        }
+        
+        .step-content {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-content h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        
+        .step-years {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        /* Learning Path */
+        .learning-path {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .phase {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .phase-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        .phase-info h3 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .phase-duration {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        
+        .topic {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-purple);
+        }
+        
+        .topic h4 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .topic-details {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .detail-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+        }
+        
+        .detail-label {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+        
+        .detail-content {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+        
+        .resources-list {
+            list-style: none;
+        }
+        
+        .resources-list li {
+            padding: 8px 0;
+            color: var(--text-gray);
+        }
+        
+        .resources-list li::before {
+            content: '→ ';
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            padding: 80px 20px;
+        }
+        
+        .stack-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .stack-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .stack-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .stack-items {
+            list-style: none;
+        }
+        
+        .stack-items li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .stack-items li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Projects */
+        .projects {
+            padding: 80px 20px;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .projects-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .project-icon {
+            font-size: 2.5em;
+        }
+        
+        .project-card h3 {
+            font-size: 1.6em;
+        }
+        
+        .project-description {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--accent-purple);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        /* Resources */
+        .resources {
+            padding: 80px 20px;
+        }
+        
+        .resources-grid {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .resource-category {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), rgba(6, 182, 212, 0.05));
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .resource-category h3 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        
+        .resource-list {
+            list-style: none;
+        }
+        
+        .resource-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+            color: var(--text-gray);
+        }
+        
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* CTA */
+        .cta-section {
+            padding: 100px 20px;
+            text-align: center;
+            background: rgba(168, 85, 247, 0.02);
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.2em;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .overview-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-text">Vertechions</a>
+            <a href="../career-roadmaps.html" class="back-btn">← Back to Roadmaps</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div data-aos="fade-up">
+            <div class="hero-icon">🛡️</div>
+            <div class="hero-badge">ADVANCED</div>
+            <h1>Site Reliability Engineer <span class="gradient-text">Roadmap</span></h1>
+            <p class="hero-description">
+                Your complete guide to becoming a Site Reliability Engineer. Ensure systems are reliable, scalable, 
+                and performant—one of the most prestigious and impactful roles in tech.
+            </p>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-content">
+                <div data-aos="fade-right">
+                    <h2 class="section-title">What is Site Reliability Engineering?</h2>
+                    <p class="overview-text">
+                        Site Reliability Engineers (SREs) are responsible for keeping systems running reliably at scale. 
+                        Born at Google, SRE applies software engineering principles to operations problems. You'll define SLIs, 
+                        SLOs and error budgets, automate toil, design for reliability, respond to incidents and build systems 
+                        that can handle millions of users.
+                    </p>
+                    <p class="overview-text">
+                        This role combines deep technical expertise with engineering discipline. You'll write code to automate 
+                        operations, design distributed systems, implement monitoring and observability, conduct chaos experiments, 
+                        perform capacity planning and ensure services meet their reliability targets. SREs are engineers first—50% 
+                        of your time should be spent on engineering projects, not operations.
+                    </p>
+                    <p class="overview-text">
+                        SRE is one of the most sought-after roles in tech. Companies like Google, Netflix, Amazon and every major 
+                        tech company have SRE teams. This career offers exceptional compensation, challenging technical problems, 
+                        direct business impact and the satisfaction of building systems that serve millions reliably.
+                    </p>
+                </div>
+                
+                <div class="key-facts" data-aos="fade-left">
+                    <h3>Key Facts</h3>
+                    <div class="fact-item">
+                        <div class="fact-label">Entry Level</div>
+                        <div class="fact-value">Advanced (3-5 years experience)</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Prerequisites</div>
+                        <div class="fact-value">DevOps/SysAdmin + coding</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Learning Time</div>
+                        <div class="fact-value">12-24 months (with experience)</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Work Style</div>
+                        <div class="fact-value">Engineering + operations hybrid</div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-label">Compensation</div>
+                        <div class="fact-value">Among highest in tech</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Path -->
+    <section class="career-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Career Progression Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Your journey from beginner to expert
+            </p>
+            
+            <div class="path-timeline">
+                <!-- Step 1 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">0-2 Years</div>
+                    <div class="step-content">
+                        <h3>Associate SRE / Junior SRE</h3>
+                        <p>Learn SRE principles, participate in on-call rotations, automate toil, assist with incident response, maintain service reliability metrics.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">2-4 Years</div>
+                    <div class="step-content">
+                        <h3>Site Reliability Engineer</h3>
+                        <p>Own service reliability, define SLOs, conduct postmortems, build automation tools, design for scalability, manage incidents independently.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">4-7 Years</div>
+                    <div class="step-content">
+                        <h3>Senior Site Reliability Engineer</h3>
+                        <p>Architect reliability solutions, lead large-scale projects, mentor juniors, influence engineering practices, drive reliability culture across teams.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">7-10 Years</div>
+                    <div class="step-content">
+                        <h3>Staff SRE / Principal SRE</h3>
+                        <p>Define SRE strategy for organization, build reliability platforms, solve company-wide infrastructure problems, technical leadership across teams.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="path-step" data-aos="fade-up">
+                    <div class="step-marker"></div>
+                    <div class="step-years">10+ Years</div>
+                    <div class="step-content">
+                        <h3>Specialization & Leadership</h3>
+                        <p>Distinguished Engineer, SRE Manager, Director of SRE, Platform Engineering Lead or continue as Principal SRE working on cutting-edge reliability problems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Complete Learning Path</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Follow this step-by-step roadmap to become job-ready
+            </p>
+            
+            <!-- Phase 0 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">0</div>
+                    <div class="phase-info">
+                        <h3>Prerequisites (CRITICAL Foundation)</h3>
+                        <div class="phase-duration">Duration: 3-5 years of experience required</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Essential Experience Before SRE</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">Required Background:</div>
+                            <div class="detail-content">
+                                <strong>Software Engineering:</strong> Proficiency in at least one language (Python, Go, Java), data structures 
+                                and algorithms, system design basics, debugging and troubleshooting<br><br>
+                                <strong>Operations Experience:</strong> 2-3+ years as DevOps Engineer, SysAdmin or Cloud Engineer. 
+                                Production system management, incident response, on-call experience<br><br>
+                                <strong>Infrastructure:</strong> Linux administration, cloud platforms (AWS/GCP/Azure), 
+                                containers and Kubernetes, networking fundamentals, distributed systems basics<br><br>
+                                <strong>DevOps Skills:</strong> CI/CD pipelines, infrastructure as code, monitoring and logging
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Reality Check:</div>
+                            <div class="detail-content">
+                                SRE is NOT an entry-level role. Most companies require 3-5 years of relevant experience. 
+                                Complete DevOps Engineer or Cloud Engineer roadmap first, work in production environments, 
+                                then transition to SRE. This roadmap assumes you have the foundation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 1 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">1</div>
+                    <div class="phase-info">
+                        <h3>SRE Principles & Philosophy</h3>
+                        <div class="phase-duration">Duration: 4-6 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Core SRE Concepts</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                SRE vs DevOps vs traditional ops, the 50/50 rule (50% engineering, 50% ops), 
+                                eliminating toil (repetitive manual work), embracing risk and error budgets, 
+                                service level terminology (SLI, SLO, SLA), the SRE workday structure, 
+                                Google's SRE principles and practices
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Site Reliability Engineering book (Google, free online)</li>
+                                    <li>The Site Reliability Workbook (Google, free online)</li>
+                                    <li>Building Secure and Reliable Systems (free online)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Key Takeaways:</div>
+                            <div class="detail-content">
+                                Understand that SRE is engineering-focused, reliability is a feature not an afterthought, 
+                                100% reliability is the wrong target, systematic problem-solving over heroics
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Service Level Objectives (SLOs)</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Defining Service Level Indicators (SLIs) - latency, availability, throughput, correctness. 
+                                Setting Service Level Objectives (SLOs) - realistic targets based on user happiness. 
+                                Service Level Agreements (SLAs) - business contracts with consequences. 
+                                Error budgets - how much failure is acceptable, error budget policies
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Implementing SLOs (Google SRE book chapter)</li>
+                                    <li>SLO workshop materials</li>
+                                    <li>Error budget policy examples</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Define SLIs for sample services, set SLOs with business justification, 
+                                calculate error budgets, create error budget policy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Eliminating Toil</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Defining toil (manual, repetitive, automatable, tactical, no enduring value), 
+                                measuring toil in your work, calculating toil vs engineering work ratio, 
+                                prioritizing toil elimination, automation strategies, building self-service tools
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Eliminating Toil (SRE book chapter)</li>
+                                    <li>Toil measurement framework</li>
+                                    <li>Automation case studies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Audit your current work for toil, identify automation opportunities, 
+                                build tools to eliminate repetitive tasks, measure time saved
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 2 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">2</div>
+                    <div class="phase-info">
+                        <h3>Monitoring, Alerting & Observability</h3>
+                        <div class="phase-duration">Duration: 8-10 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>SRE-Style Monitoring</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Four golden signals (latency, traffic, errors, saturation), whitebox vs blackbox monitoring, 
+                                symptom-based monitoring vs cause-based, monitoring distributed systems, 
+                                time-series databases (Prometheus, VictoriaMetrics), exporters and instrumentation, 
+                                recording rules and aggregation
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Monitoring Distributed Systems (SRE book)</li>
+                                    <li>Prometheus documentation</li>
+                                    <li>Grafana best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Instrument services with four golden signals, build Prometheus monitoring stack, 
+                                create dashboards aligned with SLOs, implement custom exporters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Effective Alerting</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Principles of good alerts (urgent, actionable, user-impacting), alert fatigue and how to prevent it, 
+                                symptom-based vs cause-based alerts, alert routing and escalation, on-call best practices, 
+                                pages vs tickets, alert tuning and maintenance, alert design workshop
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Practical Alerting from Time-Series Data</li>
+                                    <li>My Philosophy on Alerting (Rob Ewaschuk)</li>
+                                    <li>Alertmanager documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Design alert rules for services, configure Alertmanager routing, 
+                                audit existing alerts for quality, implement alert SLOs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Distributed Tracing & Deep Observability</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Three pillars of observability (metrics, logs, traces), distributed tracing concepts, 
+                                OpenTelemetry instrumentation, Jaeger/Tempo/Zipkin, trace sampling strategies, 
+                                correlating metrics, logs and traces, debugging production issues with tracing
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>OpenTelemetry documentation</li>
+                                    <li>Distributed tracing guide</li>
+                                    <li>Observability Engineering book (excerpts)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Implement distributed tracing with OpenTelemetry, visualize traces in Jaeger, 
+                                debug slow requests using traces, build trace-based alerts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 3 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">3</div>
+                    <div class="phase-info">
+                        <h3>Incident Management & On-Call</h3>
+                        <div class="phase-duration">Duration: 6-8 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Incident Response</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Incident response lifecycle, roles (incident commander, communications lead, ops lead), 
+                                incident severity levels, escalation procedures, war rooms and coordination, 
+                                incident documentation during crisis, when to declare an incident, 
+                                incident command system (ICS)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Managing Incidents (SRE book)</li>
+                                    <li>Incident.io handbook</li>
+                                    <li>PagerDuty Incident Response guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Practice incident response drills (game days), role-play as incident commander, 
+                                write incident reports, conduct tabletop exercises
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Postmortems & Learning from Failure</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Blameless postmortem culture, postmortem template and structure, root cause analysis 
+                                (5 whys, fishbone diagrams), contributing factors vs root causes, action items and follow-through, 
+                                sharing lessons learned, postmortem review process
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Postmortem Culture (SRE book)</li>
+                                    <li>Blameless postmortem examples</li>
+                                    <li>Etsy Debriefing Facilitation Guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Write postmortems for past incidents, practice blameless analysis, 
+                                facilitate postmortem reviews, track action item completion
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>On-Call Best Practices</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                On-call rotation schedules, on-call handoff process, escalation policies, 
+                                managing on-call burden and burnout, compensation and work-life balance, 
+                                runbooks and playbooks, on-call readiness reviews, being a good on-call engineer
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Being On-Call (SRE book)</li>
+                                    <li>Effective On-Call guide</li>
+                                    <li>PagerDuty On-Call best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Shadow on-call engineers, participate in on-call rotations, 
+                                improve runbooks during on-call, measure on-call quality metrics
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 4 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">4</div>
+                    <div class="phase-info">
+                        <h3>Reliability Engineering & Scalability</h3>
+                        <div class="phase-duration">Duration: 10-12 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Distributed Systems Reliability</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                CAP theorem and trade-offs, consistency models (strong, eventual, causal), 
+                                failure modes in distributed systems, cascading failures and how to prevent them, 
+                                circuit breakers and bulkheads, retry policies and exponential backoff, 
+                                rate limiting and load shedding, graceful degradation
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Designing Data-Intensive Applications (excerpts)</li>
+                                    <li>Distributed systems lectures (MIT 6.824)</li>
+                                    <li>AWS Architecture Center (patterns)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Design systems with failure in mind, implement circuit breakers, 
+                                test cascading failure scenarios, practice failure mode analysis
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Capacity Planning</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Forecasting demand (organic growth, launches, seasonality), resource utilization metrics, 
+                                capacity modeling and simulation, provisioning lead time, buffer capacity, 
+                                load testing and stress testing, cost optimization vs capacity, 
+                                service headroom and safety margins
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Managing Critical State (SRE workbook)</li>
+                                    <li>Capacity planning guide</li>
+                                    <li>Load testing best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Forecast capacity needs, perform load testing, create capacity models, 
+                                present capacity recommendations with business justification
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Performance Engineering</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Performance profiling (CPU, memory, I/O), identifying bottlenecks, 
+                                database query optimization, caching strategies (CDN, application, database), 
+                                load balancing and traffic management, horizontal vs vertical scaling, 
+                                latency percentiles (p50, p95, p99), performance regression detection
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Systems Performance (Brendan Gregg blog)</li>
+                                    <li>Performance analysis toolkit</li>
+                                    <li>Database optimization guides</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Profile applications for bottlenecks, optimize slow queries, 
+                                implement caching, conduct performance testing, measure improvements
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Chaos Engineering</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Chaos engineering principles, designing chaos experiments, blast radius and safety, 
+                                failure injection (network, compute, dependencies), observing system behavior under failure, 
+                                game days and disaster recovery drills, Chaos Monkey and similar tools, 
+                                building confidence in production
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Principles of Chaos Engineering</li>
+                                    <li>Chaos Monkey documentation</li>
+                                    <li>Game day exercises guide</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Design chaos experiments, inject failures in test environments, 
+                                conduct game days, document learnings and improvements
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 5 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">5</div>
+                    <div class="phase-info">
+                        <h3>Automation & Software Engineering</h3>
+                        <div class="phase-duration">Duration: 8-10 weeks</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>SRE Tooling & Automation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Building production-grade tools, automation frameworks, API development for operations, 
+                                self-service platforms, workflow orchestration, configuration management at scale, 
+                                testing automation tools, documentation and usability, tool lifecycle management
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Automation at Google (SRE book)</li>
+                                    <li>Building internal tools guide</li>
+                                    <li>Platform engineering resources</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Build CLI tools for common tasks, create web interfaces for operations, 
+                                automate complex workflows, gather user feedback and iterate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Release Engineering</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Progressive delivery (canary, blue-green, feature flags), release automation, 
+                                deployment strategies and rollback procedures, release validation and testing, 
+                                change management, release coordination, automated rollback triggers, 
+                                measuring deployment success (DORA metrics)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Release Engineering (SRE book)</li>
+                                    <li>Progressive delivery patterns</li>
+                                    <li>Feature flag best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Implement canary deployments, build automated rollback systems, 
+                                use feature flags for gradual rollouts, measure deployment metrics
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Data Processing & Analysis</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Learn:</div>
+                            <div class="detail-content">
+                                Time-series data analysis, statistical analysis for reliability, anomaly detection, 
+                                log analysis at scale, building data pipelines for metrics, querying observability data, 
+                                creating reliability dashboards, data-driven decision making
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Free Resources:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>PromQL guide (Prometheus query language)</li>
+                                    <li>Statistics for engineers</li>
+                                    <li>Log analysis techniques</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Hands-On Practice:</div>
+                            <div class="detail-content">
+                                Write complex PromQL queries, analyze service metrics, 
+                                detect anomalies, build automated analysis tools
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phase 6 -->
+            <div class="phase" data-aos="fade-up">
+                <div class="phase-header">
+                    <div class="phase-number">6</div>
+                    <div class="phase-info">
+                        <h3>Portfolio, Interviews & Career Growth</h3>
+                        <div class="phase-duration">Duration: Ongoing</div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Building Your SRE Portfolio</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Showcase:</div>
+                            <div class="detail-content">
+                                Automation tools you've built, SLO implementations, incident postmortems (sanitized), 
+                                monitoring and alerting solutions, reliability improvements with measurable impact, 
+                                technical blog posts on SRE topics, open source contributions, speaking at meetups/conferences
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Portfolio Projects:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>Production-grade monitoring stack</li>
+                                    <li>Chaos engineering framework</li>
+                                    <li>SLO tracking and alerting platform</li>
+                                    <li>Incident management automation</li>
+                                    <li>Capacity planning tooling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>SRE Interview Preparation</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">What to Prepare:</div>
+                            <div class="detail-content">
+                                System design for reliability, incident response scenarios, SLO discussions, 
+                                troubleshooting and debugging, coding challenges (algorithms, data structures), 
+                                behavioral questions (STAR method), discussing past incidents and learnings, 
+                                architecture trade-offs
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Common Questions:</div>
+                            <div class="detail-content">
+                                <ul class="resources-list">
+                                    <li>"Design a system for 99.99% availability"</li>
+                                    <li>"Tell me about a production outage you resolved"</li>
+                                    <li>"How do you measure and improve reliability?"</li>
+                                    <li>"Design monitoring for a distributed system"</li>
+                                    <li>"What's your approach to on-call and incidents?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="topic">
+                    <h4>Continuous Learning & Growth</h4>
+                    <div class="topic-details">
+                        <div class="detail-row">
+                            <div class="detail-label">Growth Areas:</div>
+                            <div class="detail-content">
+                                Stay current with industry practices, read postmortems from other companies, 
+                                attend SREcon conferences (free recordings), participate in SRE communities, 
+                                mentor others, write about your learnings, contribute to open source SRE tools, 
+                                deep dive into specific domains (security, ML systems, databases)
+                            </div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Certifications:</div>
+                            <div class="detail-content">
+                                While not required, consider: CKA (Kubernetes Administrator), 
+                                AWS/Azure/GCP Professional certifications, focuses more on experience and projects than certs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Essential Tech Stack</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Master these technologies to become job-ready
+            </p>
+            
+            <div class="stack-grid">
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Programming Languages</h3>
+                    <ul class="stack-items">
+                        <li>Python (primary)</li>
+                        <li>Go (highly recommended)</li>
+                        <li>Bash scripting</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Observability Stack</h3>
+                    <ul class="stack-items">
+                        <li>Prometheus & PromQL</li>
+                        <li>Grafana</li>
+                        <li>OpenTelemetry</li>
+                        <li>Jaeger / Tempo</li>
+                        <li>ELK / Loki</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Infrastructure & Cloud</h3>
+                    <ul class="stack-items">
+                        <li>Kubernetes (expert level)</li>
+                        <li>Docker</li>
+                        <li>Terraform</li>
+                        <li>AWS/GCP/Azure</li>
+                        <li>Linux (expert level)</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up">
+                    <h3>Incident Management</h3>
+                    <ul class="stack-items">
+                        <li>PagerDuty / Opsgenie</li>
+                        <li>Incident.io</li>
+                        <li>Slack / MS Teams</li>
+                        <li>Postmortem tools</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Reliability Tools</h3>
+                    <ul class="stack-items">
+                        <li>Chaos Monkey / Gremlin</li>
+                        <li>Load testing (k6, Locust)</li>
+                        <li>SLO tracking tools</li>
+                        <li>Alertmanager</li>
+                    </ul>
+                </div>
+                
+                <div class="stack-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>CI/CD & Automation</h3>
+                    <ul class="stack-items">
+                        <li>GitHub Actions / GitLab CI</li>
+                        <li>ArgoCD / Flux</li>
+                        <li>Ansible</li>
+                        <li>Custom tooling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Portfolio Projects to Build</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Build these projects to showcase your SRE skills
+            </p>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">🎯</div>
+                        <h3>SLO Tracking & Error Budget Platform</h3>
+                    </div>
+                    <p class="project-description">
+                        Build comprehensive SLO tracking system with automated SLI calculation, error budget monitoring, 
+                        burn rate alerts, historical trend analysis and dashboards. Implement error budget policies and automation.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">SLOs</span>
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Dashboards</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">🔥</div>
+                        <h3>Chaos Engineering Framework</h3>
+                    </div>
+                    <p class="project-description">
+                        Create chaos engineering platform with failure injection, experiment orchestration, safety controls (blast radius), 
+                        observability integration, automated rollback and comprehensive reporting of system behavior under failure.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Chaos Engineering</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Safety</span>
+                        <span class="skill-tag">Automation</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">🚨</div>
+                        <h3>Incident Management Automation</h3>
+                    </div>
+                    <p class="project-description">
+                        Build incident response automation including automatic incident creation, role assignment, communication templates, 
+                        runbook automation, postmortem generation and action item tracking with full integration to Slack/Teams.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Incident Response</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Postmortems</span>
+                        <span class="skill-tag">Collaboration</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <h3>Production Observability Stack</h3>
+                    </div>
+                    <p class="project-description">
+                        Deploy complete observability solution with Prometheus, Grafana, Loki and Tempo. Implement the four golden signals, 
+                        distributed tracing, log aggregation, custom exporters, intelligent alerting and SLO-aligned dashboards.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Observability</span>
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Tracing</span>
+                        <span class="skill-tag">Grafana</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">📈</div>
+                        <h3>Capacity Planning & Forecasting Tool</h3>
+                    </div>
+                    <p class="project-description">
+                        Create capacity planning platform with automated resource utilization tracking, demand forecasting using historical data, 
+                        growth projection models, cost analysis and recommendations for scaling with business justifications.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Capacity Planning</span>
+                        <span class="skill-tag">Forecasting</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Visualization</span>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <h3>Toil Elimination Platform</h3>
+                    </div>
+                    <p class="project-description">
+                        Build self-service platform that eliminates common operational toil: automated provisioning, deployment automation, 
+                        diagnostic tools, self-healing systems and chatops integration. Measure and report toil reduction metrics.
+                    </p>
+                    <div class="project-skills">
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Self-Service</span>
+                        <span class="skill-tag">Toil Elimination</span>
+                        <span class="skill-tag">ChatOps</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="resources">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;" data-aos="fade-up">Free Learning Resources</h2>
+            <p style="text-align: center; color: var(--text-gray); font-size: 1.1em; margin-bottom: 60px;" data-aos="fade-up">
+                Best free resources to master Site Reliability Engineering
+            </p>
+            
+            <div class="resources-grid">
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>📚 Essential Books (Free Online)</h3>
+                    <ul class="resource-list">
+                        <li>Site Reliability Engineering (Google)</li>
+                        <li>The Site Reliability Workbook (Google)</li>
+                        <li>Building Secure & Reliable Systems</li>
+                        <li>Seeking SRE (anthology)</li>
+                        <li>Implementing SLOs (O'Reilly)</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>🎓 Courses & Training</h3>
+                    <ul class="resource-list">
+                        <li>Google SRE course materials</li>
+                        <li>LinkedIn Learning SRE path</li>
+                        <li>Coursera SRE specializations</li>
+                        <li>Cloud provider SRE courses</li>
+                        <li>Udemy SRE courses (free coupons)</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>📺 Conferences & Talks</h3>
+                    <ul class="resource-list">
+                        <li>SREcon (USENIX, free videos)</li>
+                        <li>KubeCon SRE track</li>
+                        <li>DevOps Enterprise Summit</li>
+                        <li>Google SRE talks</li>
+                        <li>Incident management talks</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up">
+                    <h3>💬 Communities</h3>
+                    <ul class="resource-list">
+                        <li>SRE Slack communities</li>
+                        <li>Reddit r/SRE</li>
+                        <li>SRE Weekly newsletter</li>
+                        <li>CNCF Slack (#sre)</li>
+                        <li>Company engineering blogs</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>🔧 Tools & Platforms</h3>
+                    <ul class="resource-list">
+                        <li>Prometheus documentation</li>
+                        <li>Kubernetes documentation</li>
+                        <li>Chaos engineering tools</li>
+                        <li>Incident management platforms</li>
+                        <li>SLO tracking tools</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>📖 Blogs & Resources</h3>
+                    <ul class="resource-list">
+                        <li>Google SRE blog</li>
+                        <li>Netflix Tech Blog</li>
+                        <li>LinkedIn Engineering</li>
+                        <li>Incident.io blog</li>
+                        <li>SRE implementations (GitHub)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Ready to Start Your SRE Journey?</h2>
+            <p>
+                Have questions about this roadmap? Need guidance on your SRE learning path? 
+                We're here to help you succeed.
+            </p>
+            <a href="https://wa.me/601172570041?text=Hi!%20I'm%20following%20the%20Site%20Reliability%20Engineer%20roadmap%20and%20have%20questions" 
+               target="_blank" 
+               class="btn">
+                Get Free Guidance →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+        <p style="margin-top: 10px;">Empowering the next generation of tech professionals 💜</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
