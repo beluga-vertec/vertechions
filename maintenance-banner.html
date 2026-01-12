@@ -12,7 +12,7 @@
         padding: 12px 20px;
         font-size: 14px;
         font-weight: 500;
-        z-index: 9999;
+        z-index: 10000; /* Higher than nav (nav is 1000) */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         animation: slideDown 0.5s ease-out, gradientMove 3s ease infinite;
     }
@@ -54,7 +54,12 @@
         }
     }
 
-    /* Push content down so banner doesn't overlap */
+    /* Push nav down when maintenance banner is active */
+    body.has-maintenance-banner nav {
+        top: 48px !important; /* Push nav below banner */
+    }
+
+    /* Push main content down */
     body.has-maintenance-banner {
         padding-top: 48px;
     }
@@ -63,6 +68,10 @@
         .maintenance-banner {
             font-size: 12px;
             padding: 10px 15px;
+        }
+        
+        body.has-maintenance-banner nav {
+            top: 44px !important;
         }
         
         body.has-maintenance-banner {

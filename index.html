@@ -703,7 +703,9 @@
     <script>
         fetch('maintenance-banner.html')
             .then(r => r.text())
-            .then(html => document.getElementById('maintenance-banner').innerHTML = html);
+            .then(html => {
+                document.getElementById('maintenance-banner').innerHTML = html;
+            });
     </script>
 
     <!-- Navigation -->
