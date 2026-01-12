@@ -697,6 +697,15 @@
 </head>
 
 <body>
+
+    <!-- MAINTENANCE BANNER - Delete this line to disable -->
+    <div id="maintenance-banner"></div>
+    <script>
+        fetch('maintenance-banner.html')
+            .then(r => r.text())
+            .then(html => document.getElementById('maintenance-banner').innerHTML = html);
+    </script>
+
     <!-- Navigation -->
     <nav>
         <div class="container">

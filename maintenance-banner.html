@@ -1,0 +1,84 @@
+<!-- maintenance-banner.html -->
+<style>
+    .maintenance-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #ff6b6b, #ee5a6f, #ff6b6b);
+        background-size: 200% 100%;
+        color: white;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 9999;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        animation: slideDown 0.5s ease-out, gradientMove 3s ease infinite;
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes gradientMove {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+
+    .maintenance-banner-text {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .maintenance-banner-icon {
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    /* Push content down so banner doesn't overlap */
+    body.has-maintenance-banner {
+        padding-top: 48px;
+    }
+
+    @media (max-width: 768px) {
+        .maintenance-banner {
+            font-size: 12px;
+            padding: 10px 15px;
+        }
+        
+        body.has-maintenance-banner {
+            padding-top: 44px;
+        }
+    }
+</style>
+
+<div class="maintenance-banner">
+    <div class="maintenance-banner-text">
+        <span class="maintenance-banner-icon">🔧</span>
+        <span>AI Chatbot is currently under maintenance. We'll be back soon!</span>
+    </div>
+</div>
+
+<script>
+    // Add class to body to push content down
+    document.body.classList.add('has-maintenance-banner');
+</script>
