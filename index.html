@@ -1354,6 +1354,72 @@
         const chatMessages = document.getElementById('chatMessages');
         const chatInput = document.getElementById('chatInput');
         const sendButton = document.getElementById('sendButton');
+        // At the top, after defining API_URL
+        const CHAT_STORAGE_KEY = 'vertechions_chat_history';
+
+        // Function to save chat
+        function saveChatHistory() {
+            const messages = [];
+            document.querySelectorAll('#chatMessages .message').forEach(msg => {
+                const isBot = msg.classList.contains('bot');
+                const content = msg.querySelector('.message-content').textContent;
+                messages.push({
+                    type: isBot ? 'bot' : 'user',
+                    content: content
+                });
+            });
+            localStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(messages));
+        }
+
+        // Function to load chat
+        function loadChatHistory() {
+            const saved = localStorage.getItem(CHAT_STORAGE_KEY);
+            if (!saved) return;
+
+            const messages = JSON.parse(saved);
+            // Clear existing messages except the welcome message
+            const welcomeMsg = chatMessages.querySelector('.message.bot');
+            chatMessages.innerHTML = '';
+
+            // If no history, keep welcome message
+            if (messages.length === 0) {
+                if (welcomeMsg) chatMessages.appendChild(welcomeMsg);
+                return;
+            }
+
+            // Load saved messages
+            messages.forEach(msg => {
+                addMessage(msg.content, msg.type);
+            });
+        }
+
+        // Update the addMessage function to save after adding
+        function addMessage(text, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            avatar.textContent = type === 'bot' ? 'AI' : 'You';
+
+            const content = document.createElement('div');
+            content.className = 'message-content';
+            content.textContent = text;
+
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(content);
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Save after adding message
+            saveChatHistory();
+        }
+
+        // Load chat history when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            loadChatHistory();
+        });
 
         // Toggle chat
         chatButton.addEventListener('click', () => {
