@@ -12,27 +12,20 @@
         padding: 12px 20px;
         font-size: 14px;
         font-weight: 500;
-        z-index: 10000; /* Higher than nav (nav is 1000) */
+        z-index: 10000;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         animation: slideDown 0.5s ease-out, gradientMove 3s ease infinite;
+        height: 48px;
     }
 
     @keyframes slideDown {
-        from {
-            transform: translateY(-100%);
-        }
-        to {
-            transform: translateY(0);
-        }
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
     }
 
     @keyframes gradientMove {
-        0%, 100% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
     }
 
     .maintenance-banner-text {
@@ -46,36 +39,38 @@
     }
 
     @keyframes pulse {
-        0%, 100% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0.5;
-        }
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
     }
 
-    /* Push nav down when maintenance banner is active */
-    body.has-maintenance-banner nav {
-        top: 48px !important; /* Push nav below banner */
+    /* STRONGER selectors to push nav down */
+    nav {
+        top: 48px !important;
+        margin-top: 0 !important;
     }
 
-    /* Push main content down */
-    body.has-maintenance-banner {
-        padding-top: 48px;
+    /* Also push the first section down */
+    body > section:first-of-type,
+    body > .hero,
+    body main {
+        margin-top: 48px !important;
     }
 
     @media (max-width: 768px) {
         .maintenance-banner {
             font-size: 12px;
             padding: 10px 15px;
+            height: 44px;
         }
         
-        body.has-maintenance-banner nav {
+        nav {
             top: 44px !important;
         }
         
-        body.has-maintenance-banner {
-            padding-top: 44px;
+        body > section:first-of-type,
+        body > .hero,
+        body main {
+            margin-top: 44px !important;
         }
     }
 </style>
@@ -88,6 +83,11 @@
 </div>
 
 <script>
-    // Add class to body to push content down
-    document.body.classList.add('has-maintenance-banner');
+    // Force nav position after page loads
+    window.addEventListener('DOMContentLoaded', function() {
+        const nav = document.querySelector('nav');
+        if (nav) {
+            nav.style.top = '48px';
+        }
+    });
 </script>
