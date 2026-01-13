@@ -45,6 +45,40 @@ const chatbotMessages = document.getElementById('chatbotMessages');
 const chatbotInput = document.getElementById('chatbotInput');
 const chatbotSend = document.getElementById('chatbotSend');
 
+// Session storage key for chat history
+const CHAT_HISTORY_KEY = 'vertechions_chat_history';
+
+// Load chat history from sessionStorage when page loads
+function loadChatHistory() {
+    const savedHistory = sessionStorage.getItem(CHAT_HISTORY_KEY);
+    if (savedHistory) {
+        try {
+            const messages = JSON.parse(savedHistory);
+            // Clear existing messages
+            chatbotMessages.innerHTML = '';
+            // Restore all saved messages
+            messages.forEach(msg => {
+                addMessageToDOM(msg.text, msg.isUser, msg.isError);
+            });
+        } catch (error) {
+            console.error('Error loading chat history:', error);
+        }
+    }
+}
+
+// Save chat history to sessionStorage
+function saveChatHistory() {
+    const messages = [];
+    const messageElements = chatbotMessages.querySelectorAll('.message:not(.typing)');
+    messageElements.forEach(element => {
+        const isUser = element.classList.contains('user');
+        const isError = element.innerHTML.includes('ERROR_MESSAGE_WITH_LINKS') || element.innerHTML.includes('wa.me');
+        const text = isError ? 'ERROR_MESSAGE_WITH_LINKS' : element.textContent;
+        messages.push({ text, isUser, isError });
+    });
+    sessionStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(messages));
+}
+
 // Toggle chatbot window
 chatbotToggle.addEventListener('click', () => {
     chatbotWindow.classList.toggle('active');
@@ -57,13 +91,13 @@ chatbotClose.addEventListener('click', () => {
     chatbotWindow.classList.remove('active');
 });
 
-// Add message to chat
-function addMessage(message, isUser = false) {
+// Add message to DOM only (without saving)
+function addMessageToDOM(message, isUser = false, isError = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
     
     // Check if this is the error message that needs clickable links
-    if (message === "ERROR_MESSAGE_WITH_LINKS") {
+    if (message === "ERROR_MESSAGE_WITH_LINKS" || isError) {
         messageDiv.innerHTML = `I apologize, but I'm having trouble connecting right now. Please contact us directly at <a href="https://wa.me/601172570041" target="_blank" style="color: #06B6D4; text-decoration: underline;">011-7257 0041</a> or <a href="mailto:hello@vertechions.com" style="color: #06B6D4; text-decoration: underline;">hello@vertechions.com</a> for immediate assistance!`;
     } else {
         messageDiv.textContent = message;
@@ -71,6 +105,12 @@ function addMessage(message, isUser = false) {
     
     chatbotMessages.appendChild(messageDiv);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+// Add message to chat and save to history
+function addMessage(message, isUser = false) {
+    addMessageToDOM(message, isUser);
+    saveChatHistory();
 }
 
 // Show typing indicator
@@ -126,7 +166,6 @@ async function sendToGemini(userMessage) {
         return data.candidates[0].content.parts[0].text;
     } catch (error) {
         console.error('Error calling Gemini API:', error);
-        // Return a special marker that will be converted to clickable links
         return "ERROR_MESSAGE_WITH_LINKS";
     }
 }
@@ -154,6 +193,9 @@ async function sendMessage() {
     chatbotSend.disabled = false;
     chatbotInput.focus();
 }
+
+// Load chat history when page loads
+loadChatHistory();
 
 // Check if API key is set
 if (GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
