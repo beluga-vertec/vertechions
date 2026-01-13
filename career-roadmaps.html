@@ -15,6 +15,9 @@
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- AI Chatbot Styles -->
+    <link href="chatbot.css" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -282,9 +285,7 @@
             font-weight: 600;
             margin-bottom: 15px;
             align-self: flex-start;
-            /* Prevents stretching */
             width: fit-content;
-            /* Fits content width */
         }
 
         .badge-beginner {
@@ -432,6 +433,15 @@
             color: var(--text-gray);
         }
 
+        /* Override chatbot position for this page (no WhatsApp button) */
+        .chatbot-container {
+            bottom: 30px !important;  /* At the bottom since no WhatsApp button */
+        }
+
+        .chatbot-window {
+            bottom: 100px !important;  /* Above the chatbot button */
+        }
+
         /* Mobile */
         @media (max-width: 768px) {
             .hero h1 {
@@ -462,6 +472,14 @@
                 display: block;
                 margin: 10px auto;
             }
+
+            .chatbot-container {
+                bottom: 30px !important;
+            }
+
+            .chatbot-window {
+                bottom: 100px !important;
+            }
         }
     </style>
 </head>
@@ -474,6 +492,28 @@
             <a href="index.html" class="back-btn">← Back to Home</a>
         </div>
     </nav>
+
+    <!-- AI Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbotToggle">🤖</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>💬 Career Guide Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    Hi! 👋 I'm here to help you navigate your tech career journey. Ask me about any career path, learning resources, or how to get started!
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" id="chatbotInput" 
+                       placeholder="Ask about career paths..." 
+                       onkeypress="if(event.key==='Enter') sendMessage()">
+                <button class="chatbot-send" id="chatbotSend" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero -->
     <section class="hero">
@@ -748,6 +788,9 @@
             offset: 100
         });
     </script>
+
+    <!-- AI Chatbot Script -->
+    <script src="chatbot.js"></script>
 </body>
 
 </html>

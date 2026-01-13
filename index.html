@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Vertechions - Professional Web Development & IT Infrastructure Solutions. Custom websites, eCommerce platforms, VoIP, PBX, and SBC services for your business.">
+        content="Vertechions - Professional Web Development & IT Infrastructure Solutions. Custom websites, eCommerce platforms, VoIP, PBX and SBC services for your business.">
     <title>Vertechions | Web Development & IT Infrastructure Solutions</title>
 
     <!-- Google Fonts -->
@@ -15,6 +15,9 @@
 
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- AI Chatbot Styles -->
+    <link href="chatbot.css" rel="stylesheet">
 
     <style>
         * {
@@ -548,7 +551,7 @@
         /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
+            bottom: 30px;  /* At the bottom */
             right: 30px;
             width: 60px;
             height: 60px;
@@ -565,7 +568,6 @@
         }
 
         @keyframes pulse {
-
             0%,
             100% {
                 transform: scale(1);
@@ -695,6 +697,10 @@
             .cta-content h2 {
                 font-size: 2.2em;
             }
+
+            .whatsapp-float {
+                bottom: 30px;  /* Keep at bottom on mobile */
+            }
         }
     </style>
 </head>
@@ -721,6 +727,28 @@
             </div>
         </div>
     </nav>
+
+    <!-- AI Chatbot Widget (from external file) -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbotToggle">🤖</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>💬 Vertechions AI Assistant</h3>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    Hi! 👋 <br>I'm your Vertechions AI assistant. <br>Ask me anything about our services, pricing or how we can help your business!
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" id="chatbotInput" 
+                       placeholder="Ask me anything..." 
+                       onkeypress="if(event.key==='Enter') sendMessage()">
+                <button class="chatbot-send" id="chatbotSend" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/601172570041?text=Hi%20Vertechions!%20I'm%20interested%20in%20your%20services"
@@ -911,7 +939,7 @@
                     <div class="contact-icon">📱</div>
                     <div class="contact-details">
                         <h4>WhatsApp / Phone</h4>
-                        <p><a href="tel:+601172570041">011-7257 0041</a></p>
+                        <p><a href="tel:+601172570041">+60 11725 70041</a></p>
                         <p><a href="https://wa.me/601172570041" target="_blank">Message on WhatsApp</a></p>
                     </div>
                 </div>
@@ -1038,6 +1066,9 @@
             });
         }
     </script>
+
+    <!-- AI Chatbot Script -->
+    <script src="chatbot.js"></script>
 </body>
 
 </html>
