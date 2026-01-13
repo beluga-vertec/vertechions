@@ -48,9 +48,8 @@ const chatbotSend = document.getElementById('chatbotSend');
 // Toggle chatbot window
 chatbotToggle.addEventListener('click', () => {
     chatbotWindow.classList.toggle('active');
-    if (chatbotWindow.classList.contains('active')) {
-        chatbotInput.focus();
-    }
+    // Don't auto-focus input on mobile to prevent keyboard from opening
+    // User can manually tap the input field when ready to type
 });
 
 // Close chatbot window
