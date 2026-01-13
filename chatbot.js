@@ -3,7 +3,7 @@
 // ====================================
 
 // Replace with your actual Gemini API key
-const GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY_HERE';
+const GEMINI_API_KEY = 'AIzaSyDcvgyyHCSduNnVHsQZwWJNiuGq95fEqGk';
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`;
 
 // Company context for the AI
