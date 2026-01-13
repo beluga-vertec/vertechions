@@ -4,7 +4,7 @@
 
 // Replace with your actual Gemini API key
 const GEMINI_API_KEY = 'AIzaSyDcvgyyHCSduNnVHsQZwWJNiuGq95fEqGk';
-const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`;
+const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 // Company context for the AI
 const companyContext = `You are an AI assistant for Vertechions, a web development and IT infrastructure company based in Kuala Lumpur, Malaysia.
@@ -198,6 +198,6 @@ async function sendMessage() {
 loadChatHistory();
 
 // Check if API key is set
-if (GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
+if (GEMINI_API_KEY === 'AIzaSyDcvgyyHCSduNnVHsQZwWJNiuGq95fEqGk') {
     console.warn('⚠️ Gemini API key not configured. Please add your API key in chatbot.js to enable the chatbot.');
 }
