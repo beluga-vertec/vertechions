@@ -2,10 +2,6 @@
 // AI CHATBOT CONFIGURATION
 // ====================================
 
-// Replace with your actual Gemini API key
-const GEMINI_API_KEY = 'AIzaSyDcvgyyHCSduNnVHsQZwWJNiuGq95fEqGk';
-const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
-
 // Company context for the AI
 const companyContext = `You are an AI assistant for Vertechions, a web development and IT infrastructure company based in Kuala Lumpur, Malaysia.
 
@@ -54,9 +50,7 @@ function loadChatHistory() {
     if (savedHistory) {
         try {
             const messages = JSON.parse(savedHistory);
-            // Clear existing messages
             chatbotMessages.innerHTML = '';
-            // Restore all saved messages
             messages.forEach(msg => {
                 addMessageToDOM(msg.text, msg.isUser, msg.isError);
             });
@@ -82,8 +76,6 @@ function saveChatHistory() {
 // Toggle chatbot window
 chatbotToggle.addEventListener('click', () => {
     chatbotWindow.classList.toggle('active');
-    // Don't auto-focus input on mobile to prevent keyboard from opening
-    // User can manually tap the input field when ready to type
 });
 
 // Close chatbot window
@@ -96,7 +88,6 @@ function addMessageToDOM(message, isUser = false, isError = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
     
-    // Check if this is the error message that needs clickable links
     if (message === "ERROR_MESSAGE_WITH_LINKS" || isError) {
         messageDiv.innerHTML = `I apologize, but I'm having trouble connecting right now. Please contact us directly at <a href="https://wa.me/601172570041" target="_blank" style="color: #06B6D4; text-decoration: underline;">011-7257 0041</a> or <a href="mailto:hello@vertechions.com" style="color: #06B6D4; text-decoration: underline;">hello@vertechions.com</a> for immediate assistance!`;
     } else {
@@ -137,24 +128,17 @@ function removeTypingIndicator() {
     }
 }
 
-// Send message to Gemini API
+// Send message to YOUR Vercel API endpoint (not directly to Gemini)
 async function sendToGemini(userMessage) {
     try {
-        const response = await fetch(GEMINI_API_URL, {
+        const response = await fetch('/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                contents: [{
-                    parts: [{
-                        text: `${companyContext}\n\nUser question: ${userMessage}\n\nProvide a helpful, concise response:`
-                    }]
-                }],
-                generationConfig: {
-                    temperature: 0.7,
-                    maxOutputTokens: 500,
-                }
+                userMessage: userMessage,
+                context: companyContext
             })
         });
 
@@ -165,7 +149,7 @@ async function sendToGemini(userMessage) {
         const data = await response.json();
         return data.candidates[0].content.parts[0].text;
     } catch (error) {
-        console.error('Error calling Gemini API:', error);
+        console.error('Error calling API:', error);
         return "ERROR_MESSAGE_WITH_LINKS";
     }
 }
@@ -175,18 +159,14 @@ async function sendMessage() {
     const message = chatbotInput.value.trim();
     if (!message) return;
 
-    // Add user message
     addMessage(message, true);
     chatbotInput.value = '';
     chatbotSend.disabled = true;
 
-    // Show typing indicator
     showTypingIndicator();
 
-    // Get AI response
     const response = await sendToGemini(message);
     
-    // Remove typing indicator and add bot response
     removeTypingIndicator();
     addMessage(response);
     
@@ -196,8 +176,3 @@ async function sendMessage() {
 
 // Load chat history when page loads
 loadChatHistory();
-
-// Check if API key is set
-if (GEMINI_API_KEY === 'AIzaSyDcvgyyHCSduNnVHsQZwWJNiuGq95fEqGk') {
-    console.warn('⚠️ Gemini API key not configured. Please add your API key in chatbot.js to enable the chatbot.');
-}
