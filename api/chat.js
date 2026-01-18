@@ -26,9 +26,9 @@ export default async function handler(req, res) {
 
     console.log('Calling Gemini API...');
 
-    // Call Gemini API
+    // Call Gemini API with CORRECT model name
     const geminiResponse = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         method: 'POST',
         headers: {
@@ -48,16 +48,13 @@ export default async function handler(req, res) {
       }
     );
 
-    // Get the response text to see what Gemini is saying
     const responseText = await geminiResponse.text();
     console.log('Gemini response status:', geminiResponse.status);
-    console.log('Gemini response:', responseText);
 
     if (!geminiResponse.ok) {
       console.error('Gemini API error - Status:', geminiResponse.status);
       console.error('Gemini API error - Body:', responseText);
       
-      // Return the actual error to help debug
       return res.status(500).json({ 
         error: 'Gemini API request failed', 
         status: geminiResponse.status,
@@ -71,7 +68,6 @@ export default async function handler(req, res) {
     
   } catch (error) {
     console.error('Error in handler:', error.message);
-    console.error('Full error:', error);
     return res.status(500).json({ 
       error: 'Failed to get response', 
       message: error.message 
