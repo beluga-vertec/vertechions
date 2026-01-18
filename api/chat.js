@@ -18,8 +18,16 @@ export default async function handler(req, res) {
   try {
     const { userMessage, context } = req.body;
 
-    // Call Gemini API with the secret key from environment variable
-    const response = await fetch(
+    // Check if API key exists
+    if (!process.env.GEMINI_API_KEY) {
+      console.error('GEMINI_API_KEY not found in environment variables');
+      return res.status(500).json({ error: 'API key not configured' });
+    }
+
+    console.log('Calling Gemini API...');
+
+    // Call Gemini API
+    const geminiResponse = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         method: 'POST',
@@ -40,15 +48,33 @@ export default async function handler(req, res) {
       }
     );
 
-    if (!response.ok) {
-      throw new Error('Gemini API request failed');
+    // Get the response text to see what Gemini is saying
+    const responseText = await geminiResponse.text();
+    console.log('Gemini response status:', geminiResponse.status);
+    console.log('Gemini response:', responseText);
+
+    if (!geminiResponse.ok) {
+      console.error('Gemini API error - Status:', geminiResponse.status);
+      console.error('Gemini API error - Body:', responseText);
+      
+      // Return the actual error to help debug
+      return res.status(500).json({ 
+        error: 'Gemini API request failed', 
+        status: geminiResponse.status,
+        details: responseText 
+      });
     }
 
-    const data = await response.json();
+    const data = JSON.parse(responseText);
+    console.log('Success! Returning response to client');
     return res.status(200).json(data);
     
   } catch (error) {
-    console.error('Error:', error);
-    return res.status(500).json({ error: 'Failed to get response' });
+    console.error('Error in handler:', error.message);
+    console.error('Full error:', error);
+    return res.status(500).json({ 
+      error: 'Failed to get response', 
+      message: error.message 
+    });
   }
 }
