@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rahman Saaban — VoIP Architect & SRE</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;700;800&display=swap"
+    rel="stylesheet" />
   <style>
     :root {
       --bg: #0a0c10;
@@ -19,479 +22,570 @@
       --sans: 'Syne', sans-serif;
     }
 
-```
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ``` *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-/* Grid noise overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0,212,170,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,170,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
-}
+    /* Grid noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 212, 170, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 170, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-  position: relative;
-  z-index: 1;
-}
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ── HEADER ── */
-header {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-  align-items: start;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 2.5rem;
-  margin-bottom: 2.5rem;
-  animation: fadeUp 0.6s ease both;
-}
+    /* ── HEADER ── */
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: start;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
 
-.header-text {}
+    .header-text {}
 
-.tag {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  color: var(--accent);
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.tag::before { content: '//'; opacity: 0.5; }
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-h1 {
-  font-family: var(--sans);
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
-}
+    .tag::before {
+      content: '//';
+      opacity: 0.5;
+    }
+ß
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-.title-line {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--muted);
-  letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
-}
-.title-line span {
-  color: var(--accent2);
-}
+    .title-line {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
 
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--muted);
-}
-.contacts a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
-.contacts a:hover { color: var(--accent); }
-.contacts span::before { content: '→ '; color: var(--accent); }
+    .title-line span {
+      color: var(--accent2);
+    }
 
-.avatar-wrap {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  overflow: hidden;
-  flex-shrink: 0;
-  box-shadow: 0 0 30px rgba(0,212,170,0.15);
-}
-.avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
-.avatar-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--surface);
-  font-family: var(--mono);
-  font-size: 1.8rem;
-  color: var(--accent);
-}
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
 
-/* ── SECTIONS ── */
-section {
-  margin-bottom: 3rem;
-  animation: fadeUp 0.6s ease both;
-}
-section:nth-child(2) { animation-delay: 0.1s; }
-section:nth-child(3) { animation-delay: 0.2s; }
-section:nth-child(4) { animation-delay: 0.3s; }
-section:nth-child(5) { animation-delay: 0.4s; }
-section:nth-child(6) { animation-delay: 0.5s; }
+    .contacts a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
 
-.section-label {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.section-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
+    .contacts a:hover {
+      color: var(--accent);
+    }
 
-/* About */
-.about-text {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #94a3b8;
-  max-width: 680px;
-}
+    .contacts span::before {
+      content: '→ ';
+      color: var(--accent);
+    }
 
-/* Experience */
-.job {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 2px solid var(--accent);
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 1rem;
-  border-radius: 0 6px 6px 0;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.job:hover {
-  border-left-color: var(--accent2);
-  box-shadow: 0 0 20px rgba(59,130,246,0.08);
-}
+    .avatar-wrap {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 30px rgba(0, 212, 170, 0.15);
+    }
 
-.job-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  margin-bottom: 0.25rem;
-}
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.job-title {
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--text);
-}
+    .avatar-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface);
+      font-family: var(--mono);
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
 
-.job-period {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-  white-space: nowrap;
-}
+    /* ── SECTIONS ── */
+    section {
+      margin-bottom: 3rem;
+      animation: fadeUp 0.6s ease both;
+    }
 
-.job-company {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
+    section:nth-child(2) {
+      animation-delay: 0.1s;
+    }
 
-.job ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+    section:nth-child(3) {
+      animation-delay: 0.2s;
+    }
 
-.job li {
-  font-size: 0.83rem;
-  color: #94a3b8;
-  line-height: 1.65;
-  padding-left: 1.1rem;
-  position: relative;
-}
-.job li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-size: 0.7rem;
-  top: 0.05em;
-}
+    section:nth-child(4) {
+      animation-delay: 0.3s;
+    }
 
-/* Skills */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.skill-tag {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--accent);
-  background: rgba(0,212,170,0.07);
-  border: 1px solid rgba(0,212,170,0.2);
-  padding: 0.3rem 0.75rem;
-  border-radius: 3px;
-  transition: background 0.2s, border-color 0.2s;
-}
-.skill-tag:hover {
-  background: rgba(0,212,170,0.15);
-  border-color: var(--accent);
-}
+    section:nth-child(5) {
+      animation-delay: 0.4s;
+    }
 
-/* Education */
-.edu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
-}
-.edu-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 1.25rem;
-  border-radius: 6px;
-}
-.edu-degree {
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 0.25rem;
-}
-.edu-school {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-}
-.edu-meta {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--accent);
-}
+    section:nth-child(6) {
+      animation-delay: 0.5s;
+    }
 
-/* Footer */
-footer {
-  border-top: 1px solid var(--border);
-  padding-top: 1.5rem;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--muted);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
 
-@media (max-width: 600px) {
-  header { grid-template-columns: 1fr; }
-  .avatar-wrap { width: 72px; height: 72px; }
-  .job-header { flex-direction: column; }
-}
-```
+    /* About */
+    .about-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #94a3b8;
+      max-width: 680px;
+    }
 
+    /* Experience */
+    .job {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0 6px 6px 0;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .job:hover {
+      border-left-color: var(--accent2);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.08);
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .job-period {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .job-company {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .job ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .job li {
+      font-size: 0.83rem;
+      color: #94a3b8;
+      line-height: 1.65;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .job li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+      top: 0.05em;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      background: rgba(0, 212, 170, 0.07);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      padding: 0.3rem 0.75rem;
+      border-radius: 3px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .skill-tag:hover {
+      background: rgba(0, 212, 170, 0.15);
+      border-color: var(--accent);
+    }
+
+    /* Education */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 6px;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-school {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-meta {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        grid-template-columns: 1fr;
+      }
+
+      .avatar-wrap {
+        width: 72px;
+        height: 72px;
+      }
+
+      .job-header {
+        flex-direction: column;
+      }
+    }
+
+    ```
   </style>
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
 
-  <!-- HEADER -->
+    <!-- HEADER -->
 
-  <header>
-    <div class="header-text">
-      <div class="tag">resume</div>
-      <h1>Rahman Saaban</h1>
-      <div class="title-line">
-        VoIP Architect &nbsp;|&nbsp; <span>SIP & UC Expert</span> &nbsp;|&nbsp; IPC Unigy Specialist
+    <header>
+      <div class="header-text">
+      <!-- <div class="tag">resume</div> -->
+        <h1>Rahman Saaban</h1>
+        <div class="title-line">
+          VoIP Architect &nbsp;|&nbsp; <span>SIP & UC Expert</span> &nbsp;|&nbsp; IPC Unigy Specialist
+        </div>
+        <div class="contacts">
+          <span><a href="tel:+60147191644">+60-14-7191644</a></span>
+          <span><a href="mailto:rahmansaaban.excel@gmail.com">rahmansaaban.excel@gmail.com</a></span>
+          <span><a href="https://linkedin.com/in/rahman-saaban" target="_blank">linkedin.com/in/rahman-saaban</a></span>
+          <span>Kuala Lumpur, Malaysia</span>
+        </div>
       </div>
-      <div class="contacts">
-        <span><a href="tel:+60147191644">+60-14-7191644</a></span>
-        <span><a href="mailto:rahmansaaban.excel@gmail.com">rahmansaaban.excel@gmail.com</a></span>
-        <span><a href="https://linkedin.com/in/rahman-saaban" target="_blank">linkedin.com/in/rahman-saaban</a></span>
-        <span>Kuala Lumpur, Malaysia</span>
+      <div class="avatar-wrap">
+        <img src="images/Rahman.jpg" alt="Rahman Saaban" />
       </div>
-    </div>
-    <div class="avatar-wrap">
-      <div class="avatar-placeholder">RS</div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ABOUT -->
+    <!-- ABOUT -->
 
-  <section>
-    <div class="section-label">about</div>
-    <p class="about-text">
-      Skilled VoIP architect with 6+ years of experience designing and managing high-availability SIP infrastructures for diverse industries, including contact centers and fintech. Expertise in IPC Unigy systems, Kubernetes, FreePBX, AudioCodes SBC and Telcobridges. Proficient in advanced SIP diagnostics, RTP analysis and VoIP troubleshooting. Committed to achieving high uptime for mission-critical voice platforms.
-    </p>
-  </section>
+    <section>
+      <div class="section-label">about</div>
+      <p class="about-text">
+        Skilled VoIP architect with 6+ years of experience designing and managing high-availability SIP infrastructures
+        for diverse industries, including contact centers and fintech. Expertise in IPC Unigy systems, Kubernetes,
+        FreePBX, AudioCodes SBC and Telcobridges. Proficient in advanced SIP diagnostics, RTP analysis and VoIP
+        troubleshooting. Committed to achieving high uptime for mission-critical voice platforms.
+      </p>
+    </section>
 
-  <!-- EXPERIENCE -->
+    <!-- EXPERIENCE -->
 
-  <section>
-    <div class="section-label">experience</div>
+    <section>
+      <div class="section-label">experience</div>
 
-```
-<div class="job">
-  <div class="job-header">
-    <div class="job-title">Advanced Support Engineer — Communications (APAC)</div>
-    <div class="job-period">2025 – Present</div>
-  </div>
-  <div class="job-company">IPC Systems</div>
-  <ul>
-    <li>Support IPC Unigy trading communications platforms for fintech clients, working to maintain high uptime SLA</li>
-    <li>Troubleshoot turret issues, capture tcpdump on servers, and analyze packets using Wireshark to identify root causes</li>
-    <li>Monitor and troubleshoot SIP infrastructures, conducting SIP ladder analysis and RTP diagnostics</li>
-    <li>Manage Kubernetes deployments on KVM, troubleshoot issues, and ensure service recovery</li>
-    <li>Provide support for IPC soft clients, ensuring seamless user experience</li>
-    <li>Implement Nagios Core and Splunk for real-time VoIP system monitoring and proactive issue resolution</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-header">
-    <div class="job-title">Senior UC and Infrastructure Engineer</div>
-    <div class="job-period">2023 – 2025</div>
-  </div>
-  <div class="job-company">Nubitel Technology Sdn Bhd</div>
-  <ul>
-    <li>Managed on-premise infrastructure including Fortigate firewall, WAN/LAN switches, 10G switches, Dell and HP servers, QNAP storage, Microtik routers and Proxmox virtualization</li>
-    <li>Handled AWS cloud infrastructure (EC2, S3, Aurora DB) and domain management with Route 53 and GoDaddy</li>
-    <li>Deployed and maintained OpenSIPS, PostgreSQL, and MySQL databases</li>
-    <li>Implemented Wazuh, Prometheus and Grafana for infrastructure monitoring and security</li>
-    <li>Served as PIC for ISMS 27001, ensuring policy compliance across all departments</li>
-    <li>Conducted security awareness and ISMS training, prepared audit evidence and collaborated with SIRIM auditors</li>
-    <li>Managed a team of 4 handling core telephony systems, providing training and mentorship to ensure high uptime of SIP servers</li>
-    <li>Designed and deployed multi-tenant VoIP solution supporting numerous SIP endpoints using FreePBX, AudioCodes SBC and Telcobridges</li>
-    <li>Engineered secure SIP routing with in-depth diagnostics of signaling, media, headers and SDP across NAT and firewalls</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-header">
-    <div class="job-title">Unified Communication Engineer</div>
-    <div class="job-period">2021 – 2025</div>
-  </div>
-  <div class="job-company">Nubitel Technology Sdn Bhd</div>
-  <ul>
-    <li>Managed voice policies and configurations for PBX and Microsoft Teams systems</li>
-    <li>Deployed Aarenet Phone System, Teams Phone System, Yeastar, Sangoma, Epygi, AudioCodes SBC and Telcobridge SBC</li>
-    <li>Troubleshot UC platforms, SIP phones and soft clients to ensure optimal performance and user experience</li>
-    <li>Resolved contact center issues, including API integration and PostgreSQL database troubleshooting</li>
-    <li>Configured firewalls, switches, routers and network infrastructure, mentoring junior team members</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-header">
-    <div class="job-title">System Engineer</div>
-    <div class="job-period">2020 – 2021</div>
-  </div>
-  <div class="job-company">EV Dynamic Sdn Bhd</div>
-  <ul>
-    <li>Successfully deployed PBX System in the MRT Line 2 (Sungai Buloh-Serdang-Putrajaya), involving configuration of PBX System, Voice Recording System via RSPAN protocol, Voicemail System, and Network Monitoring System</li>
-    <li>Integrated PBX System with various systems including Voicemail system, radio system, public announcement system and CCTV system</li>
-    <li>Configured PBX Systems with PRI Line, implementing E1 failover configuration for enhanced reliability</li>
-    <li>Completed Phase 1 of the MRT Line 2 Project, covering the stretch from Sungai Buloh Depot to MRT Kampung Batu stations (1 Depot and 9 stations)</li>
-  </ul>
-</div>
-
-<div class="job">
-  <div class="job-header">
-    <div class="job-title">Assistant Project Engineer</div>
-    <div class="job-period">2019</div>
-  </div>
-  <div class="job-company">TQERA Systems Sdn Bhd</div>
-  <ul>
-    <li>Worked in SCADA Team of TNB Contractor</li>
-    <li>Monitored and supervised the installation of Field Terminal Unit and Remote Terminal Unit in Stesen Suis 33kv</li>
-    <li>Prepared documentation for FAT, PAT and SAT</li>
-    <li>Managed company inventories and assisted project director with company claims and project timeline</li>
-  </ul>
-</div>
-```
-
-  </section>
-
-  <!-- SKILLS -->
-
-  <section>
-    <div class="section-label">skills</div>
-    <div class="skills-grid">
-      <span class="skill-tag">Asterisk</span>
-      <span class="skill-tag">VoIP & SIP</span>
-      <span class="skill-tag">FreePBX</span>
-      <span class="skill-tag">AudioCodes SBC</span>
-      <span class="skill-tag">Telcobridge SBC</span>
-      <span class="skill-tag">SIP Routing</span>
-      <span class="skill-tag">RTP & SDP</span>
-      <span class="skill-tag">VoIP QoS</span>
-      <span class="skill-tag">PRI & Analog to SIP</span>
-      <span class="skill-tag">Microsoft Teams</span>
-      <span class="skill-tag">IPC Unigy</span>
-      <span class="skill-tag">Turret Troubleshooting</span>
-      <span class="skill-tag">SIP Phone Troubleshooting</span>
-      <span class="skill-tag">ISO 27001</span>
-      <span class="skill-tag">PCI DSS</span>
-      <span class="skill-tag">Linux Administration</span>
-      <span class="skill-tag">KVM</span>
-      <span class="skill-tag">Proxmox</span>
-      <span class="skill-tag">AWS</span>
-      <span class="skill-tag">Kubernetes</span>
-      <span class="skill-tag">Docker</span>
-      <span class="skill-tag">Prometheus</span>
-      <span class="skill-tag">Grafana</span>
-      <span class="skill-tag">Nagios Core</span>
-      <span class="skill-tag">Splunk</span>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-
-  <section>
-    <div class="section-label">education</div>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <div class="edu-degree">Master of Business Administration (MBA)</div>
-        <div class="edu-school">Universiti Teknologi MARA, Malaysia</div>
-        <div class="edu-meta">2023 – 2025 &nbsp;·&nbsp; CGPA: 3.74</div>
+      ```
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Advanced Support Engineer — Communications (APAC)</div>
+          <div class="job-period">2025 – Present</div>
+        </div>
+        <div class="job-company">IPC Systems</div>
+        <ul>
+          <li>Support IPC Unigy trading communications platforms for fintech clients, working to maintain high uptime
+            SLA</li>
+          <li>Troubleshoot turret issues, capture tcpdump on servers, and analyze packets using Wireshark to identify
+            root causes</li>
+          <li>Monitor and troubleshoot SIP infrastructures, conducting SIP ladder analysis and RTP diagnostics</li>
+          <li>Manage Kubernetes deployments on KVM, troubleshoot issues, and ensure service recovery</li>
+          <li>Provide support for IPC soft clients, ensuring seamless user experience</li>
+          <li>Implement Nagios Core and Splunk for real-time VoIP system monitoring and proactive issue resolution</li>
+        </ul>
       </div>
-      <div class="edu-card">
-        <div class="edu-degree">Bachelor of Electrical and Electronics Engineering</div>
-        <div class="edu-school">Universiti Putra Malaysia</div>
-        <div class="edu-meta">2015 – 2020 &nbsp;·&nbsp; CGPA: 3.34</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Senior UC and Infrastructure Engineer</div>
+          <div class="job-period">2023 – 2025</div>
+        </div>
+        <div class="job-company">Nubitel Technology Sdn Bhd</div>
+        <ul>
+          <li>Managed on-premise infrastructure including Fortigate firewall, WAN/LAN switches, 10G switches, Dell and
+            HP servers, QNAP storage, Microtik routers and Proxmox virtualization</li>
+          <li>Handled AWS cloud infrastructure (EC2, S3, Aurora DB) and domain management with Route 53 and GoDaddy</li>
+          <li>Deployed and maintained OpenSIPS, PostgreSQL, and MySQL databases</li>
+          <li>Implemented Wazuh, Prometheus and Grafana for infrastructure monitoring and security</li>
+          <li>Served as PIC for ISMS 27001, ensuring policy compliance across all departments</li>
+          <li>Conducted security awareness and ISMS training, prepared audit evidence and collaborated with SIRIM
+            auditors</li>
+          <li>Managed a team of 4 handling core telephony systems, providing training and mentorship to ensure high
+            uptime of SIP servers</li>
+          <li>Designed and deployed multi-tenant VoIP solution supporting numerous SIP endpoints using FreePBX,
+            AudioCodes SBC and Telcobridges</li>
+          <li>Engineered secure SIP routing with in-depth diagnostics of signaling, media, headers and SDP across NAT
+            and firewalls</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Unified Communication Engineer</div>
+          <div class="job-period">2021 – 2025</div>
+        </div>
+        <div class="job-company">Nubitel Technology Sdn Bhd</div>
+        <ul>
+          <li>Managed voice policies and configurations for PBX and Microsoft Teams systems</li>
+          <li>Deployed Aarenet Phone System, Teams Phone System, Yeastar, Sangoma, Epygi, AudioCodes SBC and Telcobridge
+            SBC</li>
+          <li>Troubleshot UC platforms, SIP phones and soft clients to ensure optimal performance and user experience
+          </li>
+          <li>Resolved contact center issues, including API integration and PostgreSQL database troubleshooting</li>
+          <li>Configured firewalls, switches, routers and network infrastructure, mentoring junior team members</li>
+        </ul>
+      </div>
 
-  <footer>
-    <span>Rahman Saaban &nbsp;·&nbsp; Kuala Lumpur, Malaysia</span>
-    <span>Available upon request for references</span>
-  </footer>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">System Engineer</div>
+          <div class="job-period">2020 – 2021</div>
+        </div>
+        <div class="job-company">EV Dynamic Sdn Bhd</div>
+        <ul>
+          <li>Successfully deployed PBX System in the MRT Line 2 (Sungai Buloh-Serdang-Putrajaya), involving
+            configuration of PBX System, Voice Recording System via RSPAN protocol, Voicemail System, and Network
+            Monitoring System</li>
+          <li>Integrated PBX System with various systems including Voicemail system, radio system, public announcement
+            system and CCTV system</li>
+          <li>Configured PBX Systems with PRI Line, implementing E1 failover configuration for enhanced reliability</li>
+          <li>Completed Phase 1 of the MRT Line 2 Project, covering the stretch from Sungai Buloh Depot to MRT Kampung
+            Batu stations (1 Depot and 9 stations)</li>
+        </ul>
+      </div>
 
-</div>
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Assistant Project Engineer</div>
+          <div class="job-period">2019</div>
+        </div>
+        <div class="job-company">TQERA Systems Sdn Bhd</div>
+        <ul>
+          <li>Worked in SCADA Team of TNB Contractor</li>
+          <li>Monitored and supervised the installation of Field Terminal Unit and Remote Terminal Unit in Stesen Suis
+            33kv</li>
+          <li>Prepared documentation for FAT, PAT and SAT</li>
+          <li>Managed company inventories and assisted project director with company claims and project timeline</li>
+        </ul>
+      </div>
+      ```
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section>
+      <div class="section-label">skills</div>
+      <div class="skills-grid">
+        <span class="skill-tag">Asterisk</span>
+        <span class="skill-tag">VoIP & SIP</span>
+        <span class="skill-tag">FreePBX</span>
+        <span class="skill-tag">AudioCodes SBC</span>
+        <span class="skill-tag">Telcobridge SBC</span>
+        <span class="skill-tag">SIP Routing</span>
+        <span class="skill-tag">RTP & SDP</span>
+        <span class="skill-tag">VoIP QoS</span>
+        <span class="skill-tag">PRI & Analog to SIP</span>
+        <span class="skill-tag">Microsoft Teams</span>
+        <span class="skill-tag">IPC Unigy</span>
+        <span class="skill-tag">Turret Troubleshooting</span>
+        <span class="skill-tag">SIP Phone Troubleshooting</span>
+        <span class="skill-tag">ISO 27001</span>
+        <span class="skill-tag">PCI DSS</span>
+        <span class="skill-tag">Linux Administration</span>
+        <span class="skill-tag">KVM</span>
+        <span class="skill-tag">Proxmox</span>
+        <span class="skill-tag">AWS</span>
+        <span class="skill-tag">Kubernetes</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Prometheus</span>
+        <span class="skill-tag">Grafana</span>
+        <span class="skill-tag">Nagios Core</span>
+        <span class="skill-tag">Splunk</span>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section>
+      <div class="section-label">education</div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-degree">Master of Business Administration (MBA)</div>
+          <div class="edu-school">Universiti Teknologi MARA, Malaysia</div>
+          <div class="edu-meta">2023 – 2025 &nbsp;·&nbsp; CGPA: 3.74</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-degree">Bachelor of Electrical and Electronics Engineering</div>
+          <div class="edu-school">Universiti Putra Malaysia</div>
+          <div class="edu-meta">2015 – 2020 &nbsp;·&nbsp; CGPA: 3.34</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <span>Rahman Saaban &nbsp;·&nbsp; Kuala Lumpur, Malaysia</span>
+      <span>Available upon request for references</span>
+    </footer>
+
+  </div>
 </body>
+
 </html>
