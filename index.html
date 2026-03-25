@@ -551,7 +551,8 @@
         /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;  /* At the bottom */
+            bottom: 30px;
+            /* At the bottom */
             right: 30px;
             width: 60px;
             height: 60px;
@@ -568,6 +569,7 @@
         }
 
         @keyframes pulse {
+
             0%,
             100% {
                 transform: scale(1);
@@ -699,7 +701,40 @@
             }
 
             .whatsapp-float {
-                bottom: 30px;  /* Keep at bottom on mobile */
+                bottom: 30px;
+                /* Keep at bottom on mobile */
+            }
+
+            .founder-link-wrap {
+                margin-top: 1.5rem;
+            }
+
+            .founder-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: var(--accent);
+                /* or whatever your brand color is */
+                text-decoration: none;
+                border: 1px solid currentColor;
+                padding: 0.5rem 1.1rem;
+                border-radius: 4px;
+                transition: background 0.2s, color 0.2s;
+            }
+
+            .founder-link:hover {
+                background: var(--accent);
+                color: #fff;
+            }
+
+            .founder-link-arrow {
+                transition: transform 0.2s;
+            }
+
+            .founder-link:hover .founder-link-arrow {
+                transform: translateX(4px);
             }
         }
     </style>
@@ -738,13 +773,13 @@
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
                 <div class="message bot">
-                    Hi! 👋 I'm your Vertechions AI assistant. Ask me anything about our services, pricing, or how we can help your business!
+                    Hi! 👋 I'm your Vertechions AI assistant. Ask me anything about our services, pricing, or how we can
+                    help your business!
                 </div>
             </div>
             <div class="chatbot-input-container">
-                <input type="text" class="chatbot-input" id="chatbotInput" 
-                       placeholder="Ask me anything..." 
-                       onkeypress="if(event.key==='Enter') sendMessage()">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask me anything..."
+                    onkeypress="if(event.key==='Enter') sendMessage()">
                 <button class="chatbot-send" id="chatbotSend" onclick="sendMessage()">➤</button>
             </div>
         </div>
@@ -816,6 +851,13 @@
                         <h3>6+</h3>
                         <p>Years Professional Experience</p>
                     </div>
+                </div>
+                <div class="founder-link-wrap">
+                    <a href="founder.html" class="founder-link">
+                        <span class="founder-link-icon">👤</span>
+                        Meet the Founder
+                        <span class="founder-link-arrow">→</span>
+                    </a>
                 </div>
             </div>
 
