@@ -204,6 +204,42 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Engineer profile link */
+        .profile-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            max-width: 470px;
+            margin-top: 26px;
+            padding: 16px 18px;
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(6, 182, 212, 0.08));
+            color: var(--text-light);
+            text-decoration: none;
+            transition: transform .2s ease, border-color .2s ease, background .2s ease;
+        }
+        .profile-link:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-cyan);
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(6, 182, 212, 0.14));
+        }
+        .profile-link-icon {
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: var(--gradient-1);
+            color: white;
+            font-size: 1.25rem;
+        }
+        .profile-link-copy { display: flex; flex-direction: column; gap: 3px; }
+        .profile-link-copy strong { color: var(--text-light); font-size: 1rem; }
+        .profile-link-copy small { color: var(--text-gray); font-size: .82rem; }
+        .profile-link-arrow { margin-left: auto; color: var(--accent-cyan); font-size: 1.3rem; flex-shrink: 0; }
+
         /* About Section */
         .about {
             padding: 120px 20px;
@@ -739,7 +775,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="career-roadmaps.html">Career Guide</a></li>
             </ul>
             <div class="menu-toggle">
                 <span></span>
@@ -790,76 +825,28 @@
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-content" data-aos="fade-right">
-                <div class="section-label">WHO WE ARE</div>
-                <h2>About <span class="gradient-text">Vertechions</span></h2>
-                <p class="lead">
-                    Vertechions provides focused remote engineering support for teams that need an experienced extra pair of hands to investigate VoIP and unified communications issues.
-                </p>
-                <p>
-                    Our technical work spans SIP signalling, call-flow analysis, RTP/media troubleshooting, packet captures, SBC configuration, firewall/NAT behaviour, Linux, and UC platforms. We focus on evidence-led investigation and clear findings your team can act on.
-                </p>
-                <p>
-                    We work best alongside VoIP service providers, telecom system integrators, managed service providers, and UC teams that need targeted incident support or overflow troubleshooting.
-                </p>
-                <p class="highlight">
-                    <strong>Our Focus:</strong> Help communication teams isolate the cause of difficult VoIP issues with structured diagnostics, practical recommendations, and concise technical handover notes.
-                </p>
-
-                <div class="stats-row">
-                    <div class="stat-item"><h3>SIP</h3><p>Call-Flow Analysis</p></div>
-                    <div class="stat-item"><h3>RTP</h3><p>Media Troubleshooting</p></div>
-                    <div class="stat-item"><h3>SBC</h3><p>Interoperability Support</p></div>
-                </div>
-                <div class="about-content" data-aos="fade-right">
-                    <a href="founder.html">
-                        <div>
-                            <span>Founder Profile</span>
-                        </div>
-                    </a>
-                </div>
+                <div class="section-label">ABOUT</div>
+                <h2>Practical <span class="gradient-text">VoIP Engineering</span></h2>
+                <p class="lead">Independent remote troubleshooting for VoIP providers, telecom integrators, and unified communications teams.</p>
+                <p>We investigate failed calls, SIP signalling errors, one-way audio, and interoperability problems using packet captures, logs, and structured call-flow analysis.</p>
+                <p class="highlight"><strong>What you get:</strong> Clear findings, practical next steps, and concise technical handover notes.</p>
+                <a class="profile-link" href="founder.html">
+                    <span class="profile-link-icon">↗</span>
+                    <span class="profile-link-copy"><strong>About the Engineer</strong><small>Relevant experience and technical background</small></span>
+                    <span class="profile-link-arrow">→</span>
+                </a>
             </div>
-
             <div class="about-expertise" data-aos="fade-left">
-                <h3>VoIP Engineering Expertise</h3>
+                <h3>What We Help With</h3>
                 <div class="expertise-list">
-                    <div class="expertise-item">
-                        <div class="expertise-icon">💻</div>
-                        <div>
-                            <h4>SIP Signalling &amp; Call Flows</h4><p>Investigate registration failures, call setup problems, SIP 4xx/5xx responses, and routing issues.</p>
-                        </div>
-                    </div>
-
-                    <div class="expertise-item">
-                        <div class="expertise-icon">🌐</div>
-                        <div>
-                            <h4>RTP &amp; One-Way Audio</h4><p>Review SDP, media paths, NAT, firewall behaviour, and packet captures to narrow down audio faults.</p>
-                        </div>
-                    </div>
-
-                    <div class="expertise-item">
-                        <div class="expertise-icon">🔧</div>
-                        <div>
-                            <h4>SBC &amp; UC Interoperability</h4><p>Support investigations involving session border controllers, SIP trunks, PBX platforms, and Teams voice.</p>
-                        </div>
-                    </div>
-
-                    <div class="expertise-item">
-                        <div class="expertise-icon">📞</div>
-                        <div>
-                            <h4>Evidence-Led Incident Reports</h4><p>Receive a concise summary of findings, likely root cause, and recommended next checks.</p>
-                        </div>
-                    </div>
-
-                    <div class="expertise-item">
-                        <div class="expertise-icon">🏗️</div>
-                        <div>
-                            <h4>Remote Overflow Support</h4><p>Flexible technical assistance for VoIP providers and integrators handling escalated incidents.</p>
-                        </div>
-                    </div>
+                    <div class="expertise-item"><div class="expertise-icon">🔎</div><div><h4>SIP &amp; Call Setup</h4><p>Registration, routing, call failures, and SIP response analysis.</p></div></div>
+                    <div class="expertise-item"><div class="expertise-icon">🎧</div><div><h4>Audio &amp; RTP</h4><p>One-way audio, no audio, SDP, NAT, and firewall behaviour.</p></div></div>
+                    <div class="expertise-item"><div class="expertise-icon">🧰</div><div><h4>Escalation Support</h4><p>Packet-capture review, interoperability checks, and technical handovers.</p></div></div>
                 </div>
-
                 <div class="cta-box">
-                    <p><strong>Need Help Investigating a VoIP Issue?</strong></p><p>Share the symptoms and relevant logs or packet captures. We'll help define a focused diagnostic engagement.</p><a href="#contact" class="btn btn-primary">Send an Inquiry →</a>
+                    <p><strong>Have a difficult VoIP incident?</strong></p>
+                    <p>Share the symptoms and relevant evidence to discuss a focused diagnostic engagement.</p>
+                    <a href="#contact" class="btn btn-primary">Contact Us →</a>
                 </div>
             </div>
         </div>
@@ -868,24 +855,24 @@
     <!-- Services -->
     <section class="services" id="services">
         <h2 class="section-title" data-aos="fade-up">VoIP &amp; SIP Support Services</h2>
-        <p class="section-description" data-aos="fade-up">Focused remote diagnostics for providers, integrators, and unified communications teams</p>
+        <p class="section-description" data-aos="fade-up">Focused remote diagnostics for VoIP providers and UC teams</p>
         <div class="services-grid">
             <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-icon">🔎</div><h3>SIP &amp; Call-Flow Diagnostics</h3>
-                <p>Structured investigation of signalling and call setup problems using traces, logs, and call examples.</p>
-                <ul class="service-features"><li>SIP registration and authentication failures</li><li>Call setup, routing, and call drops</li><li>SIP 4xx/5xx response analysis</li><li>Clear findings and next steps</li></ul>
+                <p>Investigate failed calls and signalling issues using traces, logs, and call examples.</p>
+                <ul class="service-features"><li>Registration and call setup failures</li><li>Routing issues and SIP error responses</li><li>Findings and recommended next steps</li></ul>
                 <a href="#contact" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Discuss an Incident →</a>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-icon">🎧</div><h3>RTP, Audio &amp; SBC Troubleshooting</h3>
-                <p>Investigate media and interoperability faults across VoIP, PBX, SIP trunk, and UC environments.</p>
-                <ul class="service-features"><li>One-way or no-audio issues</li><li>RTP, SDP, NAT, and firewall analysis</li><li>Packet capture and SIP ladder review</li><li>SBC and platform interoperability checks</li></ul>
+                <p>Investigate audio and interoperability faults across VoIP and UC environments.</p>
+                <ul class="service-features"><li>One-way or no-audio issues</li><li>RTP, SDP, NAT, and firewall analysis</li><li>Packet capture and interoperability review</li></ul>
                 <a href="#contact" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Request Diagnostics →</a>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-icon">🧰</div><h3>Technical Overflow Support</h3>
-                <p>Extra engineering capacity for telecom providers and integrators handling escalated customer incidents.</p>
-                <ul class="service-features"><li>Remote incident investigation</li><li>FreePBX, AudioCodes, Telcobridge, and OpenSIPS context</li><li>Written technical handover notes</li><li>Web development available as a secondary service</li></ul>
+                <p>Extra remote engineering capacity for escalated incidents.</p>
+                <ul class="service-features"><li>Remote incident investigation</li><li>SIP, PBX, and SBC troubleshooting</li><li>Written technical handover notes</li></ul>
                 <a href="#contact" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Contact Vertechions →</a>
             </div>
         </div>
@@ -895,7 +882,7 @@
     <section class="contact" id="contact">
         <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
         <p class="section-description" data-aos="fade-up">
-            Let's start building something amazing together
+            For VoIP support inquiries, use the form or email us directly.
         </p>
 
         <div class="contact-container">
@@ -934,7 +921,6 @@
                             <option value="sbc">SBC, SIP trunk, or platform interoperability</option>
                             <option value="overflow">Overflow engineering / incident support</option>
                             <option value="other">Other VoIP / UC issue</option>
-                            <option value="web">Website or web application (secondary service)</option>
                         </select>
                     </div>
 
@@ -953,7 +939,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Vertechions. All rights reserved.</p>
+        <p>&copy; 2026 Vertechions. Specialist VoIP engineering support. · <a href="founder.html" style="color: var(--text-gray); text-decoration: none;">About the Engineer</a></p>
     </footer>
 
     <!-- AOS Library -->
