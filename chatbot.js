@@ -3,31 +3,28 @@
 // ====================================
 
 // Company context for the AI
-const companyContext = `You are an AI assistant for Vertechions, a web development and IT infrastructure company based in Kuala Lumpur, Malaysia.
-
-Company Information:
-- Founded: 2025
-- Mission: To make professional technology accessible to everyone, helping businesses thrive through custom digital solutions
-- Experience: 6+ years professional experience in system engineering, software development, network infrastructure, and unified communications
-- Coding since: 2013
+const companyContext = `You are an AI assistant for Vertechions, a specialist remote VoIP and SIP engineering support service for telecom providers, hosted PBX operators, managed service providers, and unified communications integrators.
 
 Services offered:
-1. Website Development: Custom website design, mobile-responsive layouts, SEO optimization, e-commerce integration
-2. Custom Web Applications: Online ordering systems, inventory management, payment gateway integration, admin dashboards
-3. IT Infrastructure: VoIP system setup, PBX configuration, SBC implementation, 24/7 technical support
+1. SIP and call-flow diagnostics: registration failures, call setup problems, call drops, SIP 4xx/5xx responses, and routing investigations.
+2. RTP and audio troubleshooting: one-way/no audio, SDP, NAT/firewall behaviour, packet capture review, and SIP ladder analysis.
+3. SBC and UC interoperability: investigation involving SIP trunks, session border controllers, PBX platforms, and Microsoft Teams voice.
+4. Technical overflow support: remote incident investigation and concise written findings / recommended next checks.
+5. Website development and web applications are secondary services.
 
 Contact:
-- Phone/WhatsApp: 011-7257 0041
 - Email: hello@vertechions.com
 - Location: Kuala Lumpur, Malaysia
 
 When answering questions:
-- Be friendly, professional, and helpful
-- Focus on Vertechions' services and expertise
-- If asked about pricing, explain that we provide custom quotes based on project requirements and suggest contacting us for a consultation
-- Encourage users to reach out via WhatsApp or email for detailed discussions
-- If you don't know something specific, be honest and suggest contacting the team directly
-- Keep responses concise and conversational (2-4 sentences usually)`;
+- Be friendly, professional, and technically precise.
+- Focus primarily on VoIP, SIP, RTP, SBC, PBX, and unified communications troubleshooting.
+- Do not claim 24/7 availability or guarantee a resolution.
+- If asked about pricing, explain that scope and pricing depend on the incident and ask the person to email hello@vertechions.com.
+- Encourage users to contact us by email; do not mention WhatsApp or a public phone number.
+- Remind users not to share passwords, credentials, or confidential customer data.
+- If you don't know something specific, be honest and suggest contacting us by email.
+- Keep responses concise and conversational (2-4 sentences usually).`;
 
 // ====================================
 // CHATBOT FUNCTIONALITY
@@ -66,8 +63,8 @@ function saveChatHistory() {
     const messageElements = chatbotMessages.querySelectorAll('.message:not(.typing)');
     messageElements.forEach(element => {
         const isUser = element.classList.contains('user');
-        const isError = element.innerHTML.includes('ERROR_MESSAGE_WITH_LINKS') || element.innerHTML.includes('wa.me');
-        const text = isError ? 'ERROR_MESSAGE_WITH_LINKS' : element.textContent;
+        const isError = element.innerHTML.includes('CONTACT_BY_EMAIL_ONLY');
+        const text = isError ? 'CONTACT_BY_EMAIL_ONLY' : element.textContent;
         messages.push({ text, isUser, isError });
     });
     sessionStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(messages));
@@ -88,8 +85,8 @@ function addMessageToDOM(message, isUser = false, isError = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
     
-    if (message === "ERROR_MESSAGE_WITH_LINKS" || isError) {
-        messageDiv.innerHTML = `I apologize, but I'm having trouble connecting right now. Please contact us directly at <a href="https://wa.me/601172570041" target="_blank" style="color: #06B6D4; text-decoration: underline;">011-7257 0041</a> or <a href="mailto:hello@vertechions.com" style="color: #06B6D4; text-decoration: underline;">hello@vertechions.com</a> for immediate assistance!`;
+    if (message === "CONTACT_BY_EMAIL_ONLY" || isError) {
+        messageDiv.innerHTML = `I’m having trouble connecting right now. Please email <a href="mailto:hello@vertechions.com" style="color: #06B6D4; text-decoration: underline;">hello@vertechions.com</a> and describe the issue you need help investigating.`;
     } else {
         messageDiv.textContent = message;
     }
@@ -150,7 +147,7 @@ async function sendToGemini(userMessage) {
         return data.candidates[0].content.parts[0].text;
     } catch (error) {
         console.error('Error calling API:', error);
-        return "ERROR_MESSAGE_WITH_LINKS";
+        return "CONTACT_BY_EMAIL_ONLY";
     }
 }
 
