@@ -15,11 +15,7 @@
 
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- AI Chatbot Styles -->
-    <link href="chatbot.css" rel="stylesheet">
-
-    <style>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -759,6 +755,41 @@
                 transform: translateX(6px);
             }
         }
+
+        /* Floating WhatsApp contact button */
+        .whatsapp-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 1100;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 999px;
+            background: #25D366;
+            color: #062b16;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 26px rgba(0, 0, 0, 0.38);
+        }
+        .whatsapp-float:focus-visible {
+            outline: 3px solid white;
+            outline-offset: 3px;
+        }
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                right: 16px;
+                bottom: 16px;
+                padding: 13px 17px;
+            }
+        }
+
     </style>
 </head>
 
@@ -782,30 +813,14 @@
             </div>
         </div>
     </nav>
+    <!-- WhatsApp Contact Button -->
+    <a class="whatsapp-float"
+       href="https://wa.me/60147191644?text=Hi%20Vertechions%2C%20I%27d%20like%20to%20ask%20about%20your%20business%20VoIP%20services."
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat with Vertechions on WhatsApp"
+       title="Chat with us on WhatsApp">☏ <span>WhatsApp</span></a>
 
-    <!-- AI Chatbot Widget (from external file) -->
-    <div class="chatbot-container">
-        <button class="chatbot-button" id="chatbotToggle">🤖</button>
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header">
-                <h3>💬 Vertechions AI Assistant</h3>
-                <button class="chatbot-close" id="chatbotClose">×</button>
-            </div>
-            <div class="chatbot-messages" id="chatbotMessages">
-                <div class="message bot">
-                    Hi! 👋 I'm your Vertechions AI assistant. Ask me anything about our services, pricing, or how we can
-                    help your business!
-                </div>
-            </div>
-            <div class="chatbot-input-container">
-                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask me anything..."
-                    onkeypress="if(event.key==='Enter') sendMessage()">
-                <button class="chatbot-send" id="chatbotSend" onclick="sendMessage()">➤</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hero -->
+<!-- Hero -->
     <section class="hero" id="home">
         <div class="floating-circle circle-1"></div>
         <div class="floating-circle circle-2"></div>
@@ -1009,9 +1024,6 @@
             });
         }
     </script>
-
-    <!-- AI Chatbot Script -->
-    <script src="chatbot.js"></script>
 </body>
 
 </html>
